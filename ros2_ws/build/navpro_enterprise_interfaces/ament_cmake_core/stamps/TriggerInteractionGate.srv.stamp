@@ -1,0 +1,8 @@
+string gate_id
+string prompt_message
+string[] available_actions
+int32 timeout_seconds
+---
+bool success
+string selected_action
+string operator_notes

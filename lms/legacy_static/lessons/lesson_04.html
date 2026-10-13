@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 04: High Concurrency Ros2 Multithreaded Executor | Level 2 Enterprise</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/highlight-dark.min.css">
+  <link rel="stylesheet" href="../assets/css/quiz.css">
+  <link rel="stylesheet" href="../assets/css/instructor_sync.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-container">
+      <a href="https://botforge.in" target="_blank" class="company-brand" title="Botforge Robotics - botforge.in">
+        <img src="../assets/images/botforge_black.png" alt="Botforge Robotics" class="company-logo">
+      </a>
+      <div class="brand-divider"></div>
+      <a href="../index.html" class="brand" title="Level 2: Enterprise Robotics & AI">
+        <img src="../assets/images/ros2_logo.svg" alt="ROS 2" class="brand-logo">
+        <span class="brand-title">NavPro Learning Hub</span>
+        <span class="badge-jazzy" style="background:#0284c7; color:#fff; border-color:#0284c7;">Level 2 Enterprise</span>
+      </a>
+    </div>
+    <div class="header-center">
+      <input type="text" id="lessonSearchInput" class="search-input" placeholder="🔍 Search Level 2 curriculum...">
+    </div>
+    <div class="header-actions">
+      <a href="http://localhost:6080/vnc.html" target="_blank" class="track-btn" title="Open Ubuntu Desktop GUI via noVNC">🖥️ Desktop GUI</a>
+      <a href="http://localhost:8443/?folder=/home/navpro/workspace" target="_blank" class="track-btn" title="Open VS Code in browser">💻 VS Code</a>
+      <a href="../index.html" class="track-btn active" style="background:#0284c7; color:#fff;">Architecture Hub</a>
+      <span class="theme-pill">☀️ Light Theme</span>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <aside class="app-sidebar">
+      <div class="progress-card">
+        <div class="progress-header">
+          <span>Enterprise Progress</span>
+          <span id="overallProgressText">0% Complete (0/24)</span>
+        </div>
+        <div class="progress-bar-track">
+          <div id="overallProgressBar" class="progress-bar-fill"></div>
+        </div>
+        <button id="resetProgressBtn" class="track-btn reset-btn" style="width:100%; margin-top:8px; justify-content:center;">↺ Reset Progress</button>
+      </div>
+
+      
+        <div class="sidebar-section-title">Enterprise &amp; AI Stack (24 Lessons)</div>
+        <ul class="lesson-list">
+          
+            <li>
+              <a href="lesson_01.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_01" onclick="event.stopPropagation();">
+                <span class="lesson-num">01</span>
+                <span class="lesson-title">Web Technologies For Roboticists Http Methods Json</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_02.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_02" onclick="event.stopPropagation();">
+                <span class="lesson-num">02</span>
+                <span class="lesson-title">Realtime Websockets Vs Http Polling</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_03.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_03" onclick="event.stopPropagation();">
+                <span class="lesson-num">03</span>
+                <span class="lesson-title">Enterprise System Architecture Dual Plane</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_04.html" class="lesson-item active">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_04" onclick="event.stopPropagation();">
+                <span class="lesson-num">04</span>
+                <span class="lesson-title">High Concurrency Ros2 Multithreaded Executor</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_05.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_05" onclick="event.stopPropagation();">
+                <span class="lesson-num">05</span>
+                <span class="lesson-title">Fastapi Robotics Rest Gateway Pydantic</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_06.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_06" onclick="event.stopPropagation();">
+                <span class="lesson-num">06</span>
+                <span class="lesson-title">High Frequency Websocket Telemetry Broadcaster</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_07.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_07" onclick="event.stopPropagation();">
+                <span class="lesson-num">07</span>
+                <span class="lesson-title">Non Blocking Nav2 Action Dispatching</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_08.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_08" onclick="event.stopPropagation();">
+                <span class="lesson-num">08</span>
+                <span class="lesson-title">Day1 Capstone Navpro Api Gateway</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_09.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_09" onclick="event.stopPropagation();">
+                <span class="lesson-num">09</span>
+                <span class="lesson-title">Client Sdk Architecture Python Javascript</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_10.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_10" onclick="event.stopPropagation();">
+                <span class="lesson-num">10</span>
+                <span class="lesson-title">Modern Fleet Cockpit Architecture Canvas</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_11.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_11" onclick="event.stopPropagation();">
+                <span class="lesson-num">11</span>
+                <span class="lesson-title">Rendering 2D Slam Map Occupancy Grid</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_12.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_12" onclick="event.stopPropagation();">
+                <span class="lesson-num">12</span>
+                <span class="lesson-title">Live Robot Pose And Trajectory Rendering</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_13.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_13" onclick="event.stopPropagation();">
+                <span class="lesson-num">13</span>
+                <span class="lesson-title">Interactive Robot Controls Virtual Joystick</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_14.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_14" onclick="event.stopPropagation();">
+                <span class="lesson-num">14</span>
+                <span class="lesson-title">Waypoint Store And Interactive Map Markers</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_15.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_15" onclick="event.stopPropagation();">
+                <span class="lesson-num">15</span>
+                <span class="lesson-title">Enterprise Fleet Security Auth Rate Limiting</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_16.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_16" onclick="event.stopPropagation();">
+                <span class="lesson-num">16</span>
+                <span class="lesson-title">Day2 Capstone Interactive Web Cockpit</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_17.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_17" onclick="event.stopPropagation();">
+                <span class="lesson-num">17</span>
+                <span class="lesson-title">Physical Ai And Grounded Reasoning</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_18.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_18" onclick="event.stopPropagation();">
+                <span class="lesson-num">18</span>
+                <span class="lesson-title">Model Context Protocol Standard Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_19.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_19" onclick="event.stopPropagation();">
+                <span class="lesson-num">19</span>
+                <span class="lesson-title">Building Python Mcp Robotics Server</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_20.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_20" onclick="event.stopPropagation();">
+                <span class="lesson-num">20</span>
+                <span class="lesson-title">Deterministic Safety Barriers And Preflight Guards</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_21.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_21" onclick="event.stopPropagation();">
+                <span class="lesson-num">21</span>
+                <span class="lesson-title">Connecting Frontier Models Claude Gemini Antigravity</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_22.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_22" onclick="event.stopPropagation();">
+                <span class="lesson-num">22</span>
+                <span class="lesson-title">Industrial Mission Graph Dag Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_23.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_23" onclick="event.stopPropagation();">
+                <span class="lesson-num">23</span>
+                <span class="lesson-title">Stateful Mission Runner And Ui Gates</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_24.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_24" onclick="event.stopPropagation();">
+                <span class="lesson-num">24</span>
+                <span class="lesson-title">Day3 Grand Capstone End To End Fleet Pipeline</span>
+              </a>
+            </li>
+            
+        </ul>
+        
+    </aside>
+
+    <main class="app-content">
+      <article class="markdown-body">
+        
+        <div class="concept-card">
+          <h3>⚡ Quick Concept Snapshot</h3>
+          <ul>
+            <li><strong>MultiThreadedExecutor:</strong> Prevents deadlocks when ROS 2 services and action client callbacks execute concurrently inside a single process.</li>
+            <li><strong>ReentrantCallbackGroup:</strong> Allows multiple callbacks in the same group to execute in parallel across worker threads.</li>
+          </ul>
+        </div>
+        <h1>Lesson 04: High-Concurrency ROS 2 Execution — MultiThreadedExecutor &amp; Mutex Caches</h1>
+<p>In Lesson 03, we designed the Dual-Plane Architecture. To make this architecture function in code, we must solve a major concurrency problem in <code>rclpy</code>.</p>
+<p>By default, ROS 2 Python nodes process callbacks sequentially on a single thread. When multiple high-frequency topics, services, and web bridge queries arrive simultaneously, a single-threaded executor causes starvation and severe latency spikes.</p>
+<p>In this lesson, you will learn how to configure the <code>MultiThreadedExecutor</code>, manage callback groups, and implement thread-safe state sharing in Python.</p>
+<hr>
+<h2>1. Learning Objectives</h2>
+<p>By the end of this lesson, you will be able to:</p>
+<ol>
+<li>Explain the architectural limitations of the default <code>SingleThreadedExecutor</code>.</li>
+<li>Configure and deploy the <code>rclpy.executors.MultiThreadedExecutor</code> with managed worker thread pools.</li>
+<li>Differentiate between <code>MutuallyExclusiveCallbackGroup</code> and <code>ReentrantCallbackGroup</code>.</li>
+<li>Use Python <code>threading.Lock</code> to guarantee atomic state sharing between ROS 2 subscriber callbacks and web API endpoints.</li>
+<li>Prevent common concurrency pitfalls: deadlocks, race conditions, and priority inversion.</li>
+</ol>
+<hr>
+<h2>2. SingleThreadedExecutor vs. MultiThreadedExecutor</h2>
+<p>When you run standard ROS 2 code using <code>rclpy.spin(node)</code>, ROS 2 uses a <strong><code>SingleThreadedExecutor</code></strong>:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-bash">SingleThreadedExecutor (Sequential FIFO Queue):
+[ /odom callback ] ──&gt; [ /scan callback ] ──&gt; [ Long Service Call (Blocks 2s) ] ──&gt; [ /battery STALLED! ]</code></pre></div>
+<p>If any callback performs a blocking operation (such as waiting for a service response, disk I/O, or mathematical calculations), <strong>every other subscriber, timer, and action feedback callback is completely blocked</strong>. For an AMR driving at $1.5\,\text{m/s}$, a $500\,\text{ms}$ delay in processing laser scans or odometry can lead to collision!</p>
+<h3>The MultiThreadedExecutor</h3>
+<p>The <code>MultiThreadedExecutor</code> allocates a pool of worker OS threads (defaulting to the number of CPU cores). When an event occurs (a topic message arrives or a timer triggers), the executor assigns that callback to the next available worker thread:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-mermaid">graph TD
+    Queue[&quot;DDS Event Notification Queue&quot;]
+    Exec[&quot;MultiThreadedExecutor (Thread Pool)&quot;]
+    T1[&quot;Worker Thread 1: /odom (50Hz)&quot;]
+    T2[&quot;Worker Thread 2: /scan (10Hz)&quot;]
+    T3[&quot;Worker Thread 3: Long-running Action Client&quot;]
+    T4[&quot;Worker Thread 4: Web Bridge State Read&quot;]
+
+    Queue --&gt; Exec
+    Exec --&gt; T1
+    Exec --&gt; T2
+    Exec --&gt; T3
+    Exec --&gt; T4</code></pre></div>
+<hr>
+<h2>3. Callback Groups in ROS 2</h2>
+<p>Even with a <code>MultiThreadedExecutor</code>, ROS 2 enforces safety rules regarding which callbacks can execute concurrently. This is governed by <strong>Callback Groups</strong>:</p>
+<h3>3.1 MutuallyExclusiveCallbackGroup (Default)</h3>
+<ul>
+<li><strong>Rule:</strong> Only <strong>one</strong> callback belonging to this group can execute at any given time.</li>
+<li><strong>Use Case:</strong> Operations that mutate non-thread-safe internal state (e.g. updating a PID controller&#x27;s integral accumulator).</li>
+<li><strong>Caveat:</strong> If a timer in this group calls a ROS 2 service whose response callback is in the same group, your node will <strong>deadlock</strong> permanently!</li>
+</ul>
+<h3>3.2 ReentrantCallbackGroup</h3>
+<ul>
+<li><strong>Rule:</strong> Callbacks in this group can execute <strong>concurrently</strong> across multiple threads. Multiple instances of the <em>same</em> callback or different callbacks can run at the exact same moment.</li>
+<li><strong>Use Case:</strong> High-throughput telemetry subscribers, web bridge read handlers, and non-blocking service clients.</li>
+<li><strong>Requirement:</strong> You <strong>must</strong> protect all shared mutable variables with explicit thread synchronization locks (<code>threading.Lock</code>).</li>
+</ul>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python">from rclpy.callback_groups import MutuallyExclusiveCallbackGroup, ReentrantCallbackGroup
+
+class DualPlaneBridgeNode(Node):
+    def __init__(self):
+        super().__init__(&#x27;dual_plane_bridge_node&#x27;)
+        
+        # Group for high-frequency concurrent sensor streams
+        self.sensor_cb_group = ReentrantCallbackGroup()
+        
+        # Group for delicate actuator control commands
+        self.motor_cb_group = MutuallyExclusiveCallbackGroup()</code></pre></div>
+<hr>
+<h2>4. Thread-Safe State Sharing with <code>threading.Lock</code></h2>
+<p>In Python, the Global Interpreter Lock (GIL) does <em>not</em> protect your application from race conditions when modifying complex data structures like dictionaries or object attributes across multiple threads.</p>
+<p>To share telemetry between ROS 2 subscriber callbacks and the web API, we encapsulate shared state inside a thread-safe container using <code>threading.Lock</code>:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python">import threading
+from typing import Dict, Any
+
+class ThreadSafeRobotState:
+    &quot;&quot;&quot;Thread-safe cache storing latest robot telemetry.&quot;&quot;&quot;
+    
+    def __init__(self):
+        self._lock = threading.Lock()
+        self._data = {
+            &quot;x&quot;: 0.0,
+            &quot;y&quot;: 0.0,
+            &quot;yaw&quot;: 0.0,
+            &quot;linear_velocity&quot;: 0.0,
+            &quot;angular_velocity&quot;: 0.0,
+            &quot;battery_percentage&quot;: 100.0,
+            &quot;emergency_stop&quot;: False,
+            &quot;timestamp&quot;: 0.0
+        }
+
+    def update_pose_and_velocity(self, x: float, y: float, yaw: float, v: float, w: float):
+        &quot;&quot;&quot;Called by high-frequency ROS 2 /odom subscriber callback.&quot;&quot;&quot;
+        with self._lock:
+            self._data[&quot;x&quot;] = x
+            self._data[&quot;y&quot;] = y
+            self._data[&quot;yaw&quot;] = yaw
+            self._data[&quot;linear_velocity&quot;] = v
+            self._data[&quot;angular_velocity&quot;] = w
+
+    def update_battery(self, percentage: float):
+        &quot;&quot;&quot;Called by /battery_state subscriber callback.&quot;&quot;&quot;
+        with self._lock:
+            self._data[&quot;battery_percentage&quot;] = percentage
+
+    def get_snapshot(self) -&gt; Dict[str, Any]:
+        &quot;&quot;&quot;Called by FastAPI REST / WebSocket threads to serialize state.&quot;&quot;&quot;
+        with self._lock:
+            # Return a shallow copy so reading threads never mutate the active cache
+            return self._data.copy()</code></pre></div>
+<hr>
+<h2>5. Complete Implementation: MultiThreaded Background Worker</h2>
+<p>Here is the complete reference implementation showing how to launch <code>MultiThreadedExecutor</code> inside an isolated Python background thread:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python">import threading
+import time
+import math
+import rclpy
+from rclpy.node import Node
+from rclpy.executors import MultiThreadedExecutor
+from rclpy.callback_groups import ReentrantCallbackGroup
+from nav_msgs.msg import Odometry
+from sensor_msgs.msg import BatteryState
+
+class TelemetryCollectorNode(Node):
+    def __init__(self, state_cache: ThreadSafeRobotState):
+        super().__init__(&#x27;telemetry_collector_node&#x27;)
+        self.state_cache = state_cache
+        self.reentrant_group = ReentrantCallbackGroup()
+
+        # Ingest odometry at 20-50Hz
+        self.odom_sub = self.create_subscription(
+            Odometry,
+            &#x27;/odom&#x27;,
+            self.odom_callback,
+            10,
+            callback_group=self.reentrant_group
+        )
+
+        # Ingest battery state at 1Hz
+        self.battery_sub = self.create_subscription(
+            BatteryState,
+            &#x27;/battery_state&#x27;,
+            self.battery_callback,
+            10,
+            callback_group=self.reentrant_group
+        )
+        self.get_logger().info(&quot;TelemetryCollectorNode initialized with MultiThreadedExecutor.&quot;)
+
+    def odom_callback(self, msg: Odometry):
+        x = msg.pose.pose.position.x
+        y = msg.pose.pose.position.y
+        
+        # Quaternion to Yaw calculation
+        q = msg.pose.pose.orientation
+        siny_cosp = 2.0 * (q.w * q.z + q.x * q.y)
+        cosy_cosp = 1.0 - 2.0 * (q.y * q.y + q.z * q.z)
+        yaw = math.atan2(siny_cosp, cosy_cosp)
+        
+        lin_v = msg.twist.twist.linear.x
+        ang_w = msg.twist.twist.angular.z
+
+        self.state_cache.update_pose_and_velocity(x, y, yaw, lin_v, ang_w)
+
+    def battery_callback(self, msg: BatteryState):
+        pct = msg.percentage * 100.0 if msg.percentage &lt;= 1.0 else msg.percentage
+        self.state_cache.update_battery(pct)
+
+
+def start_ros2_background_daemon(state_cache: ThreadSafeRobotState) -&gt; threading.Thread:
+    &quot;&quot;&quot;Spawns rclpy MultiThreadedExecutor in an isolated OS daemon thread.&quot;&quot;&quot;
+    def worker():
+        rclpy.init()
+        node = TelemetryCollectorNode(state_cache)
+        executor = MultiThreadedExecutor(num_threads=4)
+        executor.add_node(node)
+        try:
+            executor.spin()
+        finally:
+            node.destroy_node()
+            rclpy.shutdown()
+
+    t = threading.Thread(target=worker, daemon=True, name=&quot;ROS2-Executor-Worker&quot;)
+    t.start()
+    return t</code></pre></div>
+<hr>
+<h2>6. Summary &amp; Next Steps</h2>
+<p>In this lesson, you mastered concurrent ROS 2 execution:</p>
+<ul>
+<li>Deployed the <strong><code>MultiThreadedExecutor</code></strong> to eliminate single-threaded callback starvation.</li>
+<li>Used <strong><code>ReentrantCallbackGroup</code></strong> for concurrent sensor ingestion.</li>
+<li>Implemented <strong><code>threading.Lock</code></strong> mutexes to guarantee thread-safe cache updates.</li>
+</ul>
+<p>In <strong>Lesson 05</strong>, we will connect this thread-safe state cache to <strong>FastAPI</strong>, creating our production REST endpoints and Pydantic validation schemas!</p>
+      </article>
+
+      <footer class="lesson-nav-footer">
+        <a href="lesson_03.html" class="nav-link-btn" >&larr; Previous Lesson</a>
+        <a href="../index.html" class="nav-link-btn">⚡ Enterprise Hub</a>
+        <a href="lesson_05.html" class="nav-link-btn" >Next Lesson &rarr;</a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../assets/js/highlight.min.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/quiz_engine.js"></script>
+  <script src="../assets/js/instructor_sync.js"></script>
+</body>
+</html>

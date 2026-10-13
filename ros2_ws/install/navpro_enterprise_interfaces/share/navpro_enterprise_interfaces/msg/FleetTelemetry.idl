@@ -1,0 +1,33 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from navpro_enterprise_interfaces/msg/FleetTelemetry.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+#include "geometry_msgs/msg/Pose.idl"
+#include "geometry_msgs/msg/Twist.idl"
+
+module navpro_enterprise_interfaces {
+  module msg {
+    struct FleetTelemetry {
+      builtin_interfaces::msg::Time stamp;
+
+      string robot_id;
+
+      geometry_msgs::msg::Pose pose;
+
+      geometry_msgs::msg::Twist velocity;
+
+      float battery_percentage;
+
+      float battery_voltage;
+
+      boolean is_charging;
+
+      boolean estop_engaged;
+
+      string operational_status;
+
+      string current_mission_id;
+    };
+  };
+};

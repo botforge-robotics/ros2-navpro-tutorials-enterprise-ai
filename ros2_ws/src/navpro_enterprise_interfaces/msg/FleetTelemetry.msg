@@ -1,0 +1,10 @@
+builtin_interfaces/Time stamp
+string robot_id
+geometry_msgs/Pose pose
+geometry_msgs/Twist velocity
+float32 battery_percentage
+float32 battery_voltage
+bool is_charging
+bool estop_engaged
+string operational_status
+string current_mission_id

@@ -1,0 +1,7 @@
+navpro_api_gateway:
+  ros__parameters:
+    host: "0.0.0.0"
+    port: 8000
+    telemetry_rate_hz: 20.0
+    robot_id: "navpro_mini_amr"
+    mock_mode: false

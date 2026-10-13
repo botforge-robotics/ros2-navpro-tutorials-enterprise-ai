@@ -1,0 +1,8 @@
+{
+  "package_name": "navpro_enterprise_interfaces",
+  "non_idl_tuples": [
+    "/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_enterprise_interfaces:msg/FleetTelemetry.msg",
+    "/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_enterprise_interfaces:srv/TriggerInteractionGate.srv",
+    "/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_enterprise_interfaces:action/ExecuteMission.action"
+  ]
+}

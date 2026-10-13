@@ -1,0 +1,2 @@
+[console_scripts]
+gateway_node = navpro_api_gateway.gateway_node:main

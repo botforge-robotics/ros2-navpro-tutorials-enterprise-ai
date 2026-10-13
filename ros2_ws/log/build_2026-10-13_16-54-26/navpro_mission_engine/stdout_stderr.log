@@ -1,0 +1,19 @@
+running egg_info
+writing ../../build/navpro_mission_engine/navpro_mission_engine.egg-info/PKG-INFO
+writing dependency_links to ../../build/navpro_mission_engine/navpro_mission_engine.egg-info/dependency_links.txt
+writing entry points to ../../build/navpro_mission_engine/navpro_mission_engine.egg-info/entry_points.txt
+writing requirements to ../../build/navpro_mission_engine/navpro_mission_engine.egg-info/requires.txt
+writing top-level names to ../../build/navpro_mission_engine/navpro_mission_engine.egg-info/top_level.txt
+reading manifest file '../../build/navpro_mission_engine/navpro_mission_engine.egg-info/SOURCES.txt'
+writing manifest file '../../build/navpro_mission_engine/navpro_mission_engine.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/lib/python3.12/site-packages/navpro_mission_engine-2.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/navpro_mission_engine/navpro_mission_engine.egg-info to /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/lib/python3.12/site-packages/navpro_mission_engine-2.0.0-py3.12.egg-info
+running install_scripts
+Installing mission_engine_node script to /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/lib/navpro_mission_engine
+writing list of installed files to '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mission_engine/install.log'

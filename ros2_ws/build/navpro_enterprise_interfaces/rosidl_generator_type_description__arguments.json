@@ -1,0 +1,17 @@
+{
+  "package_name": "navpro_enterprise_interfaces",
+  "output_dir": "/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_enterprise_interfaces/rosidl_generator_type_description/navpro_enterprise_interfaces",
+  "idl_tuples": [
+    "/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_enterprise_interfaces/rosidl_adapter/navpro_enterprise_interfaces:msg/FleetTelemetry.idl",
+    "/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_enterprise_interfaces/rosidl_adapter/navpro_enterprise_interfaces:srv/TriggerInteractionGate.idl",
+    "/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_enterprise_interfaces/rosidl_adapter/navpro_enterprise_interfaces:action/ExecuteMission.idl"
+  ],
+  "include_paths": [
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces",
+    "geometry_msgs:/opt/ros/jazzy/share/geometry_msgs",
+    "std_msgs:/opt/ros/jazzy/share/std_msgs",
+    "service_msgs:/opt/ros/jazzy/share/service_msgs",
+    "action_msgs:/opt/ros/jazzy/share/action_msgs",
+    "unique_identifier_msgs:/opt/ros/jazzy/share/unique_identifier_msgs"
+  ]
+}

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 09: Client Sdk Architecture Python Javascript | Level 2 Enterprise</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/highlight-dark.min.css">
+  <link rel="stylesheet" href="../assets/css/quiz.css">
+  <link rel="stylesheet" href="../assets/css/instructor_sync.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-container">
+      <a href="https://botforge.in" target="_blank" class="company-brand" title="Botforge Robotics - botforge.in">
+        <img src="../assets/images/botforge_black.png" alt="Botforge Robotics" class="company-logo">
+      </a>
+      <div class="brand-divider"></div>
+      <a href="../index.html" class="brand" title="Level 2: Enterprise Robotics & AI">
+        <img src="../assets/images/ros2_logo.svg" alt="ROS 2" class="brand-logo">
+        <span class="brand-title">NavPro Learning Hub</span>
+        <span class="badge-jazzy" style="background:#0284c7; color:#fff; border-color:#0284c7;">Level 2 Enterprise</span>
+      </a>
+    </div>
+    <div class="header-center">
+      <input type="text" id="lessonSearchInput" class="search-input" placeholder="🔍 Search Level 2 curriculum...">
+    </div>
+    <div class="header-actions">
+      <a href="http://localhost:6080/vnc.html" target="_blank" class="track-btn" title="Open Ubuntu Desktop GUI via noVNC">🖥️ Desktop GUI</a>
+      <a href="http://localhost:8443/?folder=/home/navpro/workspace" target="_blank" class="track-btn" title="Open VS Code in browser">💻 VS Code</a>
+      <a href="../index.html" class="track-btn active" style="background:#0284c7; color:#fff;">Architecture Hub</a>
+      <span class="theme-pill">☀️ Light Theme</span>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <aside class="app-sidebar">
+      <div class="progress-card">
+        <div class="progress-header">
+          <span>Enterprise Progress</span>
+          <span id="overallProgressText">0% Complete (0/24)</span>
+        </div>
+        <div class="progress-bar-track">
+          <div id="overallProgressBar" class="progress-bar-fill"></div>
+        </div>
+        <button id="resetProgressBtn" class="track-btn reset-btn" style="width:100%; margin-top:8px; justify-content:center;">↺ Reset Progress</button>
+      </div>
+
+      
+        <div class="sidebar-section-title">Enterprise &amp; AI Stack (24 Lessons)</div>
+        <ul class="lesson-list">
+          
+            <li>
+              <a href="lesson_01.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_01" onclick="event.stopPropagation();">
+                <span class="lesson-num">01</span>
+                <span class="lesson-title">Web Technologies For Roboticists Http Methods Json</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_02.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_02" onclick="event.stopPropagation();">
+                <span class="lesson-num">02</span>
+                <span class="lesson-title">Realtime Websockets Vs Http Polling</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_03.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_03" onclick="event.stopPropagation();">
+                <span class="lesson-num">03</span>
+                <span class="lesson-title">Enterprise System Architecture Dual Plane</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_04.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_04" onclick="event.stopPropagation();">
+                <span class="lesson-num">04</span>
+                <span class="lesson-title">High Concurrency Ros2 Multithreaded Executor</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_05.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_05" onclick="event.stopPropagation();">
+                <span class="lesson-num">05</span>
+                <span class="lesson-title">Fastapi Robotics Rest Gateway Pydantic</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_06.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_06" onclick="event.stopPropagation();">
+                <span class="lesson-num">06</span>
+                <span class="lesson-title">High Frequency Websocket Telemetry Broadcaster</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_07.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_07" onclick="event.stopPropagation();">
+                <span class="lesson-num">07</span>
+                <span class="lesson-title">Non Blocking Nav2 Action Dispatching</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_08.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_08" onclick="event.stopPropagation();">
+                <span class="lesson-num">08</span>
+                <span class="lesson-title">Day1 Capstone Navpro Api Gateway</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_09.html" class="lesson-item active">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_09" onclick="event.stopPropagation();">
+                <span class="lesson-num">09</span>
+                <span class="lesson-title">Client Sdk Architecture Python Javascript</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_10.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_10" onclick="event.stopPropagation();">
+                <span class="lesson-num">10</span>
+                <span class="lesson-title">Modern Fleet Cockpit Architecture Canvas</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_11.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_11" onclick="event.stopPropagation();">
+                <span class="lesson-num">11</span>
+                <span class="lesson-title">Rendering 2D Slam Map Occupancy Grid</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_12.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_12" onclick="event.stopPropagation();">
+                <span class="lesson-num">12</span>
+                <span class="lesson-title">Live Robot Pose And Trajectory Rendering</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_13.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_13" onclick="event.stopPropagation();">
+                <span class="lesson-num">13</span>
+                <span class="lesson-title">Interactive Robot Controls Virtual Joystick</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_14.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_14" onclick="event.stopPropagation();">
+                <span class="lesson-num">14</span>
+                <span class="lesson-title">Waypoint Store And Interactive Map Markers</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_15.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_15" onclick="event.stopPropagation();">
+                <span class="lesson-num">15</span>
+                <span class="lesson-title">Enterprise Fleet Security Auth Rate Limiting</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_16.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_16" onclick="event.stopPropagation();">
+                <span class="lesson-num">16</span>
+                <span class="lesson-title">Day2 Capstone Interactive Web Cockpit</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_17.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_17" onclick="event.stopPropagation();">
+                <span class="lesson-num">17</span>
+                <span class="lesson-title">Physical Ai And Grounded Reasoning</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_18.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_18" onclick="event.stopPropagation();">
+                <span class="lesson-num">18</span>
+                <span class="lesson-title">Model Context Protocol Standard Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_19.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_19" onclick="event.stopPropagation();">
+                <span class="lesson-num">19</span>
+                <span class="lesson-title">Building Python Mcp Robotics Server</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_20.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_20" onclick="event.stopPropagation();">
+                <span class="lesson-num">20</span>
+                <span class="lesson-title">Deterministic Safety Barriers And Preflight Guards</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_21.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_21" onclick="event.stopPropagation();">
+                <span class="lesson-num">21</span>
+                <span class="lesson-title">Connecting Frontier Models Claude Gemini Antigravity</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_22.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_22" onclick="event.stopPropagation();">
+                <span class="lesson-num">22</span>
+                <span class="lesson-title">Industrial Mission Graph Dag Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_23.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_23" onclick="event.stopPropagation();">
+                <span class="lesson-num">23</span>
+                <span class="lesson-title">Stateful Mission Runner And Ui Gates</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_24.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_24" onclick="event.stopPropagation();">
+                <span class="lesson-num">24</span>
+                <span class="lesson-title">Day3 Grand Capstone End To End Fleet Pipeline</span>
+              </a>
+            </li>
+            
+        </ul>
+        
+    </aside>
+
+    <main class="app-content">
+      <article class="markdown-body">
+        <h1>Lesson 09: Client SDK Architecture — Building Python &amp; JavaScript Robotics SDKs</h1>
+<p>Welcome to <strong>Day 2</strong> of the Level 2 Advanced Robotics Workshop! On Day 1, you built a high-performance REST and WebSocket API Gateway.</p>
+<p>However, in professional software engineering, frontend web applications, mobile apps, and automated scripts <strong>never make raw <code>fetch()</code> or <code>curl</code> calls directly to individual endpoints</strong>. If an endpoint URL changes or an authentication header format is updated, every screen across the codebase breaks.</p>
+<p>Instead, companies build a <strong>Client SDK (Software Development Kit)</strong>. In this lesson, you will learn the architecture of robotics client SDKs (modeled after the production <strong><code>navpromini_sdk</code></strong> and Dart <a href="file:///home/chaitu/Projects/nav2_mission_planner/lib/services/sdk_api_service.dart#L41"><code>SdkApiService</code></a>), building clean, reusable Python and JavaScript client libraries.</p>
+<hr>
+<h2>1. Learning Objectives</h2>
+<p>By the end of this lesson, you will be able to:</p>
+<ol>
+<li>Explain the architectural advantages of an SDK over ad-hoc raw HTTP/WebSocket requests.</li>
+<li>Design a standardized, object-oriented client interface: <code>get_health()</code>, <code>teleop()</code>, <code>navigate()</code>, and <code>on_telemetry()</code>.</li>
+<li>Handle network timeouts, graceful reconnects, and structured exceptions (<code>RobotApiException</code>).</li>
+<li>Implement a production Python SDK using <code>httpx</code> and <code>websockets</code>.</li>
+<li>Implement a lightweight JavaScript client SDK for browser frontends.</li>
+</ol>
+<hr>
+<h2>2. Client SDK Architecture</h2>
+<p>The SDK encapsulates the complexity of HTTP requests, authentication tokens, JSON serialization, and persistent WebSocket streams behind a clean, developer-friendly class:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-mermaid">graph LR
+    subgraph Client_Applications[&quot;Client Code (Clean &amp; Readable)&quot;]
+        UI[&quot;Fleet Cockpit Web App&quot;]
+        Script[&quot;Python Automation Script&quot;]
+    end
+
+    subgraph NavPro_SDK[&quot;NavPro Client SDK (Abstraction Layer)&quot;]
+        Client[&quot;NavProClient(host=&#x27;192.168.1.100&#x27;)&quot;]
+        HTTPHandler[&quot;_send(method, path, body)&quot;]
+        WSHandler[&quot;_stream_telemetry(callback)&quot;]
+        AuthHandler[&quot;Bearer Token Injection&quot;]
+    end
+
+    subgraph Robot_Backend[&quot;Robot Gateway (Port 8080)&quot;]
+        REST[&quot;FastAPI REST Endpoints&quot;]
+        WS[&quot;20Hz Telemetry WebSocket&quot;]
+    end
+
+    UI --&gt;|client.teleop(0.5, 0.0)| Client
+    Script --&gt;|client.navigate(4.2, 1.5)| Client
+
+    Client --&gt; HTTPHandler
+    Client --&gt; WSHandler
+    HTTPHandler --&gt; AuthHandler
+
+    AuthHandler --&gt;|HTTP / JSON| REST
+    WSHandler --&gt;|WebSocket Frames| WS</code></pre></div>
+<hr>
+<h2>3. Designing the Python Client SDK (<code>navpro_client.py</code>)</h2>
+<p>Here is the production implementation of the Python SDK:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python">import time
+import json
+import asyncio
+import threading
+from typing import Dict, Any, Callable, Optional
+import httpx
+import websockets
+
+
+class RobotApiException(Exception):
+    &quot;&quot;&quot;Raised when the robot gateway returns a non-2xx status code or network fails.&quot;&quot;&quot;
+    def __init__(self, status_code: int, message: str, detail: Optional[Dict[str, Any]] = None):
+        self.status_code = status_code
+        self.message = message
+        self.detail = detail or {}
+        super().__init__(f&quot;[{status_code}] {message}: {self.detail}&quot;)
+
+
+class NavProClient:
+    &quot;&quot;&quot;Client SDK for interfacing with NavPro robots over REST and WebSockets.&quot;&quot;&quot;
+
+    def __init__(self, host: str = &quot;localhost&quot;, port: int = 8080, api_token: Optional[str] = None):
+        self.base_url = f&quot;http://{host}:{port}&quot;
+        self.ws_url = f&quot;ws://{host}:{port}/ws/telemetry&quot;
+        self.headers = {&quot;Content-Type&quot;: &quot;application/json&quot;}
+        if api_token:
+            self.headers[&quot;Authorization&quot;] = f&quot;Bearer {api_token}&quot;
+        self._http = httpx.Client(base_url=self.base_url, timeout=5.0)
+
+    # 1. Health &amp; Status
+    def get_health(self) -&gt; Dict[str, Any]:
+        &quot;&quot;&quot;Fetches robot health, connectivity, and battery state.&quot;&quot;&quot;
+        resp = self._http.get(&quot;/api/v1/system/health&quot;, headers=self.headers)
+        if resp.status_code != 200:
+            raise RobotApiException(resp.status_code, &quot;Failed to fetch health&quot;, resp.json())
+        return resp.json()
+
+    # 2. Velocity Teleoperation
+    def send_velocity(self, linear_x: float, angular_z: float) -&gt; Dict[str, Any]:
+        &quot;&quot;&quot;Sends velocity setpoint to robot /cmd_vel.&quot;&quot;&quot;
+        payload = {&quot;linear_x&quot;: float(linear_x), &quot;angular_z&quot;: float(angular_z)}
+        resp = self._http.post(&quot;/api/v1/teleop&quot;, json=payload, headers=self.headers)
+        if resp.status_code != 200:
+            raise RobotApiException(resp.status_code, &quot;Teleop command rejected&quot;, resp.json())
+        return resp.json()
+
+    # 3. Autonomous Waypoint Navigation
+    def navigate_to_coordinates(self, x: float, y: float, yaw: float = 0.0) -&gt; str:
+        &quot;&quot;&quot;Dispatches autonomous navigation goal and returns tracking goal_id.&quot;&quot;&quot;
+        payload = {&quot;x&quot;: float(x), &quot;y&quot;: float(y), &quot;yaw&quot;: float(yaw)}
+        resp = self._http.post(&quot;/api/v1/navigation/goal&quot;, json=payload, headers=self.headers)
+        if resp.status_code != 202:
+            raise RobotApiException(resp.status_code, &quot;Navigation goal rejected&quot;, resp.json())
+        return resp.json()[&quot;goal_id&quot;]
+
+    # 4. Emergency Stop
+    def emergency_stop(self) -&gt; Dict[str, Any]:
+        &quot;&quot;&quot;Triggers immediate hardware emergency stop.&quot;&quot;&quot;
+        resp = self._http.post(&quot;/api/v1/emergency_stop&quot;, headers=self.headers)
+        return resp.json()
+
+    # 5. Live Telemetry Streaming (WebSocket Thread)
+    def start_telemetry_listener(self, on_frame_callback: Callable[[Dict[str, Any]], None]):
+        &quot;&quot;&quot;Spawns background thread streaming 20Hz telemetry over WebSockets.&quot;&quot;&quot;
+        async def ws_loop():
+            while True:
+                try:
+                    async with websockets.connect(self.ws_url) as ws:
+                        while True:
+                            msg = await ws.recv()
+                            data = json.loads(msg)
+                            on_frame_callback(data)
+                except Exception as e:
+                    await asyncio.sleep(2.0) # Retry on disconnect
+
+        def run_loop():
+            asyncio.run(ws_loop())
+
+        t = threading.Thread(target=run_loop, daemon=True, name=&quot;NavPro-WS-Listener&quot;)
+        t.start()
+        return t</code></pre></div>
+<hr>
+<h2>4. Designing the JavaScript SDK (<code>navpro_client.js</code>)</h2>
+<p>For web browsers and the Cockpit GUI, we implement the equivalent JavaScript class:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-javascript">class NavProWebClient {
+    constructor(host = &quot;localhost&quot;, port = 8080) {
+        this.baseUrl = `http://${host}:${port}`;
+        this.wsUrl = `ws://${host}:${port}/ws/telemetry`;
+        this.ws = null;
+    }
+
+    async getHealth() {
+        const res = await fetch(`${this.baseUrl}/api/v1/system/health`);
+        if (!res.ok) throw new Error(`Health check failed: ${res.statusText}`);
+        return await res.json();
+    }
+
+    async sendVelocity(linearX, angularZ) {
+        const res = await fetch(`${this.baseUrl}/api/v1/teleop`, {
+            method: &quot;POST&quot;,
+            headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+            body: JSON.stringify({ linear_x: linearX, angular_z: angularZ })
+        });
+        return await res.json();
+    }
+
+    async navigate(x, y, yaw = 0.0) {
+        const res = await fetch(`${this.baseUrl}/api/v1/navigation/goal`, {
+            method: &quot;POST&quot;,
+            headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+            body: JSON.stringify({ x, y, yaw })
+        });
+        const data = await res.json();
+        return data.goal_id;
+    }
+
+    async emergencyStop() {
+        const res = await fetch(`${this.baseUrl}/api/v1/emergency_stop`, { method: &quot;POST&quot; });
+        return await res.json();
+    }
+
+    connectTelemetry(onFrameCallback) {
+        this.ws = new WebSocket(this.wsUrl);
+        this.ws.onmessage = (event) =&gt; {
+            const data = JSON.parse(event.data);
+            if (data.type === &quot;TELEMETRY_FRAME&quot;) {
+                onFrameCallback(data);
+            }
+        };
+        this.ws.onclose = () =&gt; {
+            setTimeout(() =&gt; this.connectTelemetry(onFrameCallback), 2000); // Auto reconnect
+        };
+    }
+}</code></pre></div>
+<hr>
+<h2>5. Summary &amp; Next Steps</h2>
+<p>In this lesson, you designed clean Client SDKs:</p>
+<ul>
+<li>Abstracted network protocol details behind simple class methods.</li>
+<li>Built reusable <strong>Python</strong> and <strong>JavaScript</strong> client SDKs.</li>
+<li>Handled network errors and automatic WebSocket reconnection.</li>
+</ul>
+<p>In <strong>Lesson 10</strong>, we will use this SDK to build the <strong>Modern Fleet Cockpit UI</strong>, mastering multi-layer Canvas rendering and coordinate transforms!</p>
+      </article>
+
+      <footer class="lesson-nav-footer">
+        <a href="lesson_08.html" class="nav-link-btn" >&larr; Previous Lesson</a>
+        <a href="../index.html" class="nav-link-btn">⚡ Enterprise Hub</a>
+        <a href="lesson_10.html" class="nav-link-btn" >Next Lesson &rarr;</a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../assets/js/highlight.min.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/quiz_engine.js"></script>
+  <script src="../assets/js/instructor_sync.js"></script>
+</body>
+</html>

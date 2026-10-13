@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 22: Industrial Mission Graph Dag Architecture | Level 2 Enterprise</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/highlight-dark.min.css">
+  <link rel="stylesheet" href="../assets/css/quiz.css">
+  <link rel="stylesheet" href="../assets/css/instructor_sync.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-container">
+      <a href="https://botforge.in" target="_blank" class="company-brand" title="Botforge Robotics - botforge.in">
+        <img src="../assets/images/botforge_black.png" alt="Botforge Robotics" class="company-logo">
+      </a>
+      <div class="brand-divider"></div>
+      <a href="../index.html" class="brand" title="Level 2: Enterprise Robotics & AI">
+        <img src="../assets/images/ros2_logo.svg" alt="ROS 2" class="brand-logo">
+        <span class="brand-title">NavPro Learning Hub</span>
+        <span class="badge-jazzy" style="background:#0284c7; color:#fff; border-color:#0284c7;">Level 2 Enterprise</span>
+      </a>
+    </div>
+    <div class="header-center">
+      <input type="text" id="lessonSearchInput" class="search-input" placeholder="🔍 Search Level 2 curriculum...">
+    </div>
+    <div class="header-actions">
+      <a href="http://localhost:6080/vnc.html" target="_blank" class="track-btn" title="Open Ubuntu Desktop GUI via noVNC">🖥️ Desktop GUI</a>
+      <a href="http://localhost:8443/?folder=/home/navpro/workspace" target="_blank" class="track-btn" title="Open VS Code in browser">💻 VS Code</a>
+      <a href="../index.html" class="track-btn active" style="background:#0284c7; color:#fff;">Architecture Hub</a>
+      <span class="theme-pill">☀️ Light Theme</span>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <aside class="app-sidebar">
+      <div class="progress-card">
+        <div class="progress-header">
+          <span>Enterprise Progress</span>
+          <span id="overallProgressText">0% Complete (0/24)</span>
+        </div>
+        <div class="progress-bar-track">
+          <div id="overallProgressBar" class="progress-bar-fill"></div>
+        </div>
+        <button id="resetProgressBtn" class="track-btn reset-btn" style="width:100%; margin-top:8px; justify-content:center;">↺ Reset Progress</button>
+      </div>
+
+      
+        <div class="sidebar-section-title">Enterprise &amp; AI Stack (24 Lessons)</div>
+        <ul class="lesson-list">
+          
+            <li>
+              <a href="lesson_01.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_01" onclick="event.stopPropagation();">
+                <span class="lesson-num">01</span>
+                <span class="lesson-title">Web Technologies For Roboticists Http Methods Json</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_02.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_02" onclick="event.stopPropagation();">
+                <span class="lesson-num">02</span>
+                <span class="lesson-title">Realtime Websockets Vs Http Polling</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_03.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_03" onclick="event.stopPropagation();">
+                <span class="lesson-num">03</span>
+                <span class="lesson-title">Enterprise System Architecture Dual Plane</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_04.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_04" onclick="event.stopPropagation();">
+                <span class="lesson-num">04</span>
+                <span class="lesson-title">High Concurrency Ros2 Multithreaded Executor</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_05.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_05" onclick="event.stopPropagation();">
+                <span class="lesson-num">05</span>
+                <span class="lesson-title">Fastapi Robotics Rest Gateway Pydantic</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_06.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_06" onclick="event.stopPropagation();">
+                <span class="lesson-num">06</span>
+                <span class="lesson-title">High Frequency Websocket Telemetry Broadcaster</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_07.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_07" onclick="event.stopPropagation();">
+                <span class="lesson-num">07</span>
+                <span class="lesson-title">Non Blocking Nav2 Action Dispatching</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_08.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_08" onclick="event.stopPropagation();">
+                <span class="lesson-num">08</span>
+                <span class="lesson-title">Day1 Capstone Navpro Api Gateway</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_09.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_09" onclick="event.stopPropagation();">
+                <span class="lesson-num">09</span>
+                <span class="lesson-title">Client Sdk Architecture Python Javascript</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_10.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_10" onclick="event.stopPropagation();">
+                <span class="lesson-num">10</span>
+                <span class="lesson-title">Modern Fleet Cockpit Architecture Canvas</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_11.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_11" onclick="event.stopPropagation();">
+                <span class="lesson-num">11</span>
+                <span class="lesson-title">Rendering 2D Slam Map Occupancy Grid</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_12.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_12" onclick="event.stopPropagation();">
+                <span class="lesson-num">12</span>
+                <span class="lesson-title">Live Robot Pose And Trajectory Rendering</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_13.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_13" onclick="event.stopPropagation();">
+                <span class="lesson-num">13</span>
+                <span class="lesson-title">Interactive Robot Controls Virtual Joystick</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_14.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_14" onclick="event.stopPropagation();">
+                <span class="lesson-num">14</span>
+                <span class="lesson-title">Waypoint Store And Interactive Map Markers</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_15.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_15" onclick="event.stopPropagation();">
+                <span class="lesson-num">15</span>
+                <span class="lesson-title">Enterprise Fleet Security Auth Rate Limiting</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_16.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_16" onclick="event.stopPropagation();">
+                <span class="lesson-num">16</span>
+                <span class="lesson-title">Day2 Capstone Interactive Web Cockpit</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_17.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_17" onclick="event.stopPropagation();">
+                <span class="lesson-num">17</span>
+                <span class="lesson-title">Physical Ai And Grounded Reasoning</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_18.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_18" onclick="event.stopPropagation();">
+                <span class="lesson-num">18</span>
+                <span class="lesson-title">Model Context Protocol Standard Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_19.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_19" onclick="event.stopPropagation();">
+                <span class="lesson-num">19</span>
+                <span class="lesson-title">Building Python Mcp Robotics Server</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_20.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_20" onclick="event.stopPropagation();">
+                <span class="lesson-num">20</span>
+                <span class="lesson-title">Deterministic Safety Barriers And Preflight Guards</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_21.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_21" onclick="event.stopPropagation();">
+                <span class="lesson-num">21</span>
+                <span class="lesson-title">Connecting Frontier Models Claude Gemini Antigravity</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_22.html" class="lesson-item active">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_22" onclick="event.stopPropagation();">
+                <span class="lesson-num">22</span>
+                <span class="lesson-title">Industrial Mission Graph Dag Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_23.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_23" onclick="event.stopPropagation();">
+                <span class="lesson-num">23</span>
+                <span class="lesson-title">Stateful Mission Runner And Ui Gates</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_24.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_24" onclick="event.stopPropagation();">
+                <span class="lesson-num">24</span>
+                <span class="lesson-title">Day3 Grand Capstone End To End Fleet Pipeline</span>
+              </a>
+            </li>
+            
+        </ul>
+        
+    </aside>
+
+    <main class="app-content">
+      <article class="markdown-body">
+        
+        <div class="concept-card">
+          <h3>⚡ Quick Concept Snapshot</h3>
+          <ul>
+            <li><strong>Human-in-the-Loop:</strong> Halts autonomous motion at designated assembly/inspection points until a human confirms.</li>
+            <li><strong>Interaction Gates:</strong> Broadcasts push notifications to Cockpit GUI and ESP32-S3 AMOLED Smartwatch Badges.</li>
+          </ul>
+        </div>
+        <h1>Lesson 22: Industrial Mission Graph &amp; DAG Architecture</h1>
+<h2>Learning Objectives</h2>
+<p>By the end of this lesson, you will be able to:</p>
+<ol>
+<li>Explain why industrial AMR operations require stateful <strong>Directed Acyclic Graphs (DAGs)</strong> rather than simple linear waypoint queues.</li>
+<li>Define the schema of <strong>NavPro Mission Graph Nodes</strong> (<code>navigation</code>, <code>delay</code>, <code>ui_interaction</code>, <code>condition_branch</code>, <code>dock</code>).</li>
+<li>Construct directed edge transitions supporting deterministic condition branches and error fallbacks.</li>
+<li>Implement topological sort and cycle-detection validation (Kahn&#x27;s algorithm) to guarantee execution termination.</li>
+<li>Contrast custom DAG JSON schemas with the physical NavPro Mini AMR&#x27;s <code>synthesize_and_save_graph_mission</code> tool and Cockpit visual node editor.</li>
+</ol>
+<hr>
+<h2>1. Why Linear Waypoint Lists Fail in Enterprise AMR Deployments</h2>
+<p>In introductory robotics tutorials, autonomous missions are often represented as a flat array:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-json">[&quot;go_to_wp_1&quot;, &quot;go_to_wp_2&quot;, &quot;go_to_dock&quot;]</code></pre></div>
+<p>In real-world manufacturing plants, warehouses, and hospitals, <strong>linear execution is insufficient</strong>:</p>
+<ul>
+<li><strong>Human-in-the-Loop Gating</strong>: The AMR arrives at Assembly Bay 3. It cannot move until an operator confirms that the pallet has been strapped.</li>
+<li><strong>Conditional Branching</strong>: The AMR reads a barcode. If the barcode is Valid &amp;rarr; route to Packing Station A; if Damaged &amp;rarr; route to Quarantine Bay B.</li>
+<li><strong>Error Recovery Branches</strong>: If path planning fails after 3 retries &amp;rarr; sound warning buzzer and divert to safe maintenance siding rather than stopping dead in the traffic lane.</li>
+</ul>
+<p>This requires a <strong>Mission Graph (DAG)</strong>:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-mermaid">graph TD
+    Start([Start Mission]) --&gt; N1[Nav: Assembly Bay 3]
+    N1 --&gt; N2[UI Gate: &#x27;Confirm Pallet Strapped?&#x27;]
+    N2 --&gt;|Operator clicks &#x27;Yes&#x27;| N3{Condition: Quality Check}
+    N2 --&gt;|Operator clicks &#x27;Cancel&#x27;| Abort[Divert to Siding]
+    N3 --&gt;|Pass| N4[Nav: Packing Station A]
+    N3 --&gt;|Fail / Defect| N5[Nav: Quarantine Bay B]
+    N4 --&gt; N6[Dock &amp; Charge]
+    N5 --&gt; N6
+    Abort --&gt; N6</code></pre></div>
+<hr>
+<h2>2. NavPro Mission Graph JSON Schema Specification</h2>
+<p>Let&#x27;s examine the standard JSON schema that defines a stateful mission graph:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-json">{
+  &quot;mission_id&quot;: &quot;mission_patrol_and_inspect_01&quot;,
+  &quot;name&quot;: &quot;Warehouse Inspection &amp; Pallet Transfer&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;start_node_id&quot;: &quot;nav_to_bay_1&quot;,
+  &quot;nodes&quot;: [
+    {
+      &quot;id&quot;: &quot;nav_to_bay_1&quot;,
+      &quot;type&quot;: &quot;navigation&quot;,
+      &quot;params&quot;: {
+        &quot;waypoint_id&quot;: &quot;assembly_bay_1&quot;,
+        &quot;tolerance_meters&quot;: 0.25
+      },
+      &quot;next_node_id&quot;: &quot;gate_operator_inspection&quot;
+    },
+    {
+      &quot;id&quot;: &quot;gate_operator_inspection&quot;,
+      &quot;type&quot;: &quot;ui_interaction&quot;,
+      &quot;params&quot;: {
+        &quot;title&quot;: &quot;Pallet Transfer Ready&quot;,
+        &quot;prompt&quot;: &quot;Operator: Confirm parts are loaded onto tray.&quot;,
+        &quot;options&quot;: [&quot;Confirmed&quot;, &quot;Reject / Empty&quot;],
+        &quot;timeout_seconds&quot;: 300
+      },
+      &quot;conditional_transitions&quot;: {
+        &quot;Confirmed&quot;: &quot;nav_to_storage&quot;,
+        &quot;Reject / Empty&quot;: &quot;nav_to_dock&quot;
+      }
+    },
+    {
+      &quot;id&quot;: &quot;nav_to_storage&quot;,
+      &quot;type&quot;: &quot;navigation&quot;,
+      &quot;params&quot;: {
+        &quot;waypoint_id&quot;: &quot;storage_bay_b&quot;,
+        &quot;tolerance_meters&quot;: 0.25
+      },
+      &quot;next_node_id&quot;: &quot;delay_settle&quot;
+    },
+    {
+      &quot;id&quot;: &quot;delay_settle&quot;,
+      &quot;type&quot;: &quot;delay&quot;,
+      &quot;params&quot;: {
+        &quot;duration_seconds&quot;: 5.0
+      },
+      &quot;next_node_id&quot;: &quot;nav_to_dock&quot;
+    },
+    {
+      &quot;id&quot;: &quot;nav_to_dock&quot;,
+      &quot;type&quot;: &quot;dock&quot;,
+      &quot;params&quot;: {
+        &quot;dock_id&quot;: &quot;charging_dock_1&quot;
+      },
+      &quot;next_node_id&quot;: null
+    }
+  ]
+}</code></pre></div>
+<hr>
+<h2>3. Core Mission Node Types</h2>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th>Node Type</th>
+<th>Execution Behavior</th>
+<th>Output State / Branch Keys</th>
+</tr></thead><tbody>
+<tr>
+<td><strong><code>navigation</code></strong></td>
+<td>Dispatches Nav2 action goal to coordinates or named waypoint. Blocks until goal reached.</td>
+<td><code>SUCCESS</code>, <code>ABORTED</code>, <code>CANCELED</code></td>
+</tr>
+<tr>
+<td><strong><code>delay</code></strong></td>
+<td>Pauses mission execution for $N$ seconds (e.g. sensor readings, mechanical latching).</td>
+<td><code>SUCCESS</code></td>
+</tr>
+<tr>
+<td><strong><code>ui_interaction</code></strong></td>
+<td>Displays interactive prompt on Cockpit GUI and ESP32 smartwatch. Suspends execution until operator responds.</td>
+<td>Selected Option String (e.g. <code>&quot;Confirmed&quot;</code>, <code>&quot;Reject&quot;</code>)</td>
+</tr>
+<tr>
+<td><strong><code>condition_branch</code></strong></td>
+<td>Evaluates a boolean logic expression against telemetry (e.g. <code>battery_soc &gt; 50</code>).</td>
+<td><code>&quot;true&quot;</code>, <code>&quot;false&quot;</code></td>
+</tr>
+<tr>
+<td><strong><code>dock</code></strong></td>
+<td>Invokes precision infrared / laser docking server. Terminal or intermediate state.</td>
+<td><code>SUCCESS</code>, <code>DOCK_FAILED</code></td>
+</tr>
+</tbody></table></div>
+<hr>
+<h2>4. Graph Validation: Detecting Cycles &amp; Dangling Edges</h2>
+<p>Before executing a mission graph on physical hardware, we must mathematically guarantee that:</p>
+<ol>
+<li>Every referenced <code>next_node_id</code> exists in the node list (no dangling pointers).</li>
+<li>The graph contains <strong>no infinite cycles</strong> (is a true DAG).</li>
+<li>Every path terminates cleanly at an exit node (<code>next_node_id: null</code>).</li>
+</ol>
+<p>Here is the validation algorithm using Kahn&#x27;s topological sort in Python (<code>level2/scripts/validate_mission_graph.py</code>):</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python">&quot;&quot;&quot;
+Mission Graph Topological Validator (Kahn&#x27;s Algorithm)
+&quot;&quot;&quot;
+
+from typing import Dict, Any, List, Set
+
+class MissionGraphValidationError(Exception):
+    pass
+
+def validate_mission_graph(graph_data: Dict[str, Any]) -&gt; bool:
+    nodes = {node[&quot;id&quot;]: node for node in graph_data.get(&quot;nodes&quot;, [])}
+    if not nodes:
+        raise MissionGraphValidationError(&quot;Graph contains no nodes.&quot;)
+
+    start_node = graph_data.get(&quot;start_node_id&quot;)
+    if start_node not in nodes:
+        raise MissionGraphValidationError(f&quot;start_node_id &#x27;{start_node}&#x27; not found in nodes.&quot;)
+
+    # 1. Build adjacency list &amp; compute in-degrees
+    in_degree = {nid: 0 for nid in nodes}
+    adjacency: Dict[str, List[str]] = {nid: [] for nid in nodes}
+
+    for nid, node in nodes.items():
+        # Check direct next_node_id
+        next_id = node.get(&quot;next_node_id&quot;)
+        if next_id:
+            if next_id not in nodes:
+                raise MissionGraphValidationError(f&quot;Node &#x27;{nid}&#x27; references non-existent node &#x27;{next_id}&#x27;.&quot;)
+            adjacency[nid].append(next_id)
+            in_degree[next_id] += 1
+
+        # Check conditional transitions
+        cond_trans = node.get(&quot;conditional_transitions&quot;, {})
+        for option, target_id in cond_trans.items():
+            if target_id not in nodes:
+                raise MissionGraphValidationError(f&quot;Conditional transition &#x27;{option}&#x27; in &#x27;{nid}&#x27; references non-existent node &#x27;{target_id}&#x27;.&quot;)
+            adjacency[nid].append(target_id)
+            in_degree[target_id] += 1
+
+    # 2. Kahn&#x27;s Algorithm: Cycle Detection
+    queue = [nid for nid, deg in in_degree.items() if deg == 0]
+    visited_count = 0
+
+    while queue:
+        curr = queue.pop(0)
+        visited_count += 1
+        for neighbor in adjacency[curr]:
+            in_degree[neighbor] -= 1
+            if in_degree[neighbor] == 0:
+                queue.append(neighbor)
+
+    if visited_count != len(nodes):
+        raise MissionGraphValidationError(&quot;Cycle detected! Mission graph must be a Directed Acyclic Graph (DAG).&quot;)
+
+    return True</code></pre></div>
+<hr>
+<h2>5. Physical AMR Parity: NavPro Mini&#x27;s MCP Mission Synthesis</h2>
+<p>On the physical <strong>NavPro Mini AMR</strong>, Frontier AI models synthesize complete mission DAGs directly from voice or chat using the MCP tool:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python">call_mcp_tool(
+    ServerName=&quot;navpromini&quot;,
+    ToolName=&quot;synthesize_and_save_graph_mission&quot;,
+    Arguments={
+        &quot;mission_name&quot;: &quot;Shift Change Patrol&quot;,
+        &quot;nodes&quot;: [...],
+        &quot;start_node_id&quot;: &quot;nav_to_bay_1&quot;
+    }
+)</code></pre></div>
+<p>In the NavPro Cockpit, human operators can inspect the synthesized graph visually, re-order nodes with drag-and-drop, and monitor live progress as nodes change color from <strong>PENDING</strong> &amp;rarr; <strong>RUNNING</strong> &amp;rarr; <strong>COMPLETED</strong>.</p>
+<hr>
+<h2>Summary</h2>
+<ul>
+<li>Industrial AMR workflows require <strong>Directed Acyclic Graphs (DAGs)</strong> to handle human approvals, condition branches, and fault recoveries.</li>
+<li>Nodes represent discrete operations (<code>navigation</code>, <code>ui_interaction</code>, <code>delay</code>, <code>dock</code>); edges represent state transitions.</li>
+<li>Graph validation using Kahn&#x27;s algorithm guarantees absence of dangling edges or infinite cycles before physical actuation.</li>
+<li>In <strong>Lesson 23</strong>, we will build the <strong>Stateful Mission Runner Engine</strong> that executes this DAG and dispatches UI approval cards to web and smartwatch badges!</li>
+</ul>
+      </article>
+
+      <footer class="lesson-nav-footer">
+        <a href="lesson_21.html" class="nav-link-btn" >&larr; Previous Lesson</a>
+        <a href="../index.html" class="nav-link-btn">⚡ Enterprise Hub</a>
+        <a href="lesson_23.html" class="nav-link-btn" >Next Lesson &rarr;</a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../assets/js/highlight.min.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/quiz_engine.js"></script>
+  <script src="../assets/js/instructor_sync.js"></script>
+</body>
+</html>

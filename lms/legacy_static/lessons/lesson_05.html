@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 05: Fastapi Robotics Rest Gateway Pydantic | Level 2 Enterprise</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/highlight-dark.min.css">
+  <link rel="stylesheet" href="../assets/css/quiz.css">
+  <link rel="stylesheet" href="../assets/css/instructor_sync.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-container">
+      <a href="https://botforge.in" target="_blank" class="company-brand" title="Botforge Robotics - botforge.in">
+        <img src="../assets/images/botforge_black.png" alt="Botforge Robotics" class="company-logo">
+      </a>
+      <div class="brand-divider"></div>
+      <a href="../index.html" class="brand" title="Level 2: Enterprise Robotics & AI">
+        <img src="../assets/images/ros2_logo.svg" alt="ROS 2" class="brand-logo">
+        <span class="brand-title">NavPro Learning Hub</span>
+        <span class="badge-jazzy" style="background:#0284c7; color:#fff; border-color:#0284c7;">Level 2 Enterprise</span>
+      </a>
+    </div>
+    <div class="header-center">
+      <input type="text" id="lessonSearchInput" class="search-input" placeholder="🔍 Search Level 2 curriculum...">
+    </div>
+    <div class="header-actions">
+      <a href="http://localhost:6080/vnc.html" target="_blank" class="track-btn" title="Open Ubuntu Desktop GUI via noVNC">🖥️ Desktop GUI</a>
+      <a href="http://localhost:8443/?folder=/home/navpro/workspace" target="_blank" class="track-btn" title="Open VS Code in browser">💻 VS Code</a>
+      <a href="../index.html" class="track-btn active" style="background:#0284c7; color:#fff;">Architecture Hub</a>
+      <span class="theme-pill">☀️ Light Theme</span>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <aside class="app-sidebar">
+      <div class="progress-card">
+        <div class="progress-header">
+          <span>Enterprise Progress</span>
+          <span id="overallProgressText">0% Complete (0/24)</span>
+        </div>
+        <div class="progress-bar-track">
+          <div id="overallProgressBar" class="progress-bar-fill"></div>
+        </div>
+        <button id="resetProgressBtn" class="track-btn reset-btn" style="width:100%; margin-top:8px; justify-content:center;">↺ Reset Progress</button>
+      </div>
+
+      
+        <div class="sidebar-section-title">Enterprise &amp; AI Stack (24 Lessons)</div>
+        <ul class="lesson-list">
+          
+            <li>
+              <a href="lesson_01.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_01" onclick="event.stopPropagation();">
+                <span class="lesson-num">01</span>
+                <span class="lesson-title">Web Technologies For Roboticists Http Methods Json</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_02.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_02" onclick="event.stopPropagation();">
+                <span class="lesson-num">02</span>
+                <span class="lesson-title">Realtime Websockets Vs Http Polling</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_03.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_03" onclick="event.stopPropagation();">
+                <span class="lesson-num">03</span>
+                <span class="lesson-title">Enterprise System Architecture Dual Plane</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_04.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_04" onclick="event.stopPropagation();">
+                <span class="lesson-num">04</span>
+                <span class="lesson-title">High Concurrency Ros2 Multithreaded Executor</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_05.html" class="lesson-item active">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_05" onclick="event.stopPropagation();">
+                <span class="lesson-num">05</span>
+                <span class="lesson-title">Fastapi Robotics Rest Gateway Pydantic</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_06.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_06" onclick="event.stopPropagation();">
+                <span class="lesson-num">06</span>
+                <span class="lesson-title">High Frequency Websocket Telemetry Broadcaster</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_07.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_07" onclick="event.stopPropagation();">
+                <span class="lesson-num">07</span>
+                <span class="lesson-title">Non Blocking Nav2 Action Dispatching</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_08.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_08" onclick="event.stopPropagation();">
+                <span class="lesson-num">08</span>
+                <span class="lesson-title">Day1 Capstone Navpro Api Gateway</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_09.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_09" onclick="event.stopPropagation();">
+                <span class="lesson-num">09</span>
+                <span class="lesson-title">Client Sdk Architecture Python Javascript</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_10.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_10" onclick="event.stopPropagation();">
+                <span class="lesson-num">10</span>
+                <span class="lesson-title">Modern Fleet Cockpit Architecture Canvas</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_11.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_11" onclick="event.stopPropagation();">
+                <span class="lesson-num">11</span>
+                <span class="lesson-title">Rendering 2D Slam Map Occupancy Grid</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_12.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_12" onclick="event.stopPropagation();">
+                <span class="lesson-num">12</span>
+                <span class="lesson-title">Live Robot Pose And Trajectory Rendering</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_13.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_13" onclick="event.stopPropagation();">
+                <span class="lesson-num">13</span>
+                <span class="lesson-title">Interactive Robot Controls Virtual Joystick</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_14.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_14" onclick="event.stopPropagation();">
+                <span class="lesson-num">14</span>
+                <span class="lesson-title">Waypoint Store And Interactive Map Markers</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_15.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_15" onclick="event.stopPropagation();">
+                <span class="lesson-num">15</span>
+                <span class="lesson-title">Enterprise Fleet Security Auth Rate Limiting</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_16.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_16" onclick="event.stopPropagation();">
+                <span class="lesson-num">16</span>
+                <span class="lesson-title">Day2 Capstone Interactive Web Cockpit</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_17.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_17" onclick="event.stopPropagation();">
+                <span class="lesson-num">17</span>
+                <span class="lesson-title">Physical Ai And Grounded Reasoning</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_18.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_18" onclick="event.stopPropagation();">
+                <span class="lesson-num">18</span>
+                <span class="lesson-title">Model Context Protocol Standard Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_19.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_19" onclick="event.stopPropagation();">
+                <span class="lesson-num">19</span>
+                <span class="lesson-title">Building Python Mcp Robotics Server</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_20.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_20" onclick="event.stopPropagation();">
+                <span class="lesson-num">20</span>
+                <span class="lesson-title">Deterministic Safety Barriers And Preflight Guards</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_21.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_21" onclick="event.stopPropagation();">
+                <span class="lesson-num">21</span>
+                <span class="lesson-title">Connecting Frontier Models Claude Gemini Antigravity</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_22.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_22" onclick="event.stopPropagation();">
+                <span class="lesson-num">22</span>
+                <span class="lesson-title">Industrial Mission Graph Dag Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_23.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_23" onclick="event.stopPropagation();">
+                <span class="lesson-num">23</span>
+                <span class="lesson-title">Stateful Mission Runner And Ui Gates</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_24.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_24" onclick="event.stopPropagation();">
+                <span class="lesson-num">24</span>
+                <span class="lesson-title">Day3 Grand Capstone End To End Fleet Pipeline</span>
+              </a>
+            </li>
+            
+        </ul>
+        
+    </aside>
+
+    <main class="app-content">
+      <article class="markdown-body">
+        <h1>Lesson 05: Building the Robot REST API Gateway with FastAPI</h1>
+<p>In Lesson 04, we implemented the thread-safe <code>MultiThreadedExecutor</code> background worker. Now, we will wrap this worker inside <strong>FastAPI</strong>, building our production REST API Gateway.</p>
+<p>FastAPI is the industry standard for high-performance Python microservices. Built on the <strong>Asynchronous Server Gateway Interface (ASGI)</strong>, it provides asynchronous non-blocking request handling, automated Pydantic v2 validation, and auto-generated Swagger documentation.</p>
+<hr>
+<h2>1. Learning Objectives</h2>
+<p>By the end of this lesson, you will be able to:</p>
+<ol>
+<li>Embed the <code>rclpy</code> background daemon into FastAPI using modern <code>@asynccontextmanager</code> <strong>lifespans</strong>.</li>
+<li>Define Pydantic v2 data models that enforce physical velocity limits ($[-1.0, 1.0]\,\text{m/s}$) and coordinate bounds.</li>
+<li>Construct core REST endpoints: <code>GET /api/v1/system/health</code>, <code>GET /api/v1/telemetry</code>, <code>POST /api/v1/teleop</code>, and <code>POST /api/v1/emergency_stop</code>.</li>
+<li>Automatically generate interactive OpenAPI (Swagger) documentation at <code>/docs</code>.</li>
+<li>Test endpoints using <code>curl</code> and verify automated HTTP 422 input rejection.</li>
+</ol>
+<hr>
+<h2>2. Lifespan Management: Starting &amp; Stopping ROS 2 in FastAPI</h2>
+<p>In modern FastAPI, the <code>@asynccontextmanager lifespan</code> pattern manages external background services during server startup and shutdown:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python">from contextlib import asynccontextmanager
+from fastapi import FastAPI
+import rclpy
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Startup: Initialize ROS 2 and spawn background worker
+    print(&quot;[FastAPI Lifespan] Initializing ROS 2 Jazzy subsystem...&quot;)
+    rclpy.init()
+    # (Launch background MultiThreadedExecutor thread here...)
+    yield
+    # Shutdown: Halt robot and teardown cleanly
+    print(&quot;[FastAPI Lifespan] Shutting down ROS 2 subsystems cleanly...&quot;)
+    if rclpy.ok():
+        rclpy.shutdown()
+
+app = FastAPI(
+    title=&quot;NavPro Robot API Gateway&quot;,
+    version=&quot;2.0.0&quot;,
+    lifespan=lifespan
+)</code></pre></div>
+<hr>
+<h2>3. Pydantic v2 Robotics Data Models</h2>
+<p>Pydantic v2 enforces physical safety constraints before any command reaches the ROS 2 <code>/cmd_vel</code> publisher:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python">from pydantic import BaseModel, Field, field_validator
+from typing import Dict, Any
+import math
+
+class TeleopPayload(BaseModel):
+    &quot;&quot;&quot;Payload for manual velocity commands.&quot;&quot;&quot;
+    linear_x: float = Field(
+        ...,
+        ge=-1.0,
+        le=1.0,
+        description=&quot;Forward/reverse velocity setpoint (m/s). Clamped between -1.0 and +1.0.&quot;
+    )
+    angular_z: float = Field(
+        ...,
+        ge=-2.0,
+        le=2.0,
+        description=&quot;Rotational velocity setpoint (rad/s). Clamped between -2.0 and +2.0.&quot;
+    )
+
+    @field_validator(&#x27;linear_x&#x27;, &#x27;angular_z&#x27;)
+    @classmethod
+    def check_finite(cls, v: float) -&gt; float:
+        if math.isnan(v) or math.isinf(v):
+            raise ValueError(&quot;Velocity cannot be NaN or Infinite.&quot;)
+        return v
+
+
+class NavigationGoalPayload(BaseModel):
+    &quot;&quot;&quot;Payload for dispatching an autonomous navigation waypoint.&quot;&quot;&quot;
+    x: float = Field(..., ge=-50.0, le=50.0, description=&quot;Target X coordinate in map frame (m).&quot;)
+    y: float = Field(..., ge=-50.0, le=50.0, description=&quot;Target Y coordinate in map frame (m).&quot;)
+    yaw: float = Field(0.0, ge=-math.pi, le=math.pi, description=&quot;Target orientation yaw angle (rad).&quot;)
+
+
+class SystemHealthResponse(BaseModel):
+    &quot;&quot;&quot;System health snapshot response.&quot;&quot;&quot;
+    robot_id: str = &quot;navpro-mini-amr&quot;
+    status: str
+    is_online: bool
+    battery_percentage: float
+    estop_active: bool
+    current_position: Dict[str, float]
+    ros2_connected: bool
+    timestamp: float</code></pre></div>
+<hr>
+<h2>4. Mounting the REST Endpoints</h2>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python">from fastapi import APIRouter, HTTPException, status
+from geometry_msgs.msg import Twist
+
+router = APIRouter(prefix=&quot;/api/v1&quot;, tags=[&quot;Robotics Core APIs&quot;])
+
+
+@router.get(&quot;/system/health&quot;, response_model=SystemHealthResponse)
+async def get_system_health():
+    &quot;&quot;&quot;Returns real-time health, connectivity, and battery status.&quot;&quot;&quot;
+    snapshot = robot_state.get_snapshot()
+    return SystemHealthResponse(
+        robot_id=&quot;navpro-mini-amr&quot;,
+        status=&quot;ESTOP&quot; if snapshot[&quot;emergency_stop&quot;] else &quot;OPERATIONAL&quot;,
+        is_online=True,
+        battery_percentage=snapshot[&quot;battery_percentage&quot;],
+        estop_active=snapshot[&quot;emergency_stop&quot;],
+        current_position={
+            &quot;x&quot;: round(snapshot[&quot;x&quot;], 3),
+            &quot;y&quot;: round(snapshot[&quot;y&quot;], 3),
+            &quot;yaw&quot;: round(snapshot[&quot;yaw&quot;], 3)
+        },
+        ros2_connected=rclpy.ok(),
+        timestamp=snapshot[&quot;timestamp&quot;]
+    )
+
+
+@router.post(&quot;/teleop&quot;, status_code=status.HTTP_200_OK)
+async def manual_teleop(cmd: TeleopPayload):
+    &quot;&quot;&quot;Publishes velocity commands to the ROS 2 /cmd_vel topic.&quot;&quot;&quot;
+    snapshot = robot_state.get_snapshot()
+    if snapshot[&quot;emergency_stop&quot;]:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail=&quot;Cannot execute teleop: Hardware Emergency Stop is currently ENGAGED!&quot;
+        )
+
+    # Publish Twist to ROS 2
+    twist = Twist()
+    twist.linear.x = float(cmd.linear_x)
+    twist.angular.z = float(cmd.angular_z)
+    ros2_node.cmd_vel_pub.publish(twist)
+
+    return {&quot;status&quot;: &quot;COMMAND_ACCEPTED&quot;, &quot;linear_x&quot;: cmd.linear_x, &quot;angular_z&quot;: cmd.angular_z}
+
+
+@router.post(&quot;/emergency_stop&quot;, status_code=status.HTTP_200_OK)
+async def trigger_emergency_stop():
+    &quot;&quot;&quot;Immediately stops the robot and engages software E-Stop.&quot;&quot;&quot;
+    zero_twist = Twist()
+    for _ in range(5):
+        ros2_node.cmd_vel_pub.publish(zero_twist)
+
+    robot_state.set_estop(True)
+    return {&quot;status&quot;: &quot;ESTOP_ENGAGED&quot;, &quot;detail&quot;: &quot;Motors cut off immediately.&quot;}</code></pre></div>
+<hr>
+<h2>5. Testing with <code>curl</code> &amp; Swagger UI</h2>
+<p>Launch your server:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-bash">uvicorn server:app --host 0.0.0.0 --port 8080</code></pre></div>
+<ol>
+<li><strong>Test Valid Teleop Command:</strong></li>
+</ol>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-bash">   curl -X POST http://localhost:8080/api/v1/teleop \
+        -H &quot;Content-Type: application/json&quot; \
+        -d &#x27;{&quot;linear_x&quot;: 0.5, &quot;angular_z&quot;: 0.2}&#x27; | jq .</code></pre></div>
+<p><em>Response: <code>HTTP 200 OK</code> <code>{&quot;status&quot;: &quot;COMMAND_ACCEPTED&quot;}</code></em></p>
+<ol>
+<li><strong>Test Safety Rejection (Overspeeding):</strong></li>
+</ol>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-bash">   curl -X POST http://localhost:8080/api/v1/teleop \
+        -H &quot;Content-Type: application/json&quot; \
+        -d &#x27;{&quot;linear_x&quot;: 99.0, &quot;angular_z&quot;: 0.0}&#x27; | jq .</code></pre></div>
+<p><em>Response: <code>HTTP 422 Unprocessable Entity</code> — Pydantic automatically rejects the unsafe velocity without executing!</em></p>
+<ol>
+<li><strong>Open Swagger UI:</strong> Navigate to <code>http://localhost:8080/docs</code> in your browser to interactively test every endpoint!</li>
+</ol>
+<hr>
+<h2>6. Summary &amp; Next Steps</h2>
+<p>In this lesson, you built the core REST API Gateway:</p>
+<ul>
+<li>Configured FastAPI with <strong><code>@asynccontextmanager lifespan</code></strong> for background ROS 2 management.</li>
+<li>Enforced physical velocity limits using <strong>Pydantic v2 schemas</strong>.</li>
+<li>Protected the robot from invalid inputs with automated <code>422</code> error responses.</li>
+</ul>
+<p>In <strong>Lesson 06</strong>, we will add the <strong>High-Frequency 20Hz WebSocket Telemetry Broadcaster</strong> to stream live robot coordinates to the web!</p>
+      </article>
+
+      <footer class="lesson-nav-footer">
+        <a href="lesson_04.html" class="nav-link-btn" >&larr; Previous Lesson</a>
+        <a href="../index.html" class="nav-link-btn">⚡ Enterprise Hub</a>
+        <a href="lesson_06.html" class="nav-link-btn" >Next Lesson &rarr;</a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../assets/js/highlight.min.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/quiz_engine.js"></script>
+  <script src="../assets/js/instructor_sync.js"></script>
+</body>
+</html>

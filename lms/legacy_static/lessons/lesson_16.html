@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 16: Day2 Capstone Interactive Web Cockpit | Level 2 Enterprise</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/highlight-dark.min.css">
+  <link rel="stylesheet" href="../assets/css/quiz.css">
+  <link rel="stylesheet" href="../assets/css/instructor_sync.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-container">
+      <a href="https://botforge.in" target="_blank" class="company-brand" title="Botforge Robotics - botforge.in">
+        <img src="../assets/images/botforge_black.png" alt="Botforge Robotics" class="company-logo">
+      </a>
+      <div class="brand-divider"></div>
+      <a href="../index.html" class="brand" title="Level 2: Enterprise Robotics & AI">
+        <img src="../assets/images/ros2_logo.svg" alt="ROS 2" class="brand-logo">
+        <span class="brand-title">NavPro Learning Hub</span>
+        <span class="badge-jazzy" style="background:#0284c7; color:#fff; border-color:#0284c7;">Level 2 Enterprise</span>
+      </a>
+    </div>
+    <div class="header-center">
+      <input type="text" id="lessonSearchInput" class="search-input" placeholder="🔍 Search Level 2 curriculum...">
+    </div>
+    <div class="header-actions">
+      <a href="http://localhost:6080/vnc.html" target="_blank" class="track-btn" title="Open Ubuntu Desktop GUI via noVNC">🖥️ Desktop GUI</a>
+      <a href="http://localhost:8443/?folder=/home/navpro/workspace" target="_blank" class="track-btn" title="Open VS Code in browser">💻 VS Code</a>
+      <a href="../index.html" class="track-btn active" style="background:#0284c7; color:#fff;">Architecture Hub</a>
+      <span class="theme-pill">☀️ Light Theme</span>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <aside class="app-sidebar">
+      <div class="progress-card">
+        <div class="progress-header">
+          <span>Enterprise Progress</span>
+          <span id="overallProgressText">0% Complete (0/24)</span>
+        </div>
+        <div class="progress-bar-track">
+          <div id="overallProgressBar" class="progress-bar-fill"></div>
+        </div>
+        <button id="resetProgressBtn" class="track-btn reset-btn" style="width:100%; margin-top:8px; justify-content:center;">↺ Reset Progress</button>
+      </div>
+
+      
+        <div class="sidebar-section-title">Enterprise &amp; AI Stack (24 Lessons)</div>
+        <ul class="lesson-list">
+          
+            <li>
+              <a href="lesson_01.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_01" onclick="event.stopPropagation();">
+                <span class="lesson-num">01</span>
+                <span class="lesson-title">Web Technologies For Roboticists Http Methods Json</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_02.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_02" onclick="event.stopPropagation();">
+                <span class="lesson-num">02</span>
+                <span class="lesson-title">Realtime Websockets Vs Http Polling</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_03.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_03" onclick="event.stopPropagation();">
+                <span class="lesson-num">03</span>
+                <span class="lesson-title">Enterprise System Architecture Dual Plane</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_04.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_04" onclick="event.stopPropagation();">
+                <span class="lesson-num">04</span>
+                <span class="lesson-title">High Concurrency Ros2 Multithreaded Executor</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_05.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_05" onclick="event.stopPropagation();">
+                <span class="lesson-num">05</span>
+                <span class="lesson-title">Fastapi Robotics Rest Gateway Pydantic</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_06.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_06" onclick="event.stopPropagation();">
+                <span class="lesson-num">06</span>
+                <span class="lesson-title">High Frequency Websocket Telemetry Broadcaster</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_07.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_07" onclick="event.stopPropagation();">
+                <span class="lesson-num">07</span>
+                <span class="lesson-title">Non Blocking Nav2 Action Dispatching</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_08.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_08" onclick="event.stopPropagation();">
+                <span class="lesson-num">08</span>
+                <span class="lesson-title">Day1 Capstone Navpro Api Gateway</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_09.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_09" onclick="event.stopPropagation();">
+                <span class="lesson-num">09</span>
+                <span class="lesson-title">Client Sdk Architecture Python Javascript</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_10.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_10" onclick="event.stopPropagation();">
+                <span class="lesson-num">10</span>
+                <span class="lesson-title">Modern Fleet Cockpit Architecture Canvas</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_11.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_11" onclick="event.stopPropagation();">
+                <span class="lesson-num">11</span>
+                <span class="lesson-title">Rendering 2D Slam Map Occupancy Grid</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_12.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_12" onclick="event.stopPropagation();">
+                <span class="lesson-num">12</span>
+                <span class="lesson-title">Live Robot Pose And Trajectory Rendering</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_13.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_13" onclick="event.stopPropagation();">
+                <span class="lesson-num">13</span>
+                <span class="lesson-title">Interactive Robot Controls Virtual Joystick</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_14.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_14" onclick="event.stopPropagation();">
+                <span class="lesson-num">14</span>
+                <span class="lesson-title">Waypoint Store And Interactive Map Markers</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_15.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_15" onclick="event.stopPropagation();">
+                <span class="lesson-num">15</span>
+                <span class="lesson-title">Enterprise Fleet Security Auth Rate Limiting</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_16.html" class="lesson-item active">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_16" onclick="event.stopPropagation();">
+                <span class="lesson-num">16</span>
+                <span class="lesson-title">Day2 Capstone Interactive Web Cockpit</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_17.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_17" onclick="event.stopPropagation();">
+                <span class="lesson-num">17</span>
+                <span class="lesson-title">Physical Ai And Grounded Reasoning</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_18.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_18" onclick="event.stopPropagation();">
+                <span class="lesson-num">18</span>
+                <span class="lesson-title">Model Context Protocol Standard Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_19.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_19" onclick="event.stopPropagation();">
+                <span class="lesson-num">19</span>
+                <span class="lesson-title">Building Python Mcp Robotics Server</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_20.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_20" onclick="event.stopPropagation();">
+                <span class="lesson-num">20</span>
+                <span class="lesson-title">Deterministic Safety Barriers And Preflight Guards</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_21.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_21" onclick="event.stopPropagation();">
+                <span class="lesson-num">21</span>
+                <span class="lesson-title">Connecting Frontier Models Claude Gemini Antigravity</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_22.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_22" onclick="event.stopPropagation();">
+                <span class="lesson-num">22</span>
+                <span class="lesson-title">Industrial Mission Graph Dag Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_23.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_23" onclick="event.stopPropagation();">
+                <span class="lesson-num">23</span>
+                <span class="lesson-title">Stateful Mission Runner And Ui Gates</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_24.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_24" onclick="event.stopPropagation();">
+                <span class="lesson-num">24</span>
+                <span class="lesson-title">Day3 Grand Capstone End To End Fleet Pipeline</span>
+              </a>
+            </li>
+            
+        </ul>
+        
+    </aside>
+
+    <main class="app-content">
+      <article class="markdown-body">
+        <h1>Lesson 16: Day 2 Capstone — The Full Interactive Web Cockpit</h1>
+<p>Congratulations on reaching the <strong>Day 2 Capstone</strong>! Today, you designed client SDKs, implemented layered Canvas graphics, decoded SLAM occupancy grids, and built interactive virtual joysticks and waypoint stores.</p>
+<p>In this capstone project, you will deploy and operate the complete <strong>Interactive Web Cockpit</strong>, connecting directly to both the Level 1 simulated robot and the physical <strong>NavPro Mini AMR</strong>.</p>
+<hr>
+<h2>1. Project Specifications</h2>
+<p>Your objective is to run and test the complete frontend cockpit stack:</p>
+<ul>
+<li><strong>Client SDK:</strong> <a href="../web/assets/js/app.js"><code>navpro_client.js</code></a></li>
+<li><strong>API Gateway Backend:</strong> <a href="../ros2_ws/src/navpro_api_gateway/navpro_api_gateway/gateway_node.py"><code>gateway_node.py</code></a></li>
+<li><strong>Interactive Web Interface:</strong> <a href="../web/index.html"><code>web/index.html</code></a></li>
+</ul>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-mermaid">graph TD
+    subgraph Day2_Capstone[&quot;Day 2 Capstone Verification Pipeline&quot;]
+        A[&quot;1. Launch Gateway &amp; Web Server&quot;] --&gt; B[&quot;2. Verify 2D SLAM Map Loading on Canvas&quot;]
+        B --&gt; C[&quot;3. Verify 60 FPS Live Robot Pose &amp; Heading Marker&quot;]
+        C --&gt; D[&quot;4. Test Virtual Joystick Manual Teleoperation&quot;]
+        D --&gt; E[&quot;5. Save New Landmark (&#x27;inspection_bay_1&#x27;)&quot;]
+        E --&gt; F[&quot;6. Click-to-Navigate 2D Nav Goal via Map Canvas&quot;]
+        F --&gt; G[&quot;7. Trigger Emergency Stop from Web Dashboard&quot;]
+    end</code></pre></div>
+<hr>
+<h2>2. Step-by-Step Execution Guide</h2>
+<h3>Step 1: Launch the Robot API Gateway</h3>
+<p>In your terminal, start the ROS 2 gateway node:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-bash">cd ~/ros2_ws
+source install/setup.bash
+ros2 launch navpro_api_gateway gateway.launch.py</code></pre></div>
+<h3>Step 2: Open the Web Cockpit in Your Browser</h3>
+<p>Navigate to the NavPro Learning Hub interface:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-bash">http://localhost:8000</code></pre></div>
+<hr>
+<h2>3. Interactive Cockpit Verification Checklist</h2>
+<p>Open your browser and verify each interactive subsystem:</p>
+<h3>Checklist Item 1: 2D SLAM Map &amp; Heading Alignment</h3>
+<ul>
+<li>Inspect Canvas Layer 1. The grayscale occupancy grid of your warehouse/room displays with crisp obstacle borders.</li>
+<li>The blue robot marker sits centered at $(0, 0)$ with a white directional heading pointer pointing along $+X$.</li>
+</ul>
+<h3>Checklist Item 2: Virtual Touch Joystick Teleop</h3>
+<ul>
+<li>Click and drag the on-screen joystick thumb knob forward.</li>
+<li>Notice the linear velocity gauge increment to $+0.4\,\text{m/s}$.</li>
+<li>The robot marker advances on the map in real time.</li>
+<li>Release the joystick: the thumb knob snaps back to center and velocity cuts off to $0.0\,\text{m/s}$ immediately (deadman safety verified!).</li>
+</ul>
+<h3>Checklist Item 3: Waypoint Store Management</h3>
+<ul>
+<li>Drive the robot over to an interesting location on the map.</li>
+<li>Click the <strong>&quot;Save Current Location as Waypoint&quot;</strong> button in the sidebar.</li>
+<li>Enter the landmark name: <code>assembly_table_a</code>.</li>
+<li>A custom styled map pin appears at that exact coordinate on the canvas!</li>
+</ul>
+<h3>Checklist Item 4: Click-to-Navigate 2D Nav Goal</h3>
+<ul>
+<li>Click any open white space on the map and drag slightly to indicate desired orientation.</li>
+<li>The browser dispatches an asynchronous Nav2 goal via the Client SDK.</li>
+<li>A glowing dashed blue path line appears connecting the robot to your target goal.</li>
+<li>Watch the robot track the planned path until it reaches the target coordinates.</li>
+</ul>
+<h3>Checklist Item 5: Emergency Stop Verification</h3>
+<ul>
+<li>While the robot is driving towards a goal, press the large red <strong>EMERGENCY STOP</strong> button.</li>
+<li>The robot halts immediately. The status badge flashes <code>ESTOP_ENGAGED</code>.</li>
+<li>Verify that subsequent joystick drag attempts are rejected with <code>HTTP 409 Conflict</code>.</li>
+</ul>
+<hr>
+<h2>4. Comparing Simulation with the Physical NavPro Mini</h2>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th>Feature</th>
+<th>Level 1 Gazebo Simulation</th>
+<th>Physical NavPro Mini AMR</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>Map Source</strong></td>
+<td>Simulated SLAM Toolbox map</td>
+<td>Real warehouse SLAM map</td>
+</tr>
+<tr>
+<td><strong>Telemetry Transport</strong></td>
+<td>Virtual WebSocket stream</td>
+<td>Wi-Fi 20Hz WebSocket pipe</td>
+</tr>
+<tr>
+<td><strong>Joystick Driving</strong></td>
+<td>Moves virtual robot in Gazebo</td>
+<td>Drives physical robot across the room!</td>
+</tr>
+<tr>
+<td><strong>Cockpit Code</strong></td>
+<td><strong>100% Identical HTML/JS!</strong></td>
+<td><strong>100% Identical HTML/JS!</strong></td>
+</tr>
+</tbody></table></div>
+<p><em>Because our Client SDK decouples the UI from the underlying hardware, the exact same cockpit code controls both simulated robots and commercial fleets!</em></p>
+<hr>
+<h2>5. Day 2 Capstone Rubric &amp; Deliverables</h2>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th>Criteria</th>
+<th>Points</th>
+<th>Verification Method</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>Client SDK Design</strong></td>
+<td>20 pts</td>
+<td>Cleanly encapsulates HTTP endpoints and WebSocket streams.</td>
+</tr>
+<tr>
+<td><strong>Layered Canvas Rendering</strong></td>
+<td>20 pts</td>
+<td>Map decoded once; dynamic entities redraw smoothly at 60 FPS.</td>
+</tr>
+<tr>
+<td><strong>Virtual Joystick Control</strong></td>
+<td>20 pts</td>
+<td>Translates $(x, y)$ drag into metric speeds with deadman safety release.</td>
+</tr>
+<tr>
+<td><strong>2D Nav Goal &amp; Waypoints</strong></td>
+<td>20 pts</td>
+<td>Click-and-drag dispatches goals; landmark pins render accurately.</td>
+</tr>
+<tr>
+<td><strong>Emergency Stop Interlock</strong></td>
+<td>20 pts</td>
+<td>E-Stop overrides all active motion and locks out future commands.</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>100 pts</strong></td>
+<td>Grade: Certified Robotics Frontend &amp; SDK Engineer!</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h2>6. Summary &amp; Moving to Day 3</h2>
+<p>You have successfully completed Day 2:</p>
+<ul>
+<li>Built reusable <strong>Client SDKs</strong> in Python and JavaScript.</li>
+<li>Mastered <strong>Layered Canvas rendering</strong> and coordinate frame conversions.</li>
+<li>Deployed a complete <strong>Web Cockpit GUI</strong> with teleoperation and waypoint saving.</li>
+</ul>
+<p>In <strong>Day 3 (Lessons 17 - 24)</strong>, we unlock the next dimension of robotics: <strong>Model Context Protocol (MCP)</strong>, <strong>Autonomous AI Agents (Claude &amp; Gemini)</strong>, <strong>Stateful Mission DAGs</strong>, and <strong>ESP32-S3 Smartwatch Badges</strong>!</p>
+      </article>
+
+      <footer class="lesson-nav-footer">
+        <a href="lesson_15.html" class="nav-link-btn" >&larr; Previous Lesson</a>
+        <a href="../index.html" class="nav-link-btn">⚡ Enterprise Hub</a>
+        <a href="lesson_17.html" class="nav-link-btn" >Next Lesson &rarr;</a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../assets/js/highlight.min.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/quiz_engine.js"></script>
+  <script src="../assets/js/instructor_sync.js"></script>
+</body>
+</html>

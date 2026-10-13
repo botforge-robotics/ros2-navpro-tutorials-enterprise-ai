@@ -1,0 +1,19 @@
+running egg_info
+writing ../../build/navpro_mcp_server/navpro_mcp_server.egg-info/PKG-INFO
+writing dependency_links to ../../build/navpro_mcp_server/navpro_mcp_server.egg-info/dependency_links.txt
+writing entry points to ../../build/navpro_mcp_server/navpro_mcp_server.egg-info/entry_points.txt
+writing requirements to ../../build/navpro_mcp_server/navpro_mcp_server.egg-info/requires.txt
+writing top-level names to ../../build/navpro_mcp_server/navpro_mcp_server.egg-info/top_level.txt
+reading manifest file '../../build/navpro_mcp_server/navpro_mcp_server.egg-info/SOURCES.txt'
+writing manifest file '../../build/navpro_mcp_server/navpro_mcp_server.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/lib/python3.12/site-packages/navpro_mcp_server-2.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/navpro_mcp_server/navpro_mcp_server.egg-info to /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/lib/python3.12/site-packages/navpro_mcp_server-2.0.0-py3.12.egg-info
+running install_scripts
+Installing mcp_node script to /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/lib/navpro_mcp_server
+writing list of installed files to '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mcp_server/install.log'

@@ -1,0 +1,4 @@
+source;share/navpro_enterprise_interfaces/local_setup.bash
+source;share/navpro_enterprise_interfaces/local_setup.dsv
+source;share/navpro_enterprise_interfaces/local_setup.sh
+source;share/navpro_enterprise_interfaces/local_setup.zsh

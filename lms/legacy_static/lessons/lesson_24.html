@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 24: Day3 Grand Capstone End To End Fleet Pipeline | Level 2 Enterprise</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/highlight-dark.min.css">
+  <link rel="stylesheet" href="../assets/css/quiz.css">
+  <link rel="stylesheet" href="../assets/css/instructor_sync.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-container">
+      <a href="https://botforge.in" target="_blank" class="company-brand" title="Botforge Robotics - botforge.in">
+        <img src="../assets/images/botforge_black.png" alt="Botforge Robotics" class="company-logo">
+      </a>
+      <div class="brand-divider"></div>
+      <a href="../index.html" class="brand" title="Level 2: Enterprise Robotics & AI">
+        <img src="../assets/images/ros2_logo.svg" alt="ROS 2" class="brand-logo">
+        <span class="brand-title">NavPro Learning Hub</span>
+        <span class="badge-jazzy" style="background:#0284c7; color:#fff; border-color:#0284c7;">Level 2 Enterprise</span>
+      </a>
+    </div>
+    <div class="header-center">
+      <input type="text" id="lessonSearchInput" class="search-input" placeholder="🔍 Search Level 2 curriculum...">
+    </div>
+    <div class="header-actions">
+      <a href="http://localhost:6080/vnc.html" target="_blank" class="track-btn" title="Open Ubuntu Desktop GUI via noVNC">🖥️ Desktop GUI</a>
+      <a href="http://localhost:8443/?folder=/home/navpro/workspace" target="_blank" class="track-btn" title="Open VS Code in browser">💻 VS Code</a>
+      <a href="../index.html" class="track-btn active" style="background:#0284c7; color:#fff;">Architecture Hub</a>
+      <span class="theme-pill">☀️ Light Theme</span>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <aside class="app-sidebar">
+      <div class="progress-card">
+        <div class="progress-header">
+          <span>Enterprise Progress</span>
+          <span id="overallProgressText">0% Complete (0/24)</span>
+        </div>
+        <div class="progress-bar-track">
+          <div id="overallProgressBar" class="progress-bar-fill"></div>
+        </div>
+        <button id="resetProgressBtn" class="track-btn reset-btn" style="width:100%; margin-top:8px; justify-content:center;">↺ Reset Progress</button>
+      </div>
+
+      
+        <div class="sidebar-section-title">Enterprise &amp; AI Stack (24 Lessons)</div>
+        <ul class="lesson-list">
+          
+            <li>
+              <a href="lesson_01.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_01" onclick="event.stopPropagation();">
+                <span class="lesson-num">01</span>
+                <span class="lesson-title">Web Technologies For Roboticists Http Methods Json</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_02.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_02" onclick="event.stopPropagation();">
+                <span class="lesson-num">02</span>
+                <span class="lesson-title">Realtime Websockets Vs Http Polling</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_03.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_03" onclick="event.stopPropagation();">
+                <span class="lesson-num">03</span>
+                <span class="lesson-title">Enterprise System Architecture Dual Plane</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_04.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_04" onclick="event.stopPropagation();">
+                <span class="lesson-num">04</span>
+                <span class="lesson-title">High Concurrency Ros2 Multithreaded Executor</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_05.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_05" onclick="event.stopPropagation();">
+                <span class="lesson-num">05</span>
+                <span class="lesson-title">Fastapi Robotics Rest Gateway Pydantic</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_06.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_06" onclick="event.stopPropagation();">
+                <span class="lesson-num">06</span>
+                <span class="lesson-title">High Frequency Websocket Telemetry Broadcaster</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_07.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_07" onclick="event.stopPropagation();">
+                <span class="lesson-num">07</span>
+                <span class="lesson-title">Non Blocking Nav2 Action Dispatching</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_08.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_08" onclick="event.stopPropagation();">
+                <span class="lesson-num">08</span>
+                <span class="lesson-title">Day1 Capstone Navpro Api Gateway</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_09.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_09" onclick="event.stopPropagation();">
+                <span class="lesson-num">09</span>
+                <span class="lesson-title">Client Sdk Architecture Python Javascript</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_10.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_10" onclick="event.stopPropagation();">
+                <span class="lesson-num">10</span>
+                <span class="lesson-title">Modern Fleet Cockpit Architecture Canvas</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_11.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_11" onclick="event.stopPropagation();">
+                <span class="lesson-num">11</span>
+                <span class="lesson-title">Rendering 2D Slam Map Occupancy Grid</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_12.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_12" onclick="event.stopPropagation();">
+                <span class="lesson-num">12</span>
+                <span class="lesson-title">Live Robot Pose And Trajectory Rendering</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_13.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_13" onclick="event.stopPropagation();">
+                <span class="lesson-num">13</span>
+                <span class="lesson-title">Interactive Robot Controls Virtual Joystick</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_14.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_14" onclick="event.stopPropagation();">
+                <span class="lesson-num">14</span>
+                <span class="lesson-title">Waypoint Store And Interactive Map Markers</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_15.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_15" onclick="event.stopPropagation();">
+                <span class="lesson-num">15</span>
+                <span class="lesson-title">Enterprise Fleet Security Auth Rate Limiting</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_16.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_16" onclick="event.stopPropagation();">
+                <span class="lesson-num">16</span>
+                <span class="lesson-title">Day2 Capstone Interactive Web Cockpit</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_17.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_17" onclick="event.stopPropagation();">
+                <span class="lesson-num">17</span>
+                <span class="lesson-title">Physical Ai And Grounded Reasoning</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_18.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_18" onclick="event.stopPropagation();">
+                <span class="lesson-num">18</span>
+                <span class="lesson-title">Model Context Protocol Standard Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_19.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_19" onclick="event.stopPropagation();">
+                <span class="lesson-num">19</span>
+                <span class="lesson-title">Building Python Mcp Robotics Server</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_20.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_20" onclick="event.stopPropagation();">
+                <span class="lesson-num">20</span>
+                <span class="lesson-title">Deterministic Safety Barriers And Preflight Guards</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_21.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_21" onclick="event.stopPropagation();">
+                <span class="lesson-num">21</span>
+                <span class="lesson-title">Connecting Frontier Models Claude Gemini Antigravity</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_22.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_22" onclick="event.stopPropagation();">
+                <span class="lesson-num">22</span>
+                <span class="lesson-title">Industrial Mission Graph Dag Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_23.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_23" onclick="event.stopPropagation();">
+                <span class="lesson-num">23</span>
+                <span class="lesson-title">Stateful Mission Runner And Ui Gates</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_24.html" class="lesson-item active">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_24" onclick="event.stopPropagation();">
+                <span class="lesson-num">24</span>
+                <span class="lesson-title">Day3 Grand Capstone End To End Fleet Pipeline</span>
+              </a>
+            </li>
+            
+        </ul>
+        
+    </aside>
+
+    <main class="app-content">
+      <article class="markdown-body">
+        
+        <div class="concept-card">
+          <h3>⚡ Quick Concept Snapshot</h3>
+          <ul>
+            <li><strong>End-to-End Fleet Integration:</strong> Natural Language &rarr; MCP Tool Calling &rarr; Mission DAG Synthesis &rarr; Robot Execution &rarr; Wrist Confirmation.</li>
+            <li><strong>Production Parity:</strong> Matches the exact architecture of the commercial <strong>NavPro Mini Platform</strong>!</li>
+          </ul>
+        </div>
+        <h1>Lesson 24: Day 3 &amp; Grand Capstone — End-to-End Enterprise Fleet Pipeline</h1>
+<h2>Learning Objectives</h2>
+<p>By the end of this capstone lesson, you will be able to:</p>
+<ol>
+<li>Integrate all layers built across Level 2 into a single unified <strong>Industrial AMR Control &amp; Intelligence Pipeline</strong>.</li>
+<li>Trace an end-to-end command from <strong>Natural Language Voice/Chat &amp;rarr; Frontier AI Agent &amp;rarr; MCP Server &amp;rarr; Safety Guard &amp;rarr; FastAPI Gateway &amp;rarr; ROS 2 Nav2 &amp;rarr; Web Cockpit &amp;rarr; ESP32 Smartwatch Badge &amp;rarr; Precision Docking</strong>.</li>
+<li>Execute and verify the complete <strong>Grand Capstone Automated Integration Test Suite</strong>.</li>
+<li>Deploy the software stack seamlessly onto both the Level 1 Gazebo simulation and the physical <strong>NavPro Mini AMR</strong>.</li>
+<li>Receive your enterprise robotics practitioner graduation credentials.</li>
+</ol>
+<hr>
+<h2>1. The Unified Enterprise Architecture</h2>
+<p>Here is the complete software and hardware topology you have designed, implemented, and verified:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-mermaid">flowchart TD
+    subgraph Human &amp; AI Reasoning Layer
+        User[Human Supervisor Voice / Chat] --&gt; Frontier[Frontier AI Model: Claude / Gemini / Antigravity]
+        Frontier &lt;--&gt;|JSON-RPC 2.0 stdio / SSE| MCP[NavPro MCP Server :8000]
+    end
+
+    subgraph Deterministic Safety Layer
+        MCP --&gt; Safety[Pre-flight Deterministic Safety Interceptor]
+        Safety --&gt;|Validated &amp; Clamped| API[FastAPI Enterprise Gateway :8000]
+    end
+
+    subgraph ROS 2 Actuation &amp; Control Plane
+        API --&gt; ROS2Exec[High-Concurrency MultiThreadedExecutor]
+        ROS2Exec --&gt; Nav2[Nav2 Action Client: NavigateToPose]
+        ROS2Exec --&gt; MicroROS[Micro-ROS Motor Driver &amp; Sensors]
+    end
+
+    subgraph Live Operator Cockpit Layer
+        API --&gt;|20Hz WebSocket Telemetry| Cockpit[Web Cockpit Canvas SLAM UI :8000]
+        API --&gt;|Active UI Gate Event| Watch[ESP32-S3 Smartwatch Badge]
+        Watch --&gt;|Wrist Button &#x27;Confirmed&#x27;| API
+    end
+
+    subgraph Physical Actuators &amp; Simulation
+        Nav2 --&gt; Gazebo[Gazebo Harmonic Simulation (Level 1)]
+        Nav2 --&gt; Physical[Physical NavPro Mini AMR Hardware]
+    end</code></pre></div>
+<p>Every single component in this diagram is now backed by production-grade Python, JavaScript, and ROS 2 code written by you.</p>
+<hr>
+<h2>2. The 12-Step End-to-End Grand Capstone Scenario</h2>
+<p>Let&#x27;s trace how the complete pipeline behaves in real-time during an enterprise shift transfer:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-mermaid">sequenceDiagram
+    autonumber
+    actor Operator as Plant Supervisor
+    participant AI as Frontier AI Agent
+    participant MCP as NavPro MCP Server
+    participant Safety as Deterministic Safety Guard
+    participant Gateway as FastAPI Gateway
+    participant Nav2 as ROS 2 Nav2 Stack
+    participant Cockpit as Web Cockpit (Browser)
+    participant Watch as ESP32-S3 Smartwatch Badge
+    actor Worker as Floor Assembly Worker
+
+    Operator-&gt;&gt;AI: &quot;Prepare Shift Transfer: Inspect Assembly Bay 1, await worker loading confirmation, then return to dock.&quot;
+    
+    Note over AI,Safety: Phase 1: Pre-flight Verification
+    AI-&gt;&gt;MCP: tools/call: get_robot_telemetry()
+    MCP-&gt;&gt;Gateway: GET /api/v1/telemetry
+    Gateway--&gt;&gt;MCP: {battery_soc: 86.5%, estop: false}
+    MCP--&gt;&gt;AI: Battery healthy, E-Stop clear
+    
+    AI-&gt;&gt;MCP: tools/call: synthesize_and_save_graph_mission(...)
+    MCP-&gt;&gt;Safety: Validate Geofence &amp; Battery Envelope
+    Safety--&gt;&gt;MCP: PASSED (All bounds verified)
+    MCP-&gt;&gt;Gateway: POST /api/v1/missions/graphs
+    Gateway--&gt;&gt;MCP: {mission_id: &quot;shift_transfer_01&quot;, status: &quot;saved&quot;}
+    
+    AI-&gt;&gt;MCP: tools/call: execute_mission(&quot;shift_transfer_01&quot;)
+    MCP-&gt;&gt;Gateway: POST /api/v1/missions/execute
+    Gateway--&gt;&gt;MCP: {execution_status: &quot;running&quot;}
+    
+    Note over Gateway,Cockpit: Phase 2: Navigation to Assembly Bay 1
+    Gateway-&gt;&gt;Nav2: Dispatch NavigateToPose(Assembly Bay 1)
+    Gateway--&gt;&gt;Cockpit: 20Hz WebSocket Pose &amp; Trajectory Trail
+    Cockpit-&gt;&gt;Cockpit: Render AMR footprint moving across 2D SLAM Canvas
+    Nav2--&gt;&gt;Gateway: Goal Reached (SUCCESS)
+    
+    Note over Gateway,Worker: Phase 3: Human-in-the-Loop Gate
+    Gateway-&gt;&gt;Gateway: Node &#x27;ui_interaction&#x27; Activated
+    Gateway--&gt;&gt;Cockpit: WS Broadcast: &#x27;Confirm Parts Loaded&#x27;
+    Gateway--&gt;&gt;Watch: Haptic Pulse + Screen Alert: &#x27;Confirm Parts Loaded&#x27;
+    
+    Worker-&gt;&gt;Watch: Taps &#x27;Confirmed&#x27; Button on Wrist Badge
+    Watch-&gt;&gt;Gateway: POST /api/v1/ui/interaction/respond {option: &quot;Confirmed&quot;}
+    Gateway--&gt;&gt;Cockpit: Clear Modal Prompt
+    
+    Note over Gateway,Nav2: Phase 4: Precision Docking
+    Gateway-&gt;&gt;Nav2: Dispatch NavigateToPose(Charging Dock)
+    Nav2--&gt;&gt;Gateway: Dock Reached (SUCCESS)
+    Gateway-&gt;&gt;Gateway: Mission State -&gt; COMPLETED
+    Gateway--&gt;&gt;AI: Mission &#x27;shift_transfer_01&#x27; Completed Successfully
+    AI--&gt;&gt;Operator: &quot;Shift Transfer complete. Robot loaded, verified by worker badge, and docked safely.&quot;</code></pre></div>
+<hr>
+<h2>3. The Grand Capstone Automated Verification Script</h2>
+<p>To verify that your entire Level 2 system operates flawlessly, execute the automated verification suite <code>level2/scripts/verify_grand_capstone.py</code>:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python">#!/usr/bin/env python3
+&quot;&quot;&quot;
+Level 2 Grand Capstone Verification Suite
+Validates the complete chain: REST Gateway -&gt; Safety Interceptor -&gt; MCP Server -&gt; Mission Runner -&gt; Web Cockpit.
+&quot;&quot;&quot;
+
+import sys
+import asyncio
+import httpx
+import logging
+
+logging.basicConfig(level=logging.INFO, format=&quot;%(asctime)s [%(levelname)s] %(message)s&quot;)
+logger = logging.getLogger(&quot;capstone_verifier&quot;)
+
+GATEWAY_URL = &quot;http://127.0.0.1:8000&quot;
+
+async def run_capstone_verification():
+    logger.info(&quot;==================================================&quot;)
+    logger.info(&quot;🚀 STARTING LEVEL 2 GRAND CAPSTONE VERIFICATION&quot;)
+    logger.info(&quot;==================================================&quot;)
+
+    async with httpx.AsyncClient(base_url=GATEWAY_URL, timeout=10.0) as client:
+        # Step 1: Health &amp; Telemetry Check
+        logger.info(&quot;[Test 1/6] Verifying REST Gateway Health &amp; Telemetry...&quot;)
+        resp = await client.get(&quot;/api/v1/telemetry&quot;)
+        assert resp.status_code == 200, f&quot;Expected 200, got {resp.status_code}&quot;
+        telem = resp.json()
+        logger.info(f&quot;✅ Telemetry verified: Pose ({telem.get(&#x27;x&#x27;, 0):.2f}, {telem.get(&#x27;y&#x27;, 0):.2f}), Battery {telem.get(&#x27;battery_soc&#x27;, 100):.1f}%&quot;)
+
+        # Step 2: Waypoint Registry Verification
+        logger.info(&quot;[Test 2/6] Verifying Semantic Waypoint Store...&quot;)
+        resp = await client.get(&quot;/api/v1/waypoints&quot;)
+        assert resp.status_code == 200
+        waypoints = resp.json()
+        logger.info(f&quot;✅ Waypoint store active with {len(waypoints)} registered landmarks.&quot;)
+
+        # Step 3: Safety Interceptor Geofence Rejection
+        logger.info(&quot;[Test 3/6] Verifying Deterministic Safety Interceptor (Out-of-Bounds Rejection)...&quot;)
+        bad_goal = {&quot;x&quot;: 999.0, &quot;y&quot;: 999.0, &quot;yaw&quot;: 0.0}
+        resp = await client.post(&quot;/api/v1/navigation/navigate_to_pose&quot;, json=bad_goal)
+        assert resp.status_code in (400, 422), f&quot;Expected safety rejection, got HTTP {resp.status_code}&quot;
+        logger.info(&quot;✅ Safety barrier successfully intercepted out-of-bounds coordinate!&quot;)
+
+        # Step 4: Waypoint Navigation Dispatch
+        logger.info(&quot;[Test 4/6] Verifying Non-blocking Nav2 Navigation Dispatch...&quot;)
+        resp = await client.post(&quot;/api/v1/navigation/navigate_to_waypoint&quot;, json={&quot;waypoint_id&quot;: &quot;dock_01&quot;})
+        assert resp.status_code in (200, 202)
+        task_id = resp.json().get(&quot;task_id&quot;)
+        logger.info(f&quot;✅ Navigation goal accepted. Dispatched Task ID: {task_id}&quot;)
+
+        # Step 5: Human-in-the-Loop UI Gate Loop
+        logger.info(&quot;[Test 5/6] Verifying UI Interaction Gate &amp; Response...&quot;)
+        # Simulate active interaction
+        resp = await client.get(&quot;/api/v1/ui/interaction/active&quot;)
+        # Submit simulated worker response
+        resp = await client.post(&quot;/api/v1/ui/interaction/respond&quot;, json={&quot;option&quot;: &quot;Confirmed&quot;, &quot;responder&quot;: &quot;test_suite&quot;})
+        assert resp.status_code in (200, 404) # 200 if active, 404 if idle
+        logger.info(&quot;✅ Human-in-the-loop UI response pipeline verified.&quot;)
+
+        # Step 6: Software E-Stop Verification
+        logger.info(&quot;[Test 6/6] Verifying Enterprise Emergency Stop Interlock...&quot;)
+        resp = await client.post(&quot;/api/v1/safety/estop&quot;, json={&quot;reason&quot;: &quot;Capstone verification test&quot;, &quot;requester&quot;: &quot;verifier&quot;})
+        assert resp.status_code == 200
+        logger.info(&quot;✅ E-Stop engaged successfully. Motor drive interlock locked.&quot;)
+
+    logger.info(&quot;==================================================&quot;)
+    logger.info(&quot;🎉 GRAND CAPSTONE VERIFICATION COMPLETED: 100% PASS&quot;)
+    logger.info(&quot;==================================================&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    asyncio.run(run_capstone_verification())</code></pre></div>
+<hr>
+<h2>4. Graduation &amp; Transition to Physical Hardware</h2>
+<p>Congratulations! You have completed the comprehensive <strong>Level 2: Enterprise Robotics Software &amp; Fleet Engineering</strong> curriculum.</p>
+<h3>What You Built from Scratch:</h3>
+<ol>
+<li><strong>High-Performance Robotics Gateways</strong>: FastAPI REST + 20Hz WebSocket telemetry broadcasting powered by ROS 2 <code>MultiThreadedExecutor</code> and thread-safe mutex caches.</li>
+<li><strong>Client SDKs &amp; Web Cockpits</strong>: Pure JavaScript/Python SDKs, HTML5 2D Canvas SLAM rendering, 60 FPS live trajectory animation, interactive touch virtual joysticks, and SVG waypoint markers.</li>
+<li><strong>Model Context Protocol (MCP)</strong>: Native JSON-RPC 2.0 tool servers bridging frontier models directly to physical robot actions.</li>
+<li><strong>Deterministic Safety Barriers</strong>: Pre-flight geofence validators, battery reserve guards, and velocity clamps preventing AI hallucinations from causing physical damage.</li>
+<li><strong>Industrial Mission DAGs</strong>: Stateful finite state machine runners supporting human-in-the-loop UI gates across web cockpits and wearable smartwatch badges.</li>
+</ol>
+<h3>Deploying to the Physical NavPro Mini AMR:</h3>
+<p>To deploy this exact stack to your physical robot:</p>
+<ul>
+<li>Clone your gateway and MCP server to the AMR&#x27;s on-board computer (Raspberry Pi 5 / Jetson Orin Nano).</li>
+<li>Set <code>ROBOT_GATEWAY_URL=&quot;http://192.168.1.50:8090&quot;</code>.</li>
+<li>Launch your MCP server in Antigravity or Claude Desktop.</li>
+<li>The physical robot will execute the exact same missions, dock with the same precision, and push the same interactive alerts to your smartwatch badge!</li>
+</ul>
+      </article>
+
+      <footer class="lesson-nav-footer">
+        <a href="lesson_23.html" class="nav-link-btn" >&larr; Previous Lesson</a>
+        <a href="../index.html" class="nav-link-btn">⚡ Enterprise Hub</a>
+        <a href="#" class="nav-link-btn" style='visibility:hidden;'>Next Lesson &rarr;</a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../assets/js/highlight.min.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/quiz_engine.js"></script>
+  <script src="../assets/js/instructor_sync.js"></script>
+</body>
+</html>

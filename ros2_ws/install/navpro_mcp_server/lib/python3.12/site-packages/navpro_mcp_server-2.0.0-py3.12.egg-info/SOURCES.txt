@@ -1,0 +1,15 @@
+package.xml
+setup.cfg
+setup.py
+../../build/navpro_mcp_server/navpro_mcp_server.egg-info/PKG-INFO
+../../build/navpro_mcp_server/navpro_mcp_server.egg-info/SOURCES.txt
+../../build/navpro_mcp_server/navpro_mcp_server.egg-info/dependency_links.txt
+../../build/navpro_mcp_server/navpro_mcp_server.egg-info/entry_points.txt
+../../build/navpro_mcp_server/navpro_mcp_server.egg-info/requires.txt
+../../build/navpro_mcp_server/navpro_mcp_server.egg-info/top_level.txt
+../../build/navpro_mcp_server/navpro_mcp_server.egg-info/zip-safe
+launch/mcp_server.launch.py
+navpro_mcp_server/__init__.py
+navpro_mcp_server/mcp_node.py
+navpro_mcp_server/task_mcp_server.py
+resource/navpro_mcp_server

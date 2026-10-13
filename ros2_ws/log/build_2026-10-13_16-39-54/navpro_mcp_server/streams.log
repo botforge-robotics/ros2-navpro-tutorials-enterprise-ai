@@ -1,0 +1,39 @@
+[1.033s] Invoking command in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_mcp_server': AMENT_PREFIX_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mcp_server/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/lib/python3.12/site-packages:/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/navpro_mcp_server build --build-base /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mcp_server/build install --record /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mcp_server/install.log --install-scripts $base/lib/navpro_mcp_server --single-version-externally-managed install_data
+[1.213s] running egg_info
+[1.213s] creating ../../build/navpro_mcp_server/navpro_mcp_server.egg-info
+[1.225s] writing ../../build/navpro_mcp_server/navpro_mcp_server.egg-info/PKG-INFO
+[1.225s] writing dependency_links to ../../build/navpro_mcp_server/navpro_mcp_server.egg-info/dependency_links.txt
+[1.226s] writing entry points to ../../build/navpro_mcp_server/navpro_mcp_server.egg-info/entry_points.txt
+[1.226s] writing requirements to ../../build/navpro_mcp_server/navpro_mcp_server.egg-info/requires.txt
+[1.226s] writing top-level names to ../../build/navpro_mcp_server/navpro_mcp_server.egg-info/top_level.txt
+[1.226s] writing manifest file '../../build/navpro_mcp_server/navpro_mcp_server.egg-info/SOURCES.txt'
+[1.249s] reading manifest file '../../build/navpro_mcp_server/navpro_mcp_server.egg-info/SOURCES.txt'
+[1.249s] writing manifest file '../../build/navpro_mcp_server/navpro_mcp_server.egg-info/SOURCES.txt'
+[1.250s] running build
+[1.250s] running build_py
+[1.250s] creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mcp_server/build
+[1.251s] creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mcp_server/build/lib
+[1.251s] creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mcp_server/build/lib/navpro_mcp_server
+[1.251s] copying navpro_mcp_server/__init__.py -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mcp_server/build/lib/navpro_mcp_server
+[1.251s] copying navpro_mcp_server/mcp_node.py -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mcp_server/build/lib/navpro_mcp_server
+[1.251s] running install
+[1.255s] running install_lib
+[1.267s] creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/lib/python3.12/site-packages/navpro_mcp_server
+[1.268s] copying /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mcp_server/build/lib/navpro_mcp_server/__init__.py -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/lib/python3.12/site-packages/navpro_mcp_server
+[1.268s] copying /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mcp_server/build/lib/navpro_mcp_server/mcp_node.py -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/lib/python3.12/site-packages/navpro_mcp_server
+[1.268s] byte-compiling /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/lib/python3.12/site-packages/navpro_mcp_server/__init__.py to __init__.cpython-312.pyc
+[1.268s] byte-compiling /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/lib/python3.12/site-packages/navpro_mcp_server/mcp_node.py to mcp_node.cpython-312.pyc
+[1.271s] running install_data
+[1.271s] creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/share/ament_index
+[1.271s] creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/share/ament_index/resource_index
+[1.271s] creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/share/ament_index/resource_index/packages
+[1.271s] copying resource/navpro_mcp_server -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/share/ament_index/resource_index/packages
+[1.271s] copying package.xml -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/share/navpro_mcp_server
+[1.271s] creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/share/navpro_mcp_server/launch
+[1.271s] copying launch/mcp_server.launch.py -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/share/navpro_mcp_server/launch
+[1.271s] running install_egg_info
+[1.290s] Copying ../../build/navpro_mcp_server/navpro_mcp_server.egg-info to /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/lib/python3.12/site-packages/navpro_mcp_server-2.0.0-py3.12.egg-info
+[1.290s] running install_scripts
+[1.372s] Installing mcp_node script to /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/lib/navpro_mcp_server
+[1.372s] writing list of installed files to '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mcp_server/install.log'
+[1.409s] Invoked command in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_mcp_server' returned '0': AMENT_PREFIX_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mcp_server/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/lib/python3.12/site-packages:/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/navpro_mcp_server build --build-base /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mcp_server/build install --record /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mcp_server/install.log --install-scripts $base/lib/navpro_mcp_server --single-version-externally-managed install_data

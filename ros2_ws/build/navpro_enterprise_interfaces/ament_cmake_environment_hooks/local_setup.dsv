@@ -1,0 +1,4 @@
+source;share/navpro_enterprise_interfaces/environment/ament_prefix_path.sh
+source;share/navpro_enterprise_interfaces/environment/library_path.sh
+source;share/navpro_enterprise_interfaces/environment/path.sh
+source;share/navpro_enterprise_interfaces/environment/pythonpath.sh

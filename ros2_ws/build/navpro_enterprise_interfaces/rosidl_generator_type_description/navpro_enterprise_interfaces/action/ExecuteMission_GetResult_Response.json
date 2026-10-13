@@ -1,0 +1,76 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "navpro_enterprise_interfaces/action/ExecuteMission_GetResult_Response",
+      "fields": [
+        {
+          "name": "status",
+          "type": {
+            "type_id": 2,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "result",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "navpro_enterprise_interfaces/action/ExecuteMission_Result"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "navpro_enterprise_interfaces/action/ExecuteMission_Result",
+        "fields": [
+          {
+            "name": "success",
+            "type": {
+              "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "completed_nodes_count",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "execution_summary",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "navpro_enterprise_interfaces/action/ExecuteMission_GetResult_Response",
+      "hash_string": "RIHS01_d483eb6fb47156d8fd0071559f1383476628947e52d91b8bc41afc8e9b6ada7a"
+    },
+    {
+      "type_name": "navpro_enterprise_interfaces/action/ExecuteMission_Result",
+      "hash_string": "RIHS01_9f48daf1304c439112b464c065aa7ed2ca00d8dd2e47c988469e2eaccb4c185a"
+    }
+  ]
+}

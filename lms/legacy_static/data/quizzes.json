@@ -1,0 +1,350 @@
+{
+  "lesson_01": [
+    {
+      "id": "q_l2_01_1",
+      "prompt": "Which HTTP method should be used when a cloud client dispatches a new navigation goal to the robot API gateway?",
+      "options": [
+        "GET",
+        "POST",
+        "PUT",
+        "HEAD"
+      ],
+      "correct": 1,
+      "explanation": "POST is used to create new resources and dispatch stateful actions with a JSON body. GET must be idempotent and read-only without modifying robot state."
+    },
+    {
+      "id": "q_l2_01_2",
+      "prompt": "Which HTTP status code is most appropriate for acknowledging an asynchronous navigation dispatch that will execute over the next several seconds?",
+      "options": [
+        "200 OK",
+        "202 Accepted",
+        "204 No Content",
+        "301 Moved Permanently"
+      ],
+      "correct": 1,
+      "explanation": "HTTP 202 Accepted indicates that the request has been received and validated, but processing has not yet completed\u2014standard for long-running robotics actions."
+    }
+  ],
+  "lesson_02": [
+    {
+      "id": "q_l2_02_1",
+      "prompt": "Why is persistent WebSocket streaming vastly superior to HTTP polling for streaming 20Hz AMR telemetry to web cockpits?",
+      "options": [
+        "WebSockets do not use TCP sockets",
+        "WebSockets establish a single persistent TCP connection with only 2 to 6 bytes of framing overhead per message, avoiding repeated HTTP handshake latency and header bloat",
+        "HTTP polling cannot transmit JSON data",
+        "WebSockets bypass Linux network permissions"
+      ],
+      "correct": 1,
+      "explanation": "HTTP polling sends ~800 bytes of headers on every single request and introduces TCP connection overhead. WebSockets maintain a full-duplex socket with microsecond latency and tiny 2-byte frame headers."
+    }
+  ],
+  "lesson_03": [
+    {
+      "id": "q_l2_03_1",
+      "prompt": "In an enterprise robotics Dual-Plane Architecture, what is the fundamental boundary between the Real-Time Control Plane and Application Plane?",
+      "options": [
+        "The Real-Time Plane runs deterministic motor control loops and safety guards without network blocking, while the Application Plane handles cloud networking, REST/WebSockets, and AI logic asynchronously",
+        "The Real-Time Plane runs on Windows while the Application Plane runs on Linux",
+        "The Real-Time Plane only runs in Gazebo simulation",
+        "There is no boundary; everything executes inside a single Python thread"
+      ],
+      "correct": 0,
+      "explanation": "Dual-Plane Architecture isolates safety-critical control (wheel velocity loops, emergency stops, LiDAR processing) from non-deterministic external networks and LLM agent delays."
+    }
+  ],
+  "lesson_04": [
+    {
+      "id": "q_l2_04_1",
+      "prompt": "Which ROS 2 callback group must be assigned to service servers and subscriptions in a MultiThreadedExecutor to allow concurrent execution without blocking each other?",
+      "options": [
+        "MutuallyExclusiveCallbackGroup",
+        "ReentrantCallbackGroup",
+        "StaticCallbackGroup",
+        "AsyncCallbackGroup"
+      ],
+      "correct": 1,
+      "explanation": "ReentrantCallbackGroup allows callbacks in that group to execute in parallel across multiple worker threads. MutuallyExclusiveCallbackGroup restricts execution to one thread at a time."
+    }
+  ],
+  "lesson_05": [
+    {
+      "id": "q_l2_05_1",
+      "prompt": "Why is Pydantic v2 used to define data schemas in FastAPI robotics gateways?",
+      "options": [
+        "It compiles Python into C++ binaries",
+        "It enforces strict runtime data validation, automatic type coercion, bounds checking, and generates OpenAPI documentation automatically",
+        "It replaces rclpy entirely",
+        "It allows direct access to CAN bus hardware"
+      ],
+      "correct": 1,
+      "explanation": "Pydantic validates incoming client payloads (e.g. verifying coordinates are finite numbers within [-50, 50]), rejecting malformed JSON before it can corrupt robot nodes."
+    }
+  ],
+  "lesson_06": [
+    {
+      "id": "q_l2_06_1",
+      "prompt": "What pattern should be used in a Python WebSocket broadcaster to handle multiple connected frontend cockpits cleanly?",
+      "options": [
+        "A ConnectionManager class tracking active WebSocket connections in a set and broadcasting JSON concurrently via asyncio.gather()",
+        "Spawning a separate Linux process for each browser tab",
+        "Blocking the main thread with a while True loop",
+        "Opening a separate port for every client"
+      ],
+      "correct": 0,
+      "explanation": "A ConnectionManager manages connected client sockets, discards dead connections gracefully upon disconnect, and broadcasts serialized telemetry using asynchronous tasks."
+    }
+  ],
+  "lesson_07": [
+    {
+      "id": "q_l2_07_1",
+      "prompt": "How does an asynchronous FastAPI route handler interact with a ROS 2 ActionClient without blocking the uvicorn event loop?",
+      "options": [
+        "By calling send_goal_async() and awaiting a Future / asyncio Event bridge",
+        "By invoking time.sleep(10)",
+        "By running colcon build inside the route",
+        "By restarting the uvicorn daemon"
+      ],
+      "correct": 0,
+      "explanation": "send_goal_async() returns an rclpy Future. By hooking this future into the asyncio event loop, the web server remains responsive to health checks and E-Stop requests."
+    }
+  ],
+  "lesson_08": [
+    {
+      "id": "q_l2_08_1",
+      "prompt": "When an Emergency Stop endpoint (/api/v1/emergency_stop) is triggered on the API Gateway, what must happen immediately?",
+      "options": [
+        "The robot continues to its goal and stops afterwards",
+        "The gateway publishes zero velocities to /cmd_vel, latches an internal safety lock, and rejects all subsequent navigation requests until an explicit reset",
+        "The container terminates",
+        "The LiDAR sensor is powered off"
+      ],
+      "correct": 1,
+      "explanation": "Safety latching guarantees immediate velocity dampening to zero and blocks new navigation commands from being accepted until an authorized reset occurs."
+    }
+  ],
+  "lesson_09": [
+    {
+      "id": "q_l2_09_1",
+      "prompt": "What resilience mechanism should a robotics client SDK implement for its WebSocket telemetry connection?",
+      "options": [
+        "Automatic exponential backoff reconnection with heartbeat ping/pong monitoring",
+        "Immediate process crash upon packet drop",
+        "Switching automatically to HTTP polling permanently",
+        "Disabling SSL verification"
+      ],
+      "correct": 0,
+      "explanation": "AMRs frequently roam across Wi-Fi access points. Client SDKs must implement exponential backoff reconnection and heartbeat monitoring to recover instantly from transient disconnects."
+    }
+  ],
+  "lesson_10": [
+    {
+      "id": "q_l2_10_1",
+      "prompt": "Why is an HTML5 2D Canvas preferred over DOM div elements for rendering industrial fleet cockpits?",
+      "options": [
+        "DOM elements cannot show colors",
+        "A single Canvas uses hardware-accelerated GPU draw calls (requestAnimationFrame) to render thousands of map cells, laser points, and robot poses at 60 FPS without DOM reflow overhead",
+        "Canvas does not support JavaScript",
+        "Canvas requires Node.js"
+      ],
+      "correct": 1,
+      "explanation": "DOM nodes create memory overhead and layout thrashing. The Canvas 2D API renders directly to a bitmap buffer using GPU acceleration, easily maintaining 60 FPS."
+    }
+  ],
+  "lesson_11": [
+    {
+      "id": "q_l2_11_1",
+      "prompt": "In a 2D SLAM OccupancyGrid, what do cell values of -1, 0, and 100 represent?",
+      "options": [
+        "-1 = Unknown space, 0 = Free space, 100 = Lethal obstacle / Wall",
+        "-1 = Wall, 0 = Unknown, 100 = Free",
+        "-1 = Battery empty, 0 = Idle, 100 = Moving",
+        "-1 = Error, 0 = Ground, 100 = Sky"
+      ],
+      "correct": 0,
+      "explanation": "ROS 2 OccupancyGrid standard: -1 indicates unmapped/unknown space, 0 represents verified traversable free space, and 100 represents a lethal occupied obstacle."
+    }
+  ],
+  "lesson_12": [
+    {
+      "id": "q_l2_12_1",
+      "prompt": "How do you render a robot pose heading indicator on a Canvas with world coordinates (x, y, yaw)?",
+      "options": [
+        "ctx.save(), ctx.translate(pixelX, pixelY), ctx.rotate(-yaw), draw heading vector, ctx.restore()",
+        "By changing CSS font-size",
+        "By reloading the entire canvas image",
+        "By sending an HTTP request to the browser"
+      ],
+      "correct": 0,
+      "explanation": "The 2D transform pipeline (save -> translate -> rotate -> draw -> restore) isolates rotation math to the robot icon without altering the world map coordinate system."
+    }
+  ],
+  "lesson_13": [
+    {
+      "id": "q_l2_13_1",
+      "prompt": "Why should a virtual teleoperation joystick implement a 'deadband' zone near the center position?",
+      "options": [
+        "To increase maximum robot speed",
+        "To prevent jitter, tiny touch inaccuracies, and sensor drift from commanding accidental creeping movement when the stick is near center",
+        "To save battery power when driving backwards",
+        "To disable emergency stop"
+      ],
+      "correct": 1,
+      "explanation": "A deadband (e.g. 10% radius) ensures that minor finger twitches or touch release residual positions do not send non-zero velocity commands to the robot base."
+    }
+  ],
+  "lesson_14": [
+    {
+      "id": "q_l2_14_1",
+      "prompt": "What coordinate system should map landmark waypoints be stored in?",
+      "options": [
+        "Screen pixel coordinates (clientX, clientY)",
+        "Metric world coordinates in the global 'map' frame (x, y, yaw in meters and radians)",
+        "Local odometry coordinates relative to base_link",
+        "GPS latitude and longitude only"
+      ],
+      "correct": 1,
+      "explanation": "Screen pixels vary with screen size and zoom levels. Storing metric poses in the 'map' frame ensures persistent, device-independent navigation accuracy."
+    }
+  ],
+  "lesson_15": [
+    {
+      "id": "q_l2_15_1",
+      "prompt": "What security header should be configured on the FastAPI gateway to prevent unauthorized web applications from accessing robot control endpoints?",
+      "options": [
+        "Cross-Origin Resource Sharing (CORS) headers specifying explicit allowed origins",
+        "Content-Security-Policy set to none",
+        "X-Frame-Options set to true",
+        "Server header set to ROS2"
+      ],
+      "correct": 0,
+      "explanation": "CORSMiddleware allows specifying explicit trusted origins (e.g. https://fleet.botforge.in), preventing malicious third-party websites from making cross-origin control requests."
+    }
+  ],
+  "lesson_16": [
+    {
+      "id": "q_l2_16_1",
+      "prompt": "In the Day 2 Capstone Web Cockpit, how are operator click-to-navigate coordinates converted into world coordinates?",
+      "options": [
+        "By dividing screen width by 2",
+        "Using the inverse canvas transformation matrix: worldX = (screenX - panX) / scale, worldY = -(screenY - panY) / scale",
+        "By calling navigator.geolocation",
+        "By reading the robot's odometer"
+      ],
+      "correct": 1,
+      "explanation": "Inverse transformation maps screen viewport coordinates back into metric meters, accounting for pan offsets, canvas scaling, and the Y-axis inversion between screen and Cartesian coordinates."
+    }
+  ],
+  "lesson_17": [
+    {
+      "id": "q_l2_17_1",
+      "prompt": "What is 'Physical Grounding' in the context of robotics AI agents?",
+      "options": [
+        "Connecting the robot's metal chassis to electrical earth ground",
+        "Translating abstract semantic human language ('Inspect cargo rack B') into verified metric coordinates, physical safety bounds, and valid ROS 2 actions",
+        "Training neural networks on physical GPUs",
+        "Preventing the robot wheels from slipping"
+      ],
+      "correct": 1,
+      "explanation": "Grounded reasoning bridges the gap between probabilistic LLM tokens and deterministic physical reality, mapping concepts like 'Shelf 3' to metric poses verified against obstacle maps."
+    }
+  ],
+  "lesson_18": [
+    {
+      "id": "q_l2_18_1",
+      "prompt": "What protocol specification does the Model Context Protocol (MCP) use for client-server communication?",
+      "options": [
+        "gRPC over HTTP/2",
+        "JSON-RPC 2.0 with standard methods (tools/list, tools/call, resources/list)",
+        "Raw TCP sockets",
+        "GraphQL"
+      ],
+      "correct": 1,
+      "explanation": "MCP standardizes AI tool use via JSON-RPC 2.0. Clients (Claude, Gemini, Antigravity) discover tools via tools/list and invoke deterministic robotics actions via tools/call."
+    }
+  ],
+  "lesson_19": [
+    {
+      "id": "q_l2_19_1",
+      "prompt": "In an MCP Robotics Server, why must tools provide strict JSON Schema definitions in 'inputSchema'?",
+      "options": [
+        "So the LLM understands expected parameter names, types, constraints, and required fields before generating tool calls",
+        "To speed up colcon build",
+        "To format console print outputs",
+        "To encrypt network traffic"
+      ],
+      "correct": 0,
+      "explanation": "The inputSchema guides the LLM's function-calling engine, ensuring arguments adhere strictly to required types (e.g. float between -50 and 50) and avoiding hallucinations."
+    }
+  ],
+  "lesson_20": [
+    {
+      "id": "q_l2_20_1",
+      "prompt": "Why must deterministic safety guards be implemented in software BEFORE executing an AI agent's navigation tool call?",
+      "options": [
+        "Because LLMs can hallucinate unsafe coordinates, violate geofence boundaries, or command actions when battery is critically low",
+        "Because Python requires pre-checks to allocate memory",
+        "Because ROS 2 nodes cannot handle numbers greater than 100",
+        "Because DDS crashes if a target is unreachable"
+      ],
+      "correct": 0,
+      "explanation": "LLMs are probabilistic and cannot be solely trusted with physical safety. Hard deterministic guards (geofences, speed clamps, battery interlocks) enforce non-negotiable physical constraints."
+    }
+  ],
+  "lesson_21": [
+    {
+      "id": "q_l2_21_1",
+      "prompt": "Which transport mechanism does the Model Context Protocol support for running local AI agents on the same host as the robot?",
+      "options": [
+        "Standard Input/Output (stdio) JSON-RPC streams",
+        "Bluetooth Low Energy",
+        "RS-232 Serial",
+        "NFC"
+      ],
+      "correct": 0,
+      "explanation": "MCP supports stdio transport where the agent process spawns the server as a child process and communicates via standard input/output pipes with zero network overhead."
+    }
+  ],
+  "lesson_22": [
+    {
+      "id": "q_l2_22_1",
+      "prompt": "What is the defining property of a Directed Acyclic Graph (DAG) in robotics mission workflow planning?",
+      "options": [
+        "The graph contains directed edges and has no closed loops, ensuring a deterministic sequence of tasks with clear dependencies and completion criteria",
+        "The graph can only have a single node",
+        "All nodes must execute in parallel",
+        "The graph resets when power is lost"
+      ],
+      "correct": 0,
+      "explanation": "A DAG guarantees execution flow without infinite dependency deadlocks. Each node has clear prerequisites and predictable progression toward mission completion."
+    }
+  ],
+  "lesson_23": [
+    {
+      "id": "q_l2_23_1",
+      "prompt": "How does a 'HumanApprovalGate' step function in a stateful mission execution graph?",
+      "options": [
+        "It terminates the mission immediately",
+        "It pauses mission progression, presents a prompt/alert to an operator via web or edge badge, and waits for explicit approval before resuming autonomous execution",
+        "It overrides the robot's LiDAR sensors",
+        "It prompts the operator for a root password"
+      ],
+      "correct": 1,
+      "explanation": "Interaction gates provide human-in-the-loop oversight for high-risk actions (e.g. entering restricted zones or operating heavy actuators), ensuring safety before proceeding."
+    }
+  ],
+  "lesson_24": [
+    {
+      "id": "q_l2_24_1",
+      "prompt": "In the Day 3 Grand Capstone, what is the full end-to-end data pipeline from human operator prompt to physical AMR execution?",
+      "options": [
+        "Natural Language Prompt -> Frontier AI Model (MCP Agent) -> Validated Mission DAG -> FastAPI Gateway -> ROS 2 Nav2 Execution & Telemetry Feedback",
+        "Prompt -> Bash script -> Hardware reboot",
+        "ROS 2 Topic -> Gazebo -> Web browser -> Python script",
+        "FastAPI -> SQLite -> Docker restart"
+      ],
+      "correct": 0,
+      "explanation": "The architecture seamlessly unites physical AI: Natural language is parsed by the LLM agent via MCP, compiled into a validated DAG mission, dispatched via the API Gateway, executed by Nav2, and monitored on the web cockpit."
+    }
+  ]
+}

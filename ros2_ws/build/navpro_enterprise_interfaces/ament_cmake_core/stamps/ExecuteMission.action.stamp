@@ -1,0 +1,15 @@
+# Goal
+string mission_id
+string mission_json
+---
+# Result
+bool success
+int32 completed_nodes_count
+string execution_summary
+---
+# Feedback
+int32 current_node_index
+int32 total_nodes_count
+string active_node_name
+string active_node_status
+float32 percent_complete

@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: navpro-mission-engine
+Version: 2.0.0
+Summary: Stateful Directed Acyclic Graph (DAG) Mission Runner with UI/Watch Gates for NavPro Level 2
+Maintainer: Botforge Robotics
+Maintainer-email: chaitu@botforge.in
+License: Apache-2.0

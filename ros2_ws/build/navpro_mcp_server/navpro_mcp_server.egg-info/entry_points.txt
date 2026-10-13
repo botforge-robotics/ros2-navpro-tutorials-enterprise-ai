@@ -1,0 +1,2 @@
+[console_scripts]
+mcp_node = navpro_mcp_server.mcp_node:main

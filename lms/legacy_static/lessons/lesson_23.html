@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 23: Stateful Mission Runner And Ui Gates | Level 2 Enterprise</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/highlight-dark.min.css">
+  <link rel="stylesheet" href="../assets/css/quiz.css">
+  <link rel="stylesheet" href="../assets/css/instructor_sync.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-container">
+      <a href="https://botforge.in" target="_blank" class="company-brand" title="Botforge Robotics - botforge.in">
+        <img src="../assets/images/botforge_black.png" alt="Botforge Robotics" class="company-logo">
+      </a>
+      <div class="brand-divider"></div>
+      <a href="../index.html" class="brand" title="Level 2: Enterprise Robotics & AI">
+        <img src="../assets/images/ros2_logo.svg" alt="ROS 2" class="brand-logo">
+        <span class="brand-title">NavPro Learning Hub</span>
+        <span class="badge-jazzy" style="background:#0284c7; color:#fff; border-color:#0284c7;">Level 2 Enterprise</span>
+      </a>
+    </div>
+    <div class="header-center">
+      <input type="text" id="lessonSearchInput" class="search-input" placeholder="🔍 Search Level 2 curriculum...">
+    </div>
+    <div class="header-actions">
+      <a href="http://localhost:6080/vnc.html" target="_blank" class="track-btn" title="Open Ubuntu Desktop GUI via noVNC">🖥️ Desktop GUI</a>
+      <a href="http://localhost:8443/?folder=/home/navpro/workspace" target="_blank" class="track-btn" title="Open VS Code in browser">💻 VS Code</a>
+      <a href="../index.html" class="track-btn active" style="background:#0284c7; color:#fff;">Architecture Hub</a>
+      <span class="theme-pill">☀️ Light Theme</span>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <aside class="app-sidebar">
+      <div class="progress-card">
+        <div class="progress-header">
+          <span>Enterprise Progress</span>
+          <span id="overallProgressText">0% Complete (0/24)</span>
+        </div>
+        <div class="progress-bar-track">
+          <div id="overallProgressBar" class="progress-bar-fill"></div>
+        </div>
+        <button id="resetProgressBtn" class="track-btn reset-btn" style="width:100%; margin-top:8px; justify-content:center;">↺ Reset Progress</button>
+      </div>
+
+      
+        <div class="sidebar-section-title">Enterprise &amp; AI Stack (24 Lessons)</div>
+        <ul class="lesson-list">
+          
+            <li>
+              <a href="lesson_01.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_01" onclick="event.stopPropagation();">
+                <span class="lesson-num">01</span>
+                <span class="lesson-title">Web Technologies For Roboticists Http Methods Json</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_02.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_02" onclick="event.stopPropagation();">
+                <span class="lesson-num">02</span>
+                <span class="lesson-title">Realtime Websockets Vs Http Polling</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_03.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_03" onclick="event.stopPropagation();">
+                <span class="lesson-num">03</span>
+                <span class="lesson-title">Enterprise System Architecture Dual Plane</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_04.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_04" onclick="event.stopPropagation();">
+                <span class="lesson-num">04</span>
+                <span class="lesson-title">High Concurrency Ros2 Multithreaded Executor</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_05.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_05" onclick="event.stopPropagation();">
+                <span class="lesson-num">05</span>
+                <span class="lesson-title">Fastapi Robotics Rest Gateway Pydantic</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_06.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_06" onclick="event.stopPropagation();">
+                <span class="lesson-num">06</span>
+                <span class="lesson-title">High Frequency Websocket Telemetry Broadcaster</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_07.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_07" onclick="event.stopPropagation();">
+                <span class="lesson-num">07</span>
+                <span class="lesson-title">Non Blocking Nav2 Action Dispatching</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_08.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_08" onclick="event.stopPropagation();">
+                <span class="lesson-num">08</span>
+                <span class="lesson-title">Day1 Capstone Navpro Api Gateway</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_09.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_09" onclick="event.stopPropagation();">
+                <span class="lesson-num">09</span>
+                <span class="lesson-title">Client Sdk Architecture Python Javascript</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_10.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_10" onclick="event.stopPropagation();">
+                <span class="lesson-num">10</span>
+                <span class="lesson-title">Modern Fleet Cockpit Architecture Canvas</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_11.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_11" onclick="event.stopPropagation();">
+                <span class="lesson-num">11</span>
+                <span class="lesson-title">Rendering 2D Slam Map Occupancy Grid</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_12.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_12" onclick="event.stopPropagation();">
+                <span class="lesson-num">12</span>
+                <span class="lesson-title">Live Robot Pose And Trajectory Rendering</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_13.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_13" onclick="event.stopPropagation();">
+                <span class="lesson-num">13</span>
+                <span class="lesson-title">Interactive Robot Controls Virtual Joystick</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_14.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_14" onclick="event.stopPropagation();">
+                <span class="lesson-num">14</span>
+                <span class="lesson-title">Waypoint Store And Interactive Map Markers</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_15.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_15" onclick="event.stopPropagation();">
+                <span class="lesson-num">15</span>
+                <span class="lesson-title">Enterprise Fleet Security Auth Rate Limiting</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_16.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_16" onclick="event.stopPropagation();">
+                <span class="lesson-num">16</span>
+                <span class="lesson-title">Day2 Capstone Interactive Web Cockpit</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_17.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_17" onclick="event.stopPropagation();">
+                <span class="lesson-num">17</span>
+                <span class="lesson-title">Physical Ai And Grounded Reasoning</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_18.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_18" onclick="event.stopPropagation();">
+                <span class="lesson-num">18</span>
+                <span class="lesson-title">Model Context Protocol Standard Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_19.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_19" onclick="event.stopPropagation();">
+                <span class="lesson-num">19</span>
+                <span class="lesson-title">Building Python Mcp Robotics Server</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_20.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_20" onclick="event.stopPropagation();">
+                <span class="lesson-num">20</span>
+                <span class="lesson-title">Deterministic Safety Barriers And Preflight Guards</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_21.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_21" onclick="event.stopPropagation();">
+                <span class="lesson-num">21</span>
+                <span class="lesson-title">Connecting Frontier Models Claude Gemini Antigravity</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_22.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_22" onclick="event.stopPropagation();">
+                <span class="lesson-num">22</span>
+                <span class="lesson-title">Industrial Mission Graph Dag Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_23.html" class="lesson-item active">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_23" onclick="event.stopPropagation();">
+                <span class="lesson-num">23</span>
+                <span class="lesson-title">Stateful Mission Runner And Ui Gates</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_24.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_24" onclick="event.stopPropagation();">
+                <span class="lesson-num">24</span>
+                <span class="lesson-title">Day3 Grand Capstone End To End Fleet Pipeline</span>
+              </a>
+            </li>
+            
+        </ul>
+        
+    </aside>
+
+    <main class="app-content">
+      <article class="markdown-body">
+        <h1>Lesson 23: Stateful Mission Runner &amp; Human-in-the-Loop UI Gates</h1>
+<h2>Learning Objectives</h2>
+<p>By the end of this lesson, you will be able to:</p>
+<ol>
+<li>Design and code a stateful <strong>Mission Execution Finite State Machine (FSM)</strong> in Python.</li>
+<li>Implement <strong>Human-in-the-Loop UI Gates</strong> that suspend autonomous execution until human confirmation is received.</li>
+<li>Expose interactive gate state to the Web Cockpit and <strong>ESP32-S3 Smartwatch Badge</strong> over WebSockets and REST.</li>
+<li>Process asynchronous user responses (<code>respond_to_ui_interaction</code>) and transition the DAG to the selected conditional branch.</li>
+<li>Demonstrate full mission execution lifecycle with automated node status tracking.</li>
+</ol>
+<hr>
+<h2>1. The Mission Runner Finite State Machine (FSM)</h2>
+<p>An autonomous mission runner cannot be a blocking script. It must be an asynchronous event-driven state machine:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-mermaid">stateDiagram-v2
+    [*] --&gt; IDLE
+    IDLE --&gt; RUNNING_NODE: Start Mission(DAG)
+    
+    state RUNNING_NODE {
+        [*] --&gt; ExecutingNav
+        [*] --&gt; ExecutingDelay
+        [*] --&gt; ExecutingDock
+    }
+    
+    RUNNING_NODE --&gt; WAITING_UI_INPUT: Node is &#x27;ui_interaction&#x27;
+    WAITING_UI_INPUT --&gt; RUNNING_NODE: Human selects Option (Web / Watch)
+    WAITING_UI_INPUT --&gt; FAILED: UI Timeout Exceeded
+    
+    RUNNING_NODE --&gt; RUNNING_NODE: Node Success -&gt; Next Node
+    RUNNING_NODE --&gt; PAUSED: Operator triggers Pause
+    PAUSED --&gt; RUNNING_NODE: Operator triggers Resume
+    
+    RUNNING_NODE --&gt; COMPLETED: Next Node is NULL (Exit)
+    RUNNING_NODE --&gt; ABORTED: E-Stop / Critical Error
+    
+    COMPLETED --&gt; IDLE
+    FAILED --&gt; IDLE
+    ABORTED --&gt; IDLE</code></pre></div>
+<hr>
+<h2>2. Implementing the Mission Runner (<code>mission_runner.py</code>)</h2>
+<p>Create <code>level2/scripts/mission_runner.py</code> with an asynchronous execution loop:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python">&quot;&quot;&quot;
+Stateful Mission DAG Runner with Human-in-the-Loop UI Interaction Gates
+&quot;&quot;&quot;
+
+import asyncio
+import logging
+import time
+from typing import Dict, Any, Optional
+
+logger = logging.getLogger(&quot;mission_runner&quot;)
+
+class MissionState:
+    IDLE = &quot;IDLE&quot;
+    RUNNING = &quot;RUNNING&quot;
+    WAITING_UI_INPUT = &quot;WAITING_UI_INPUT&quot;
+    PAUSED = &quot;PAUSED&quot;
+    COMPLETED = &quot;COMPLETED&quot;
+    FAILED = &quot;FAILED&quot;
+    ABORTED = &quot;ABORTED&quot;
+
+class StatefulMissionRunner:
+    def __init__(self, gateway_client):
+        self.client = gateway_client
+        self.state = MissionState.IDLE
+        self.current_mission: Optional[Dict[str, Any]] = None
+        self.current_node_id: Optional[str] = None
+        self.active_ui_interaction: Optional[Dict[str, Any]] = None
+        self.ui_response_future: Optional[asyncio.Future] = None
+
+    async def start_mission(self, mission_dag: Dict[str, Any]) -&gt; str:
+        &quot;&quot;&quot;Initialize and begin execution of a validated mission DAG.&quot;&quot;&quot;
+        if self.state not in (MissionState.IDLE, MissionState.COMPLETED):
+            return f&quot;Cannot start: Mission runner is currently in state {self.state}.&quot;
+
+        self.current_mission = mission_dag
+        self.current_node_id = mission_dag[&quot;start_node_id&quot;]
+        self.state = MissionState.RUNNING
+        logger.info(f&quot;Started mission &#x27;{mission_dag.get(&#x27;name&#x27;)}&#x27; at node &#x27;{self.current_node_id}&#x27;&quot;)
+
+        # Spawn non-blocking execution task
+        asyncio.create_task(self._execution_loop())
+        return &quot;Mission started successfully.&quot;
+
+    async def _execution_loop(self):
+        nodes_map = {n[&quot;id&quot;]: n for n in self.current_mission[&quot;nodes&quot;]}
+
+        while self.state == MissionState.RUNNING and self.current_node_id:
+            node = nodes_map.get(self.current_node_id)
+            if not node:
+                logger.error(f&quot;Node &#x27;{self.current_node_id}&#x27; missing from mission definition.&quot;)
+                self.state = MissionState.FAILED
+                break
+
+            node_type = node.get(&quot;type&quot;)
+            logger.info(f&quot;Executing node &#x27;{self.current_node_id}&#x27; (Type: {node_type})&quot;)
+
+            # Execute according to node type
+            next_node = None
+            if node_type == &quot;navigation&quot;:
+                next_node = await self._exec_navigation_node(node)
+            elif node_type == &quot;delay&quot;:
+                next_node = await self._exec_delay_node(node)
+            elif node_type == &quot;ui_interaction&quot;:
+                next_node = await self._exec_ui_interaction_node(node)
+            elif node_type == &quot;dock&quot;:
+                next_node = await self._exec_dock_node(node)
+            else:
+                logger.warning(f&quot;Unknown node type &#x27;{node_type}&#x27;. Skipping.&quot;)
+                next_node = node.get(&quot;next_node_id&quot;)
+
+            # Check termination
+            self.current_node_id = next_node
+            if not self.current_node_id:
+                logger.info(&quot;Terminal node reached. Mission COMPLETED.&quot;)
+                self.state = MissionState.COMPLETED
+                break
+
+    async def _exec_navigation_node(self, node: Dict[str, Any]) -&gt; Optional[str]:
+        wp_id = node.get(&quot;params&quot;, {}).get(&quot;waypoint_id&quot;)
+        logger.info(f&quot;Navigating to waypoint &#x27;{wp_id}&#x27;...&quot;)
+        # Dispatch to gateway
+        resp = await self.client.post(&quot;/api/v1/navigation/navigate_to_waypoint&quot;, json={&quot;waypoint_id&quot;: wp_id})
+        # Simulate awaiting Nav2 arrival
+        await asyncio.sleep(2.0)
+        return node.get(&quot;next_node_id&quot;)
+
+    async def _exec_delay_node(self, node: Dict[str, Any]) -&gt; Optional[str]:
+        duration = node.get(&quot;params&quot;, {}).get(&quot;duration_seconds&quot;, 1.0)
+        logger.info(f&quot;Settling for {duration} seconds...&quot;)
+        await asyncio.sleep(duration)
+        return node.get(&quot;next_node_id&quot;)
+
+    async def _exec_ui_interaction_node(self, node: Dict[str, Any]) -&gt; Optional[str]:
+        params = node.get(&quot;params&quot;, {})
+        self.active_ui_interaction = {
+            &quot;node_id&quot;: node[&quot;id&quot;],
+            &quot;title&quot;: params.get(&quot;title&quot;, &quot;Action Required&quot;),
+            &quot;prompt&quot;: params.get(&quot;prompt&quot;, &quot;&quot;),
+            &quot;options&quot;: params.get(&quot;options&quot;, [&quot;Confirm&quot;]),
+            &quot;timestamp&quot;: time.time()
+        }
+        self.state = MissionState.WAITING_UI_INPUT
+        self.ui_response_future = asyncio.get_event_loop().create_future()
+
+        logger.info(f&quot;Suspended execution. Waiting for operator input: &#x27;{params.get(&#x27;prompt&#x27;)}&#x27;&quot;)
+
+        try:
+            # Wait for response with timeout
+            timeout = params.get(&quot;timeout_seconds&quot;, 120)
+            selected_option = await asyncio.wait_for(self.ui_response_future, timeout=timeout)
+            logger.info(f&quot;Operator responded: &#x27;{selected_option}&#x27;&quot;)
+            self.state = MissionState.RUNNING
+            self.active_ui_interaction = None
+
+            # Resolve next node from conditional transitions
+            transitions = node.get(&quot;conditional_transitions&quot;, {})
+            return transitions.get(selected_option, node.get(&quot;next_node_id&quot;))
+        except asyncio.TimeoutError:
+            logger.error(&quot;UI Interaction timed out. Mission marked FAILED.&quot;)
+            self.state = MissionState.FAILED
+            self.active_ui_interaction = None
+            return None
+
+    def submit_ui_response(self, option: str) -&gt; bool:
+        &quot;&quot;&quot;Invoked when operator responds via Web Cockpit or ESP32 Smartwatch.&quot;&quot;&quot;
+        if self.state == MissionState.WAITING_UI_INPUT and self.ui_response_future:
+            if not self.ui_response_future.done():
+                self.ui_response_future.set_result(option)
+                return True
+        return False</code></pre></div>
+<hr>
+<h2>3. Human Interaction Flow on Web Cockpit and ESP32 Smartwatch</h2>
+<p>When the Mission Runner enters <code>WAITING_UI_INPUT</code>:</p>
+<ol>
+<li>It broadcasts a WebSocket event to all connected clients:</li>
+</ol>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-json">{
+  &quot;event&quot;: &quot;ui_interaction_active&quot;,
+  &quot;data&quot;: {
+    &quot;node_id&quot;: &quot;gate_operator_inspection&quot;,
+    &quot;title&quot;: &quot;Pallet Inspection&quot;,
+    &quot;prompt&quot;: &quot;Operator: Confirm parts are loaded onto tray.&quot;,
+    &quot;options&quot;: [&quot;Confirmed&quot;, &quot;Reject / Empty&quot;]
+  }
+}</code></pre></div>
+<ol>
+<li><strong>The Web Cockpit</strong> pops up an interactive modal card in the bottom navigation tray.</li>
+<li><strong>The ESP32-S3 Smartwatch Badge</strong> vibrates on the warehouse worker&#x27;s wrist and displays the prompt with tactile physical buttons:</li>
+</ol>
+<ul>
+<li><strong>Button 1 (Top)</strong>: Selects <em>&quot;Confirmed&quot;</em></li>
+<li><strong>Button 2 (Bottom)</strong>: Selects <em>&quot;Reject / Empty&quot;</em></li>
+</ul>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-mermaid">sequenceDiagram
+    autonumber
+    participant Runner as Stateful Mission Runner
+    participant Web as Web Cockpit (Browser)
+    participant Watch as ESP32-S3 Smartwatch Badge
+    actor Worker as Warehouse Worker
+
+    Runner-&gt;&gt;Runner: Arrives at Node &#x27;gate_operator_inspection&#x27;
+    Runner-&gt;&gt;Runner: State -&gt; WAITING_UI_INPUT
+    Runner--&gt;&gt;Web: WS Event: ui_interaction_active
+    Runner--&gt;&gt;Watch: MQTT / WS Notification: &quot;Pallet Inspection&quot;
+    
+    Watch-&gt;&gt;Worker: Wrist Haptic Vibration + Screen Awake
+    Web-&gt;&gt;Worker: Modal Dialog Rendered on Screen
+    
+    Worker-&gt;&gt;Watch: Taps &quot;Confirmed&quot; Button on Wrist
+    Watch-&gt;&gt;Runner: POST /api/v1/ui/interaction/respond {option: &quot;Confirmed&quot;}
+    Runner-&gt;&gt;Runner: Future Resolved with &quot;Confirmed&quot;
+    Runner-&gt;&gt;Runner: Transition to &#x27;nav_to_storage&#x27;
+    Runner--&gt;&gt;Web: WS Event: ui_interaction_cleared
+    Runner--&gt;&gt;Watch: Notification Cleared (Status: In Transit)</code></pre></div>
+<hr>
+<h2>4. Testing the Full Interactive Gate Loop</h2>
+<p>You can simulate the entire gate sequence in Python without physical hardware:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python"># Simulate Mission Runner execution
+runner = StatefulMissionRunner(gateway_client=mock_client)
+await runner.start_mission(mission_dag)
+
+# Check active prompt
+assert runner.state == MissionState.WAITING_UI_INPUT
+print(f&quot;Active Prompt: {runner.active_ui_interaction[&#x27;prompt&#x27;]}&quot;)
+
+# Simulate worker tapping &#x27;Confirmed&#x27; on their wrist badge
+runner.submit_ui_response(&quot;Confirmed&quot;)
+
+# Execution resumes autonomously!
+await asyncio.sleep(1.0)
+assert runner.state == MissionState.RUNNING</code></pre></div>
+<hr>
+<h2>Summary</h2>
+<ul>
+<li>Stateful mission execution requires a decoupled asynchronous Finite State Machine.</li>
+<li><code>ui_interaction</code> nodes allow physical AMRs to safely collaborate with human warehouse workers.</li>
+<li>The state machine suspends execution deterministically until a response is submitted from the Web Cockpit or ESP32 Smartwatch Badge.</li>
+<li>In <strong>Lesson 24</strong>, we bring all three days together in the <strong>End-to-End Grand Capstone Fleet Pipeline</strong>!</li>
+</ul>
+      </article>
+
+      <footer class="lesson-nav-footer">
+        <a href="lesson_22.html" class="nav-link-btn" >&larr; Previous Lesson</a>
+        <a href="../index.html" class="nav-link-btn">⚡ Enterprise Hub</a>
+        <a href="lesson_24.html" class="nav-link-btn" >Next Lesson &rarr;</a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../assets/js/highlight.min.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/quiz_engine.js"></script>
+  <script src="../assets/js/instructor_sync.js"></script>
+</body>
+</html>

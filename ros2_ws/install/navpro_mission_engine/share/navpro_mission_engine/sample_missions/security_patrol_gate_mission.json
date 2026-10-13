@@ -1,0 +1,54 @@
+{
+  "id": "mission-sec-002",
+  "title": "Facility Night Patrol Loop",
+  "version": "1.0",
+  "author": "NavPro Security Ops",
+  "nodes": [
+    {
+      "id": "node_1",
+      "type": "NAVIGATE_WAYPOINT",
+      "name": "Patrol Checkpoint Alpha",
+      "params": {
+        "waypoint": "warehouse_aisle_1",
+        "tolerance": 0.2
+      }
+    },
+    {
+      "id": "node_2",
+      "type": "WAIT_DELAY",
+      "name": "360 Thermal Camera Pan",
+      "params": {
+        "duration_seconds": 2.0
+      }
+    },
+    {
+      "id": "node_3",
+      "type": "NAVIGATE_WAYPOINT",
+      "name": "Patrol Checkpoint Bravo",
+      "params": {
+        "waypoint": "warehouse_aisle_2",
+        "tolerance": 0.2
+      }
+    },
+    {
+      "id": "node_4",
+      "type": "UI_CONFIRMATION_GATE",
+      "name": "Security Guard Check-in",
+      "params": {
+        "title": "Clear Perimeter?",
+        "prompt": "Security Desk: Confirm no unauthorized perimeter breach before returning.",
+        "options": ["ALL_CLEAR", "INVESTIGATE_ALARM"],
+        "default_option": "ALL_CLEAR",
+        "timeout_seconds": 60
+      }
+    },
+    {
+      "id": "node_5",
+      "type": "DOCK",
+      "name": "Autonomous Docking",
+      "params": {
+        "charge_threshold": 90.0
+      }
+    }
+  ]
+}

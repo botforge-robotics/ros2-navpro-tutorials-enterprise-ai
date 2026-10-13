@@ -1,0 +1,38 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from navpro_enterprise_interfaces/action/ExecuteMission.action
+// generated code does not contain a copyright notice
+
+
+module navpro_enterprise_interfaces {
+  module action {
+    @verbatim (language="comment", text=
+      "Goal")
+    struct ExecuteMission_Goal {
+      string mission_id;
+
+      string mission_json;
+    };
+    @verbatim (language="comment", text=
+      "Result")
+    struct ExecuteMission_Result {
+      boolean success;
+
+      int32 completed_nodes_count;
+
+      string execution_summary;
+    };
+    @verbatim (language="comment", text=
+      "Feedback")
+    struct ExecuteMission_Feedback {
+      int32 current_node_index;
+
+      int32 total_nodes_count;
+
+      string active_node_name;
+
+      string active_node_status;
+
+      float percent_complete;
+    };
+  };
+};

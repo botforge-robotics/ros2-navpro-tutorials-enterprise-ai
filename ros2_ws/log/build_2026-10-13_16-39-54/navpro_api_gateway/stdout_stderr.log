@@ -1,0 +1,39 @@
+running egg_info
+creating ../../build/navpro_api_gateway/navpro_api_gateway.egg-info
+writing ../../build/navpro_api_gateway/navpro_api_gateway.egg-info/PKG-INFO
+writing dependency_links to ../../build/navpro_api_gateway/navpro_api_gateway.egg-info/dependency_links.txt
+writing entry points to ../../build/navpro_api_gateway/navpro_api_gateway.egg-info/entry_points.txt
+writing requirements to ../../build/navpro_api_gateway/navpro_api_gateway.egg-info/requires.txt
+writing top-level names to ../../build/navpro_api_gateway/navpro_api_gateway.egg-info/top_level.txt
+writing manifest file '../../build/navpro_api_gateway/navpro_api_gateway.egg-info/SOURCES.txt'
+reading manifest file '../../build/navpro_api_gateway/navpro_api_gateway.egg-info/SOURCES.txt'
+writing manifest file '../../build/navpro_api_gateway/navpro_api_gateway.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_api_gateway/build
+creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_api_gateway/build/lib
+creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_api_gateway/build/lib/navpro_api_gateway
+copying navpro_api_gateway/__init__.py -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_api_gateway/build/lib/navpro_api_gateway
+copying navpro_api_gateway/gateway_node.py -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_api_gateway/build/lib/navpro_api_gateway
+running install
+running install_lib
+creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/lib/python3.12/site-packages/navpro_api_gateway
+copying /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_api_gateway/build/lib/navpro_api_gateway/__init__.py -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/lib/python3.12/site-packages/navpro_api_gateway
+copying /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_api_gateway/build/lib/navpro_api_gateway/gateway_node.py -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/lib/python3.12/site-packages/navpro_api_gateway
+byte-compiling /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/lib/python3.12/site-packages/navpro_api_gateway/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/lib/python3.12/site-packages/navpro_api_gateway/gateway_node.py to gateway_node.cpython-312.pyc
+running install_data
+creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/share/ament_index
+creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/share/ament_index/resource_index
+creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/share/ament_index/resource_index/packages
+copying resource/navpro_api_gateway -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/share/ament_index/resource_index/packages
+copying package.xml -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/share/navpro_api_gateway
+creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/share/navpro_api_gateway/launch
+copying launch/gateway.launch.py -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/share/navpro_api_gateway/launch
+creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/share/navpro_api_gateway/config
+copying config/gateway_params.yaml -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/share/navpro_api_gateway/config
+running install_egg_info
+Copying ../../build/navpro_api_gateway/navpro_api_gateway.egg-info to /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/lib/python3.12/site-packages/navpro_api_gateway-2.0.0-py3.12.egg-info
+running install_scripts
+Installing gateway_node script to /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/lib/navpro_api_gateway
+writing list of installed files to '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_api_gateway/install.log'

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 19: Building Python Mcp Robotics Server | Level 2 Enterprise</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/highlight-dark.min.css">
+  <link rel="stylesheet" href="../assets/css/quiz.css">
+  <link rel="stylesheet" href="../assets/css/instructor_sync.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-container">
+      <a href="https://botforge.in" target="_blank" class="company-brand" title="Botforge Robotics - botforge.in">
+        <img src="../assets/images/botforge_black.png" alt="Botforge Robotics" class="company-logo">
+      </a>
+      <div class="brand-divider"></div>
+      <a href="../index.html" class="brand" title="Level 2: Enterprise Robotics & AI">
+        <img src="../assets/images/ros2_logo.svg" alt="ROS 2" class="brand-logo">
+        <span class="brand-title">NavPro Learning Hub</span>
+        <span class="badge-jazzy" style="background:#0284c7; color:#fff; border-color:#0284c7;">Level 2 Enterprise</span>
+      </a>
+    </div>
+    <div class="header-center">
+      <input type="text" id="lessonSearchInput" class="search-input" placeholder="🔍 Search Level 2 curriculum...">
+    </div>
+    <div class="header-actions">
+      <a href="http://localhost:6080/vnc.html" target="_blank" class="track-btn" title="Open Ubuntu Desktop GUI via noVNC">🖥️ Desktop GUI</a>
+      <a href="http://localhost:8443/?folder=/home/navpro/workspace" target="_blank" class="track-btn" title="Open VS Code in browser">💻 VS Code</a>
+      <a href="../index.html" class="track-btn active" style="background:#0284c7; color:#fff;">Architecture Hub</a>
+      <span class="theme-pill">☀️ Light Theme</span>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <aside class="app-sidebar">
+      <div class="progress-card">
+        <div class="progress-header">
+          <span>Enterprise Progress</span>
+          <span id="overallProgressText">0% Complete (0/24)</span>
+        </div>
+        <div class="progress-bar-track">
+          <div id="overallProgressBar" class="progress-bar-fill"></div>
+        </div>
+        <button id="resetProgressBtn" class="track-btn reset-btn" style="width:100%; margin-top:8px; justify-content:center;">↺ Reset Progress</button>
+      </div>
+
+      
+        <div class="sidebar-section-title">Enterprise &amp; AI Stack (24 Lessons)</div>
+        <ul class="lesson-list">
+          
+            <li>
+              <a href="lesson_01.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_01" onclick="event.stopPropagation();">
+                <span class="lesson-num">01</span>
+                <span class="lesson-title">Web Technologies For Roboticists Http Methods Json</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_02.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_02" onclick="event.stopPropagation();">
+                <span class="lesson-num">02</span>
+                <span class="lesson-title">Realtime Websockets Vs Http Polling</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_03.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_03" onclick="event.stopPropagation();">
+                <span class="lesson-num">03</span>
+                <span class="lesson-title">Enterprise System Architecture Dual Plane</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_04.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_04" onclick="event.stopPropagation();">
+                <span class="lesson-num">04</span>
+                <span class="lesson-title">High Concurrency Ros2 Multithreaded Executor</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_05.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_05" onclick="event.stopPropagation();">
+                <span class="lesson-num">05</span>
+                <span class="lesson-title">Fastapi Robotics Rest Gateway Pydantic</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_06.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_06" onclick="event.stopPropagation();">
+                <span class="lesson-num">06</span>
+                <span class="lesson-title">High Frequency Websocket Telemetry Broadcaster</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_07.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_07" onclick="event.stopPropagation();">
+                <span class="lesson-num">07</span>
+                <span class="lesson-title">Non Blocking Nav2 Action Dispatching</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_08.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_08" onclick="event.stopPropagation();">
+                <span class="lesson-num">08</span>
+                <span class="lesson-title">Day1 Capstone Navpro Api Gateway</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_09.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_09" onclick="event.stopPropagation();">
+                <span class="lesson-num">09</span>
+                <span class="lesson-title">Client Sdk Architecture Python Javascript</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_10.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_10" onclick="event.stopPropagation();">
+                <span class="lesson-num">10</span>
+                <span class="lesson-title">Modern Fleet Cockpit Architecture Canvas</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_11.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_11" onclick="event.stopPropagation();">
+                <span class="lesson-num">11</span>
+                <span class="lesson-title">Rendering 2D Slam Map Occupancy Grid</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_12.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_12" onclick="event.stopPropagation();">
+                <span class="lesson-num">12</span>
+                <span class="lesson-title">Live Robot Pose And Trajectory Rendering</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_13.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_13" onclick="event.stopPropagation();">
+                <span class="lesson-num">13</span>
+                <span class="lesson-title">Interactive Robot Controls Virtual Joystick</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_14.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_14" onclick="event.stopPropagation();">
+                <span class="lesson-num">14</span>
+                <span class="lesson-title">Waypoint Store And Interactive Map Markers</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_15.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_15" onclick="event.stopPropagation();">
+                <span class="lesson-num">15</span>
+                <span class="lesson-title">Enterprise Fleet Security Auth Rate Limiting</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_16.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_16" onclick="event.stopPropagation();">
+                <span class="lesson-num">16</span>
+                <span class="lesson-title">Day2 Capstone Interactive Web Cockpit</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_17.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_17" onclick="event.stopPropagation();">
+                <span class="lesson-num">17</span>
+                <span class="lesson-title">Physical Ai And Grounded Reasoning</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_18.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_18" onclick="event.stopPropagation();">
+                <span class="lesson-num">18</span>
+                <span class="lesson-title">Model Context Protocol Standard Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_19.html" class="lesson-item active">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_19" onclick="event.stopPropagation();">
+                <span class="lesson-num">19</span>
+                <span class="lesson-title">Building Python Mcp Robotics Server</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_20.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_20" onclick="event.stopPropagation();">
+                <span class="lesson-num">20</span>
+                <span class="lesson-title">Deterministic Safety Barriers And Preflight Guards</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_21.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_21" onclick="event.stopPropagation();">
+                <span class="lesson-num">21</span>
+                <span class="lesson-title">Connecting Frontier Models Claude Gemini Antigravity</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_22.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_22" onclick="event.stopPropagation();">
+                <span class="lesson-num">22</span>
+                <span class="lesson-title">Industrial Mission Graph Dag Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_23.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_23" onclick="event.stopPropagation();">
+                <span class="lesson-num">23</span>
+                <span class="lesson-title">Stateful Mission Runner And Ui Gates</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_24.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_24" onclick="event.stopPropagation();">
+                <span class="lesson-num">24</span>
+                <span class="lesson-title">Day3 Grand Capstone End To End Fleet Pipeline</span>
+              </a>
+            </li>
+            
+        </ul>
+        
+    </aside>
+
+    <main class="app-content">
+      <article class="markdown-body">
+        <h1>Lesson 19: Building a Python MCP Robotics Server from Scratch</h1>
+<h2>Learning Objectives</h2>
+<p>By the end of this lesson, you will be able to:</p>
+<ol>
+<li>Implement a production-ready <strong>Model Context Protocol (MCP)</strong> server in Python using <code>asyncio</code> and standard I/O streams.</li>
+<li>Route JSON-RPC 2.0 requests (<code>initialize</code>, <code>tools/list</code>, <code>tools/call</code>) to asynchronous robotics handlers.</li>
+<li>Bridge MCP tool calls to the FastAPI REST Gateway and Nav2 Action server via <code>httpx.AsyncClient</code>.</li>
+<li>Enforce strict <code>sys.stderr</code> log isolation to ensure 100% protocol stream integrity.</li>
+<li>Verify the MCP server using an automated command-line JSON-RPC pipe test.</li>
+</ol>
+<hr>
+<h2>1. Architectural Overview of the MCP Robotics Bridge</h2>
+<p>Our Python MCP server acts as an asynchronous translator between the frontier AI agent (which speaks JSON-RPC 2.0 over standard I/O) and the robot&#x27;s physical control plane (FastAPI REST Gateway &amp; ROS 2):</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-mermaid">graph LR
+    subgraph AI Runtime
+        Agent[Antigravity / Claude Agent]
+    end
+
+    subgraph NavPro MCP Server (Python)
+        StdIn[&quot;sys.stdin (JSON-RPC)&quot;] --&gt; Parser[Protocol Router]
+        Parser --&gt; Registry[Tool Registry]
+        Registry --&gt; Handler1[get_robot_telemetry]
+        Registry --&gt; Handler2[list_waypoints]
+        Registry --&gt; Handler3[navigate_to_waypoint]
+        Registry --&gt; Handler4[emergency_stop]
+        Parser --&gt; StdOut[&quot;sys.stdout (JSON-RPC)&quot;]
+        Logger[&quot;logging.getLogger()&quot;] --&gt; StdErr[&quot;sys.stderr (Debug Logs)&quot;]
+    end
+
+    subgraph Robot Software Plane
+        Gateway[FastAPI Gateway :8000]
+        Handler1 &amp; Handler2 &amp; Handler3 &amp; Handler4 --&gt;|HTTP REST / WebSocket| Gateway
+        Gateway --&gt; ROS2[ROS 2 Nav2 / Micro-ROS]
+    end
+
+    Agent &lt;--&gt;|stdio pipe| StdIn &amp; StdOut</code></pre></div>
+<hr>
+<h2>2. Implementing the Python MCP Server (<code>navpro_mcp_server.py</code>)</h2>
+<p>Create the standalone server file in <code>level2/scripts/navpro_mcp_server.py</code>:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python">#!/usr/bin/env python3
+&quot;&quot;&quot;
+NavPro Robotics MCP Server (JSON-RPC 2.0 over stdio)
+Exposes robot telemetry, waypoint navigation, and safety tools to frontier AI models.
+&quot;&quot;&quot;
+
+import sys
+import json
+import logging
+import asyncio
+import httpx
+from typing import Dict, Any, List
+
+# Configure logging strictly to sys.stderr
+logging.basicConfig(
+    stream=sys.stderr,
+    level=logging.INFO,
+    format=&quot;%(asctime)s [%(levelname)s] NavPro-MCP: %(message)s&quot;
+)
+logger = logging.getLogger(&quot;navpro_mcp&quot;)
+
+# Configuration
+ROBOT_GATEWAY_URL = &quot;http://127.0.0.1:8000&quot;
+
+class NavProMCPServer:
+    def __init__(self, gateway_url: str = ROBOT_GATEWAY_URL):
+        self.gateway_url = gateway_url
+        self.http_client = httpx.AsyncClient(base_url=self.gateway_url, timeout=10.0)
+        self.tools_registry = {
+            &quot;get_robot_telemetry&quot;: self.tool_get_robot_telemetry,
+            &quot;list_waypoints&quot;: self.tool_list_waypoints,
+            &quot;navigate_to_waypoint&quot;: self.tool_navigate_to_waypoint,
+            &quot;emergency_stop&quot;: self.tool_emergency_stop,
+        }
+
+    def get_tool_definitions(self) -&gt; List[Dict[str, Any]]:
+        &quot;&quot;&quot;Return MCP tool schemas exposed to the AI model.&quot;&quot;&quot;
+        return [
+            {
+                &quot;name&quot;: &quot;get_robot_telemetry&quot;,
+                &quot;description&quot;: &quot;Returns current robot pose (x, y, yaw), battery SOC percentage, velocity, and Nav2 navigation status.&quot;,
+                &quot;inputSchema&quot;: {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;properties&quot;: {},
+                    &quot;required&quot;: []
+                }
+            },
+            {
+                &quot;name&quot;: &quot;list_waypoints&quot;,
+                &quot;description&quot;: &quot;Lists all registered semantic landmarks and target waypoints currently saved on the robot&#x27;s map.&quot;,
+                &quot;inputSchema&quot;: {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;properties&quot;: {},
+                    &quot;required&quot;: []
+                }
+            },
+            {
+                &quot;name&quot;: &quot;navigate_to_waypoint&quot;,
+                &quot;description&quot;: &quot;Dispatches the AMR to autonomously drive to a specified semantic waypoint landmark using Nav2.&quot;,
+                &quot;inputSchema&quot;: {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;properties&quot;: {
+                        &quot;waypoint_id&quot;: {
+                            &quot;type&quot;: &quot;string&quot;,
+                            &quot;description&quot;: &quot;Unique identifier of the destination waypoint (e.g. &#x27;charging_dock&#x27;, &#x27;inspection_bay_1&#x27;).&quot;
+                        }
+                    },
+                    &quot;required&quot;: [&quot;waypoint_id&quot;]
+                }
+            },
+            {
+                &quot;name&quot;: &quot;emergency_stop&quot;,
+                &quot;description&quot;: &quot;Trigger an immediate software Emergency Stop. Cuts motor drive power and aborts all active Nav2 tasks.&quot;,
+                &quot;inputSchema&quot;: {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;properties&quot;: {
+                        &quot;reason&quot;: {
+                            &quot;type&quot;: &quot;string&quot;,
+                            &quot;description&quot;: &quot;Operational reason for the E-Stop invocation.&quot;
+                        }
+                    },
+                    &quot;required&quot;: [&quot;reason&quot;]
+                }
+            }
+        ]
+
+    # --- Tool Implementations ---
+    async def tool_get_robot_telemetry(self, args: Dict[str, Any]) -&gt; str:
+        try:
+            resp = await self.http_client.get(&quot;/api/v1/telemetry&quot;)
+            if resp.status_code == 200:
+                data = resp.json()
+                return (
+                    f&quot;Robot Telemetry:\n&quot;
+                    f&quot;- Pose: x={data.get(&#x27;x&#x27;, 0):.2f}m, y={data.get(&#x27;y&#x27;, 0):.2f}m, yaw={data.get(&#x27;yaw&#x27;, 0):.2f} rad\n&quot;
+                    f&quot;- Battery: {data.get(&#x27;battery_soc&#x27;, 100):.1f}%\n&quot;
+                    f&quot;- Nav Status: {data.get(&#x27;nav_status&#x27;, &#x27;IDLE&#x27;)}\n&quot;
+                    f&quot;- E-Stop Active: {data.get(&#x27;estop_active&#x27;, False)}&quot;
+                )
+            return f&quot;Error querying telemetry: HTTP {resp.status_code} - {resp.text}&quot;
+        except Exception as e:
+            logger.error(f&quot;Failed to fetch telemetry: {e}&quot;)
+            return f&quot;Telemetry query exception: {str(e)}&quot;
+
+    async def tool_list_waypoints(self, args: Dict[str, Any]) -&gt; str:
+        try:
+            resp = await self.http_client.get(&quot;/api/v1/waypoints&quot;)
+            if resp.status_code == 200:
+                waypoints = resp.json()
+                if not waypoints:
+                    return &quot;No waypoints currently registered in the robot&#x27;s active map.&quot;
+                lines = [f&quot;Found {len(waypoints)} registered waypoints:&quot;]
+                for wp in waypoints:
+                    lines.append(f&quot;- ID: &#x27;{wp[&#x27;id&#x27;]}&#x27; ({wp.get(&#x27;name&#x27;, &#x27;N/A&#x27;)}) at x={wp[&#x27;x&#x27;]:.2f}, y={wp[&#x27;y&#x27;]:.2f}&quot;)
+                return &quot;\n&quot;.join(lines)
+            return f&quot;Error listing waypoints: HTTP {resp.status_code}&quot;
+        except Exception as e:
+            return f&quot;Waypoint query exception: {str(e)}&quot;
+
+    async def tool_navigate_to_waypoint(self, args: Dict[str, Any]) -&gt; str:
+        waypoint_id = args.get(&quot;waypoint_id&quot;)
+        if not waypoint_id:
+            return &quot;Error: &#x27;waypoint_id&#x27; parameter is required.&quot;
+
+        try:
+            resp = await self.http_client.post(
+                &quot;/api/v1/navigation/navigate_to_waypoint&quot;,
+                json={&quot;waypoint_id&quot;: waypoint_id}
+            )
+            if resp.status_code in (200, 202):
+                data = resp.json()
+                task_id = data.get(&quot;task_id&quot;, &quot;unknown&quot;)
+                return f&quot;Navigation goal successfully dispatched to waypoint &#x27;{waypoint_id}&#x27;. Task ID: {task_id}.&quot;
+            return f&quot;Navigation dispatch rejected: HTTP {resp.status_code} - {resp.text}&quot;
+        except Exception as e:
+            return f&quot;Navigation dispatch exception: {str(e)}&quot;
+
+    async def tool_emergency_stop(self, args: Dict[str, Any]) -&gt; str:
+        reason = args.get(&quot;reason&quot;, &quot;E-Stop triggered by MCP Agent&quot;)
+        try:
+            resp = await self.http_client.post(
+                &quot;/api/v1/safety/estop&quot;,
+                json={&quot;reason&quot;: reason, &quot;requester&quot;: &quot;mcp_ai_agent&quot;}
+            )
+            if resp.status_code == 200:
+                return f&quot;EMERGENCY STOP ENGAGED. Motors disabled. Reason: {reason}.&quot;
+            return f&quot;E-Stop command failed: HTTP {resp.status_code} - {resp.text}&quot;
+        except Exception as e:
+            return f&quot;E-Stop exception: {str(e)}&quot;
+
+    # --- JSON-RPC 2.0 Dispatcher ---
+    async def process_message(self, request_raw: str) -&gt; str:
+        &quot;&quot;&quot;Parse, execute, and format JSON-RPC 2.0 response.&quot;&quot;&quot;
+        try:
+            req = json.loads(request_raw)
+        except json.JSONDecodeError:
+            return json.dumps({
+                &quot;jsonrpc&quot;: &quot;2.0&quot;,
+                &quot;id&quot;: None,
+                &quot;error&quot;: {&quot;code&quot;: -32700, &quot;message&quot;: &quot;Parse error: Invalid JSON&quot;}
+            })
+
+        msg_id = req.get(&quot;id&quot;)
+        method = req.get(&quot;method&quot;)
+        params = req.get(&quot;params&quot;, {})
+
+        logger.info(f&quot;Incoming RPC method: {method} (id: {msg_id})&quot;)
+
+        # 1. Handle initialize handshake
+        if method == &quot;initialize&quot;:
+            return json.dumps({
+                &quot;jsonrpc&quot;: &quot;2.0&quot;,
+                &quot;id&quot;: msg_id,
+                &quot;result&quot;: {
+                    &quot;protocolVersion&quot;: &quot;2024-11-05&quot;,
+                    &quot;capabilities&quot;: {
+                        &quot;tools&quot;: {&quot;listChanged&quot;: False}
+                    },
+                    &quot;serverInfo&quot;: {
+                        &quot;name&quot;: &quot;navpro-robotics-mcp&quot;,
+                        &quot;version&quot;: &quot;1.0.0&quot;
+                    }
+                }
+            })
+
+        # 2. Handle notifications (no response expected)
+        if method == &quot;notifications/initialized&quot;:
+            logger.info(&quot;Client handshake completed successfully.&quot;)
+            return &quot;&quot;
+
+        # 3. Handle tools/list
+        if method == &quot;tools/list&quot;:
+            return json.dumps({
+                &quot;jsonrpc&quot;: &quot;2.0&quot;,
+                &quot;id&quot;: msg_id,
+                &quot;result&quot;: {
+                    &quot;tools&quot;: self.get_tool_definitions()
+                }
+            })
+
+        # 4. Handle tools/call
+        if method == &quot;tools/call&quot;:
+            tool_name = params.get(&quot;name&quot;)
+            tool_args = params.get(&quot;arguments&quot;, {})
+
+            if tool_name not in self.tools_registry:
+                return json.dumps({
+                    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+                    &quot;id&quot;: msg_id,
+                    &quot;error&quot;: {&quot;code&quot;: -32601, &quot;message&quot;: f&quot;Tool &#x27;{tool_name}&#x27; not found&quot;}
+                })
+
+            # Execute tool handler
+            handler = self.tools_registry[tool_name]
+            result_text = await handler(tool_args)
+
+            return json.dumps({
+                &quot;jsonrpc&quot;: &quot;2.0&quot;,
+                &quot;id&quot;: msg_id,
+                &quot;result&quot;: {
+                    &quot;content&quot;: [
+                        {&quot;type&quot;: &quot;text&quot;, &quot;text&quot;: result_text}
+                    ],
+                    &quot;isError&quot;: False
+                }
+            })
+
+        # Unknown method
+        return json.dumps({
+            &quot;jsonrpc&quot;: &quot;2.0&quot;,
+            &quot;id&quot;: msg_id,
+            &quot;error&quot;: {&quot;code&quot;: -32601, &quot;message&quot;: f&quot;Method &#x27;{method}&#x27; not implemented&quot;}
+        })
+
+    async def run(self):
+        &quot;&quot;&quot;Asynchronous standard I/O event loop.&quot;&quot;&quot;
+        logger.info(&quot;NavPro MCP Server started. Listening on stdio...&quot;)
+        loop = asyncio.get_event_loop()
+        reader = asyncio.StreamReader()
+        protocol = asyncio.StreamReaderProtocol(reader)
+        await loop.connect_read_pipe(lambda: protocol, sys.stdin)
+
+        while True:
+            line_bytes = await reader.readline()
+            if not line_bytes:
+                break # EOF reached
+
+            line = line_bytes.decode(&quot;utf-8&quot;).strip()
+            if not line:
+                continue
+
+            response = await self.process_message(line)
+            if response:
+                sys.stdout.write(response + &quot;\n&quot;)
+                sys.stdout.flush()
+
+        await self.http_client.aclose()
+        logger.info(&quot;NavPro MCP Server shutdown.&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    server = NavProMCPServer()
+    try:
+        asyncio.run(server.run())
+    except KeyboardInterrupt:
+        pass</code></pre></div>
+<hr>
+<h2>3. Testing the MCP Server via Command-Line Pipe</h2>
+<p>You can verify the MCP server directly in your shell using <code>echo</code> and pipes without needing an external AI host:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-bash"># Test 1: Initialize Handshake
+echo &#x27;{&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;id&quot;: 1, &quot;method&quot;: &quot;initialize&quot;, &quot;params&quot;: {&quot;protocolVersion&quot;: &quot;2024-11-05&quot;}}&#x27; | python3 level2/scripts/navpro_mcp_server.py</code></pre></div>
+<p><strong>Expected JSON Response:</strong></p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-json">{&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;id&quot;: 1, &quot;result&quot;: {&quot;protocolVersion&quot;: &quot;2024-11-05&quot;, &quot;capabilities&quot;: {&quot;tools&quot;: {&quot;listChanged&quot;: false}}, &quot;serverInfo&quot;: {&quot;name&quot;: &quot;navpro-robotics-mcp&quot;, &quot;version&quot;: &quot;1.0.0&quot;}}}</code></pre></div>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-bash"># Test 2: Query Tools List
+echo &#x27;{&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;id&quot;: 2, &quot;method&quot;: &quot;tools/list&quot;, &quot;params&quot;: {}}&#x27; | python3 level2/scripts/navpro_mcp_server.py</code></pre></div>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-bash"># Test 3: Invoke get_robot_telemetry
+echo &#x27;{&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;id&quot;: 3, &quot;method&quot;: &quot;tools/call&quot;, &quot;params&quot;: {&quot;name&quot;: &quot;get_robot_telemetry&quot;, &quot;arguments&quot;: {}}}&#x27; | python3 level2/scripts/navpro_mcp_server.py</code></pre></div>
+<hr>
+<h2>Summary</h2>
+<ul>
+<li>We implemented a complete <strong>Model Context Protocol (MCP)</strong> server in pure Python using <code>asyncio</code> and <code>httpx</code>.</li>
+<li>Handled JSON-RPC 2.0 framing for <code>initialize</code>, <code>tools/list</code>, and <code>tools/call</code>.</li>
+<li>Routed AI tool calls directly to our FastAPI REST endpoints, bridging the LLM to ROS 2.</li>
+<li>Ensured zero stdout pollution by routing all logs to <code>sys.stderr</code>.</li>
+<li>In <strong>Lesson 20</strong>, we will add <strong>Deterministic Safety Barriers and Pre-flight Interceptors</strong> to prevent the LLM from issuing dangerous commands!</li>
+</ul>
+      </article>
+
+      <footer class="lesson-nav-footer">
+        <a href="lesson_18.html" class="nav-link-btn" >&larr; Previous Lesson</a>
+        <a href="../index.html" class="nav-link-btn">⚡ Enterprise Hub</a>
+        <a href="lesson_20.html" class="nav-link-btn" >Next Lesson &rarr;</a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../assets/js/highlight.min.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/quiz_engine.js"></script>
+  <script src="../assets/js/instructor_sync.js"></script>
+</body>
+</html>

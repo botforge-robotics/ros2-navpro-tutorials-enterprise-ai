@@ -1,0 +1,309 @@
+[0.071s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.071s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7ed455692390>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ed4557c2ba0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ed4557c2ba0>>, mixin_verb=('build',))
+[0.100s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.100s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.100s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.100s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.100s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.100s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.100s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_api_gateway) by extensions ['ignore', 'ignore_ament_install']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_api_gateway) by extension 'ignore'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_api_gateway) by extension 'ignore_ament_install'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_api_gateway) by extensions ['colcon_pkg']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_api_gateway) by extension 'colcon_pkg'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_api_gateway) by extensions ['colcon_meta']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_api_gateway) by extension 'colcon_meta'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_api_gateway) by extensions ['ros']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_api_gateway) by extension 'ros'
+[0.122s] DEBUG:colcon.colcon_core.package_identification:Package 'src/navpro_api_gateway' with type 'ros.ament_python' and name 'navpro_api_gateway'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_enterprise_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_enterprise_interfaces) by extension 'ignore'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_enterprise_interfaces) by extension 'ignore_ament_install'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_enterprise_interfaces) by extensions ['colcon_pkg']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_enterprise_interfaces) by extension 'colcon_pkg'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_enterprise_interfaces) by extensions ['colcon_meta']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_enterprise_interfaces) by extension 'colcon_meta'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_enterprise_interfaces) by extensions ['ros']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_enterprise_interfaces) by extension 'ros'
+[0.123s] DEBUG:colcon.colcon_core.package_identification:Package 'src/navpro_enterprise_interfaces' with type 'ros.ament_cmake' and name 'navpro_enterprise_interfaces'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_mcp_server) by extensions ['ignore', 'ignore_ament_install']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_mcp_server) by extension 'ignore'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_mcp_server) by extension 'ignore_ament_install'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_mcp_server) by extensions ['colcon_pkg']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_mcp_server) by extension 'colcon_pkg'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_mcp_server) by extensions ['colcon_meta']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_mcp_server) by extension 'colcon_meta'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_mcp_server) by extensions ['ros']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_mcp_server) by extension 'ros'
+[0.123s] DEBUG:colcon.colcon_core.package_identification:Package 'src/navpro_mcp_server' with type 'ros.ament_python' and name 'navpro_mcp_server'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_mission_engine) by extensions ['ignore', 'ignore_ament_install']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_mission_engine) by extension 'ignore'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_mission_engine) by extension 'ignore_ament_install'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_mission_engine) by extensions ['colcon_pkg']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_mission_engine) by extension 'colcon_pkg'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_mission_engine) by extensions ['colcon_meta']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_mission_engine) by extension 'colcon_meta'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_mission_engine) by extensions ['ros']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(src/navpro_mission_engine) by extension 'ros'
+[0.124s] DEBUG:colcon.colcon_core.package_identification:Package 'src/navpro_mission_engine' with type 'ros.ament_python' and name 'navpro_mission_engine'
+[0.124s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.124s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.124s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.124s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.124s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.137s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.137s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.139s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 302 installed packages in /opt/ros/jazzy
+[0.140s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'navpro_enterprise_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'navpro_enterprise_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'navpro_enterprise_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'navpro_enterprise_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'navpro_enterprise_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'navpro_enterprise_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'navpro_enterprise_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'navpro_enterprise_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'navpro_enterprise_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.165s] DEBUG:colcon.colcon_core.verb:Building package 'navpro_enterprise_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_enterprise_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces', 'merge_install': False, 'path': '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_enterprise_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'navpro_api_gateway' build argument 'cmake_args' from command line to 'None'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'navpro_api_gateway' build argument 'cmake_target' from command line to 'None'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'navpro_api_gateway' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'navpro_api_gateway' build argument 'cmake_clean_cache' from command line to 'False'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_api_gateway' build argument 'cmake_clean_first' from command line to 'False'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_api_gateway' build argument 'cmake_force_configure' from command line to 'False'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_api_gateway' build argument 'ament_cmake_args' from command line to 'None'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_api_gateway' build argument 'catkin_cmake_args' from command line to 'None'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_api_gateway' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.166s] DEBUG:colcon.colcon_core.verb:Building package 'navpro_api_gateway' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_api_gateway', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway', 'merge_install': False, 'path': '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_api_gateway', 'symlink_install': False, 'test_result_base': None}
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_mcp_server' build argument 'cmake_args' from command line to 'None'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_mcp_server' build argument 'cmake_target' from command line to 'None'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_mcp_server' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_mcp_server' build argument 'cmake_clean_cache' from command line to 'False'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_mcp_server' build argument 'cmake_clean_first' from command line to 'False'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_mcp_server' build argument 'cmake_force_configure' from command line to 'False'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_mcp_server' build argument 'ament_cmake_args' from command line to 'None'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_mcp_server' build argument 'catkin_cmake_args' from command line to 'None'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_mcp_server' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.166s] DEBUG:colcon.colcon_core.verb:Building package 'navpro_mcp_server' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mcp_server', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server', 'merge_install': False, 'path': '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_mcp_server', 'symlink_install': False, 'test_result_base': None}
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_mission_engine' build argument 'cmake_args' from command line to 'None'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_mission_engine' build argument 'cmake_target' from command line to 'None'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_mission_engine' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_mission_engine' build argument 'cmake_clean_cache' from command line to 'False'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_mission_engine' build argument 'cmake_clean_first' from command line to 'False'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_mission_engine' build argument 'cmake_force_configure' from command line to 'False'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_mission_engine' build argument 'ament_cmake_args' from command line to 'None'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_mission_engine' build argument 'catkin_cmake_args' from command line to 'None'
+[0.166s] Level 5:colcon.colcon_core.verb:set package 'navpro_mission_engine' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.166s] DEBUG:colcon.colcon_core.verb:Building package 'navpro_mission_engine' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mission_engine', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine', 'merge_install': False, 'path': '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_mission_engine', 'symlink_install': False, 'test_result_base': None}
+[0.166s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.167s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.167s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_enterprise_interfaces' with build type 'ament_cmake'
+[0.167s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_enterprise_interfaces'
+[0.169s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.169s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.169s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.176s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_enterprise_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_enterprise_interfaces -- -j16 -l16
+[0.468s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_enterprise_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_enterprise_interfaces -- -j16 -l16
+[0.479s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_enterprise_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_enterprise_interfaces
+[0.524s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(navpro_enterprise_interfaces)
+[0.524s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_enterprise_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_enterprise_interfaces
+[0.526s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces' for CMake module files
+[0.526s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces' for CMake config files
+[0.527s] Level 1:colcon.colcon_core.shell:create_environment_hook('navpro_enterprise_interfaces', 'cmake_prefix_path')
+[0.527s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/hook/cmake_prefix_path.ps1'
+[0.527s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/hook/cmake_prefix_path.dsv'
+[0.527s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/hook/cmake_prefix_path.sh'
+[0.528s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib'
+[0.528s] Level 1:colcon.colcon_core.shell:create_environment_hook('navpro_enterprise_interfaces', 'ld_library_path_lib')
+[0.528s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/hook/ld_library_path_lib.ps1'
+[0.528s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/hook/ld_library_path_lib.dsv'
+[0.529s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/hook/ld_library_path_lib.sh'
+[0.529s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/bin'
+[0.529s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib/pkgconfig/navpro_enterprise_interfaces.pc'
+[0.529s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib/python3.12/site-packages'
+[0.529s] Level 1:colcon.colcon_core.shell:create_environment_hook('navpro_enterprise_interfaces', 'pythonpath')
+[0.529s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/hook/pythonpath.ps1'
+[0.530s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/hook/pythonpath.dsv'
+[0.530s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/hook/pythonpath.sh'
+[0.530s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/bin'
+[0.530s] INFO:colcon.colcon_core.shell:Creating package script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/package.ps1'
+[0.531s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/package.dsv'
+[0.531s] INFO:colcon.colcon_core.shell:Creating package script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/package.sh'
+[0.532s] INFO:colcon.colcon_core.shell:Creating package script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/package.bash'
+[0.532s] INFO:colcon.colcon_core.shell:Creating package script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/package.zsh'
+[0.532s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/colcon-core/packages/navpro_enterprise_interfaces)
+[0.533s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(navpro_enterprise_interfaces)
+[0.533s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces' for CMake module files
+[0.533s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces' for CMake config files
+[0.534s] Level 1:colcon.colcon_core.shell:create_environment_hook('navpro_enterprise_interfaces', 'cmake_prefix_path')
+[0.534s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/hook/cmake_prefix_path.ps1'
+[0.534s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/hook/cmake_prefix_path.dsv'
+[0.534s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/hook/cmake_prefix_path.sh'
+[0.535s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib'
+[0.535s] Level 1:colcon.colcon_core.shell:create_environment_hook('navpro_enterprise_interfaces', 'ld_library_path_lib')
+[0.535s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/hook/ld_library_path_lib.ps1'
+[0.535s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/hook/ld_library_path_lib.dsv'
+[0.535s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/hook/ld_library_path_lib.sh'
+[0.535s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/bin'
+[0.536s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib/pkgconfig/navpro_enterprise_interfaces.pc'
+[0.536s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib/python3.12/site-packages'
+[0.536s] Level 1:colcon.colcon_core.shell:create_environment_hook('navpro_enterprise_interfaces', 'pythonpath')
+[0.536s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/hook/pythonpath.ps1'
+[0.536s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/hook/pythonpath.dsv'
+[0.536s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/hook/pythonpath.sh'
+[0.537s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/bin'
+[0.537s] INFO:colcon.colcon_core.shell:Creating package script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/package.ps1'
+[0.537s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/package.dsv'
+[0.538s] INFO:colcon.colcon_core.shell:Creating package script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/package.sh'
+[0.538s] INFO:colcon.colcon_core.shell:Creating package script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/package.bash'
+[0.538s] INFO:colcon.colcon_core.shell:Creating package script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/navpro_enterprise_interfaces/package.zsh'
+[0.538s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/share/colcon-core/packages/navpro_enterprise_interfaces)
+[0.538s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_api_gateway' with build type 'ament_python'
+[0.539s] Level 1:colcon.colcon_core.shell:create_environment_hook('navpro_api_gateway', 'ament_prefix_path')
+[0.539s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/share/navpro_api_gateway/hook/ament_prefix_path.ps1'
+[0.540s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/share/navpro_api_gateway/hook/ament_prefix_path.dsv'
+[0.540s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/share/navpro_api_gateway/hook/ament_prefix_path.sh'
+[0.540s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.541s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.543s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_mcp_server' with build type 'ament_python'
+[0.543s] Level 1:colcon.colcon_core.shell:create_environment_hook('navpro_mcp_server', 'ament_prefix_path')
+[0.543s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/share/navpro_mcp_server/hook/ament_prefix_path.ps1'
+[0.544s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/share/navpro_mcp_server/hook/ament_prefix_path.dsv'
+[0.544s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/share/navpro_mcp_server/hook/ament_prefix_path.sh'
+[0.544s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.545s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.546s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_mission_engine' with build type 'ament_python'
+[0.546s] Level 1:colcon.colcon_core.shell:create_environment_hook('navpro_mission_engine', 'ament_prefix_path')
+[0.547s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/share/navpro_mission_engine/hook/ament_prefix_path.ps1'
+[0.547s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/share/navpro_mission_engine/hook/ament_prefix_path.dsv'
+[0.547s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/share/navpro_mission_engine/hook/ament_prefix_path.sh'
+[0.548s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.548s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.703s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_api_gateway'
+[0.703s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.703s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.848s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_mcp_server'
+[0.849s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.849s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.997s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_mission_engine'
+[0.997s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.997s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.400s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: bdist, update_catalog, build_py, build_clib, test, extract_messages, build_scripts, dist_info, editable_wheel, alias, install, bdist_rpm, install_scripts, symlink_data, sdist, egg_info, compile_catalog, easy_install, check, develop, clean, install_lib, bdist_dumb, install_data, build, register, saveopts, rotate, build_ext, install_headers, upload, install_egg_info, upload_docs, setopt, bdist_egg, bdist_wheel, init_catalog
+[1.403s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_api_gateway': AMENT_PREFIX_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_api_gateway/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/lib/python3.12/site-packages:/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/navpro_api_gateway build --build-base /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_api_gateway/build install --record /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_api_gateway/install.log --install-scripts $base/lib/navpro_api_gateway --single-version-externally-managed install_data
+[1.403s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: bdist, update_catalog, build_py, build_clib, test, extract_messages, build_scripts, dist_info, editable_wheel, alias, install, bdist_rpm, install_scripts, symlink_data, sdist, egg_info, compile_catalog, easy_install, check, develop, clean, install_lib, bdist_dumb, install_data, build, register, saveopts, rotate, build_ext, install_headers, upload, install_egg_info, upload_docs, setopt, bdist_egg, bdist_wheel, init_catalog
+[1.405s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_mcp_server': AMENT_PREFIX_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mcp_server/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/lib/python3.12/site-packages:/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/navpro_mcp_server build --build-base /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mcp_server/build install --record /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mcp_server/install.log --install-scripts $base/lib/navpro_mcp_server --single-version-externally-managed install_data
+[1.414s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: bdist, update_catalog, build_py, build_clib, test, extract_messages, build_scripts, dist_info, editable_wheel, alias, install, bdist_rpm, install_scripts, symlink_data, sdist, egg_info, compile_catalog, easy_install, check, develop, clean, install_lib, bdist_dumb, install_data, build, register, saveopts, rotate, build_ext, install_headers, upload, install_egg_info, upload_docs, setopt, bdist_egg, bdist_wheel, init_catalog
+[1.416s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_mission_engine': AMENT_PREFIX_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mission_engine/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/lib/python3.12/site-packages:/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/navpro_mission_engine build --build-base /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mission_engine/build install --record /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mission_engine/install.log --install-scripts $base/lib/navpro_mission_engine --single-version-externally-managed install_data
+[1.769s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server' for CMake module files
+[1.770s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_mcp_server' returned '0': AMENT_PREFIX_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mcp_server/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/lib/python3.12/site-packages:/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/navpro_mcp_server build --build-base /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mcp_server/build install --record /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mcp_server/install.log --install-scripts $base/lib/navpro_mcp_server --single-version-externally-managed install_data
+[1.770s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server' for CMake config files
+[1.771s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/lib'
+[1.771s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/bin'
+[1.771s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/lib/pkgconfig/navpro_mcp_server.pc'
+[1.771s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/lib/python3.12/site-packages'
+[1.771s] Level 1:colcon.colcon_core.shell:create_environment_hook('navpro_mcp_server', 'pythonpath')
+[1.771s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/share/navpro_mcp_server/hook/pythonpath.ps1'
+[1.772s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/share/navpro_mcp_server/hook/pythonpath.dsv'
+[1.772s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/share/navpro_mcp_server/hook/pythonpath.sh'
+[1.773s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/bin'
+[1.773s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(navpro_mcp_server)
+[1.774s] INFO:colcon.colcon_core.shell:Creating package script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/share/navpro_mcp_server/package.ps1'
+[1.774s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/share/navpro_mcp_server/package.dsv'
+[1.775s] INFO:colcon.colcon_core.shell:Creating package script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/share/navpro_mcp_server/package.sh'
+[1.775s] INFO:colcon.colcon_core.shell:Creating package script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/share/navpro_mcp_server/package.bash'
+[1.776s] INFO:colcon.colcon_core.shell:Creating package script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/share/navpro_mcp_server/package.zsh'
+[1.776s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mcp_server/share/colcon-core/packages/navpro_mcp_server)
+[1.777s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway' for CMake module files
+[1.778s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_api_gateway' returned '0': AMENT_PREFIX_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_api_gateway/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/lib/python3.12/site-packages:/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/navpro_api_gateway build --build-base /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_api_gateway/build install --record /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_api_gateway/install.log --install-scripts $base/lib/navpro_api_gateway --single-version-externally-managed install_data
+[1.778s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway' for CMake config files
+[1.778s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/lib'
+[1.778s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/bin'
+[1.778s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/lib/pkgconfig/navpro_api_gateway.pc'
+[1.778s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/lib/python3.12/site-packages'
+[1.778s] Level 1:colcon.colcon_core.shell:create_environment_hook('navpro_api_gateway', 'pythonpath')
+[1.779s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/share/navpro_api_gateway/hook/pythonpath.ps1'
+[1.779s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/share/navpro_api_gateway/hook/pythonpath.dsv'
+[1.779s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/share/navpro_api_gateway/hook/pythonpath.sh'
+[1.780s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/bin'
+[1.780s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(navpro_api_gateway)
+[1.780s] INFO:colcon.colcon_core.shell:Creating package script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/share/navpro_api_gateway/package.ps1'
+[1.780s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/share/navpro_api_gateway/package.dsv'
+[1.781s] INFO:colcon.colcon_core.shell:Creating package script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/share/navpro_api_gateway/package.sh'
+[1.781s] INFO:colcon.colcon_core.shell:Creating package script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/share/navpro_api_gateway/package.bash'
+[1.781s] INFO:colcon.colcon_core.shell:Creating package script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/share/navpro_api_gateway/package.zsh'
+[1.781s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_api_gateway/share/colcon-core/packages/navpro_api_gateway)
+[1.783s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine' for CMake module files
+[1.784s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_mission_engine' returned '0': AMENT_PREFIX_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mission_engine/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/lib/python3.12/site-packages:/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/navpro_mission_engine build --build-base /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mission_engine/build install --record /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mission_engine/install.log --install-scripts $base/lib/navpro_mission_engine --single-version-externally-managed install_data
+[1.784s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine' for CMake config files
+[1.784s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/lib'
+[1.785s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/bin'
+[1.785s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/lib/pkgconfig/navpro_mission_engine.pc'
+[1.785s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/lib/python3.12/site-packages'
+[1.785s] Level 1:colcon.colcon_core.shell:create_environment_hook('navpro_mission_engine', 'pythonpath')
+[1.785s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/share/navpro_mission_engine/hook/pythonpath.ps1'
+[1.786s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/share/navpro_mission_engine/hook/pythonpath.dsv'
+[1.786s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/share/navpro_mission_engine/hook/pythonpath.sh'
+[1.787s] Level 1:colcon.colcon_core.environment:checking '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/bin'
+[1.787s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(navpro_mission_engine)
+[1.787s] INFO:colcon.colcon_core.shell:Creating package script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/share/navpro_mission_engine/package.ps1'
+[1.788s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/share/navpro_mission_engine/package.dsv'
+[1.788s] INFO:colcon.colcon_core.shell:Creating package script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/share/navpro_mission_engine/package.sh'
+[1.788s] INFO:colcon.colcon_core.shell:Creating package script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/share/navpro_mission_engine/package.bash'
+[1.789s] INFO:colcon.colcon_core.shell:Creating package script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/share/navpro_mission_engine/package.zsh'
+[1.789s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/share/colcon-core/packages/navpro_mission_engine)
+[1.789s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.790s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.790s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.790s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.795s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.795s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.796s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.804s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.804s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/local_setup.ps1'
+[1.805s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/_local_setup_util_ps1.py'
+[1.806s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/setup.ps1'
+[1.807s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/local_setup.sh'
+[1.808s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/_local_setup_util_sh.py'
+[1.808s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/setup.sh'
+[1.809s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/local_setup.bash'
+[1.810s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/setup.bash'
+[1.810s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/local_setup.zsh'
+[1.811s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/setup.zsh'

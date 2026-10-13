@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 18: Model Context Protocol Standard Architecture | Level 2 Enterprise</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/highlight-dark.min.css">
+  <link rel="stylesheet" href="../assets/css/quiz.css">
+  <link rel="stylesheet" href="../assets/css/instructor_sync.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-container">
+      <a href="https://botforge.in" target="_blank" class="company-brand" title="Botforge Robotics - botforge.in">
+        <img src="../assets/images/botforge_black.png" alt="Botforge Robotics" class="company-logo">
+      </a>
+      <div class="brand-divider"></div>
+      <a href="../index.html" class="brand" title="Level 2: Enterprise Robotics & AI">
+        <img src="../assets/images/ros2_logo.svg" alt="ROS 2" class="brand-logo">
+        <span class="brand-title">NavPro Learning Hub</span>
+        <span class="badge-jazzy" style="background:#0284c7; color:#fff; border-color:#0284c7;">Level 2 Enterprise</span>
+      </a>
+    </div>
+    <div class="header-center">
+      <input type="text" id="lessonSearchInput" class="search-input" placeholder="🔍 Search Level 2 curriculum...">
+    </div>
+    <div class="header-actions">
+      <a href="http://localhost:6080/vnc.html" target="_blank" class="track-btn" title="Open Ubuntu Desktop GUI via noVNC">🖥️ Desktop GUI</a>
+      <a href="http://localhost:8443/?folder=/home/navpro/workspace" target="_blank" class="track-btn" title="Open VS Code in browser">💻 VS Code</a>
+      <a href="../index.html" class="track-btn active" style="background:#0284c7; color:#fff;">Architecture Hub</a>
+      <span class="theme-pill">☀️ Light Theme</span>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <aside class="app-sidebar">
+      <div class="progress-card">
+        <div class="progress-header">
+          <span>Enterprise Progress</span>
+          <span id="overallProgressText">0% Complete (0/24)</span>
+        </div>
+        <div class="progress-bar-track">
+          <div id="overallProgressBar" class="progress-bar-fill"></div>
+        </div>
+        <button id="resetProgressBtn" class="track-btn reset-btn" style="width:100%; margin-top:8px; justify-content:center;">↺ Reset Progress</button>
+      </div>
+
+      
+        <div class="sidebar-section-title">Enterprise &amp; AI Stack (24 Lessons)</div>
+        <ul class="lesson-list">
+          
+            <li>
+              <a href="lesson_01.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_01" onclick="event.stopPropagation();">
+                <span class="lesson-num">01</span>
+                <span class="lesson-title">Web Technologies For Roboticists Http Methods Json</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_02.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_02" onclick="event.stopPropagation();">
+                <span class="lesson-num">02</span>
+                <span class="lesson-title">Realtime Websockets Vs Http Polling</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_03.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_03" onclick="event.stopPropagation();">
+                <span class="lesson-num">03</span>
+                <span class="lesson-title">Enterprise System Architecture Dual Plane</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_04.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_04" onclick="event.stopPropagation();">
+                <span class="lesson-num">04</span>
+                <span class="lesson-title">High Concurrency Ros2 Multithreaded Executor</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_05.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_05" onclick="event.stopPropagation();">
+                <span class="lesson-num">05</span>
+                <span class="lesson-title">Fastapi Robotics Rest Gateway Pydantic</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_06.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_06" onclick="event.stopPropagation();">
+                <span class="lesson-num">06</span>
+                <span class="lesson-title">High Frequency Websocket Telemetry Broadcaster</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_07.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_07" onclick="event.stopPropagation();">
+                <span class="lesson-num">07</span>
+                <span class="lesson-title">Non Blocking Nav2 Action Dispatching</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_08.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_08" onclick="event.stopPropagation();">
+                <span class="lesson-num">08</span>
+                <span class="lesson-title">Day1 Capstone Navpro Api Gateway</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_09.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_09" onclick="event.stopPropagation();">
+                <span class="lesson-num">09</span>
+                <span class="lesson-title">Client Sdk Architecture Python Javascript</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_10.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_10" onclick="event.stopPropagation();">
+                <span class="lesson-num">10</span>
+                <span class="lesson-title">Modern Fleet Cockpit Architecture Canvas</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_11.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_11" onclick="event.stopPropagation();">
+                <span class="lesson-num">11</span>
+                <span class="lesson-title">Rendering 2D Slam Map Occupancy Grid</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_12.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_12" onclick="event.stopPropagation();">
+                <span class="lesson-num">12</span>
+                <span class="lesson-title">Live Robot Pose And Trajectory Rendering</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_13.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_13" onclick="event.stopPropagation();">
+                <span class="lesson-num">13</span>
+                <span class="lesson-title">Interactive Robot Controls Virtual Joystick</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_14.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_14" onclick="event.stopPropagation();">
+                <span class="lesson-num">14</span>
+                <span class="lesson-title">Waypoint Store And Interactive Map Markers</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_15.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_15" onclick="event.stopPropagation();">
+                <span class="lesson-num">15</span>
+                <span class="lesson-title">Enterprise Fleet Security Auth Rate Limiting</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_16.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_16" onclick="event.stopPropagation();">
+                <span class="lesson-num">16</span>
+                <span class="lesson-title">Day2 Capstone Interactive Web Cockpit</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_17.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_17" onclick="event.stopPropagation();">
+                <span class="lesson-num">17</span>
+                <span class="lesson-title">Physical Ai And Grounded Reasoning</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_18.html" class="lesson-item active">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_18" onclick="event.stopPropagation();">
+                <span class="lesson-num">18</span>
+                <span class="lesson-title">Model Context Protocol Standard Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_19.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_19" onclick="event.stopPropagation();">
+                <span class="lesson-num">19</span>
+                <span class="lesson-title">Building Python Mcp Robotics Server</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_20.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_20" onclick="event.stopPropagation();">
+                <span class="lesson-num">20</span>
+                <span class="lesson-title">Deterministic Safety Barriers And Preflight Guards</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_21.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_21" onclick="event.stopPropagation();">
+                <span class="lesson-num">21</span>
+                <span class="lesson-title">Connecting Frontier Models Claude Gemini Antigravity</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_22.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_22" onclick="event.stopPropagation();">
+                <span class="lesson-num">22</span>
+                <span class="lesson-title">Industrial Mission Graph Dag Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_23.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_23" onclick="event.stopPropagation();">
+                <span class="lesson-num">23</span>
+                <span class="lesson-title">Stateful Mission Runner And Ui Gates</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_24.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_24" onclick="event.stopPropagation();">
+                <span class="lesson-num">24</span>
+                <span class="lesson-title">Day3 Grand Capstone End To End Fleet Pipeline</span>
+              </a>
+            </li>
+            
+        </ul>
+        
+    </aside>
+
+    <main class="app-content">
+      <article class="markdown-body">
+        
+        <div class="concept-card">
+          <h3>⚡ Quick Concept Snapshot</h3>
+          <ul>
+            <li><strong>Mission DAG Execution:</strong> Directed Acyclic Graphs orchestrating multi-step workflows (Navigate &rarr; Dock &rarr; Inspect &rarr; Alert).</li>
+            <li><strong>Failure Recovery:</strong> Deterministic rollback and fallback branches when navigation goals or docking fail.</li>
+          </ul>
+        </div>
+        <h1>Lesson 18: Model Context Protocol (MCP) Standard &amp; Robotics Architecture</h1>
+<h2>Learning Objectives</h2>
+<p>By the end of this lesson, you will be able to:</p>
+<ol>
+<li>Explain the open <strong>Model Context Protocol (MCP)</strong> specification and why it has replaced ad-hoc tool calling in enterprise AI robotics.</li>
+<li>Diagram the <strong>Host &amp;harr; Client &amp;harr; Server</strong> architectural topology across development IDEs, desktop agents, and industrial AMRs.</li>
+<li>Contrast <strong><code>stdio</code></strong> (local sub-process piping) and <strong><code>SSE</code> (Server-Sent Events / HTTP)</strong> transport layers for robotic control.</li>
+<li>Parse and construct standard <strong>JSON-RPC 2.0</strong> protocol frames for <code>initialize</code>, <code>tools/list</code>, and <code>tools/call</code>.</li>
+<li>Map NavPro Mini AMR&#x27;s 28 MCP tools (<code>navigate_to_waypoint</code>, <code>get_system_health</code>, <code>synthesize_and_save_graph_mission</code>) directly to ROS 2 action and service endpoints.</li>
+</ol>
+<hr>
+<h2>1. Why Model Context Protocol (MCP) for Robotics?</h2>
+<p>Before the Model Context Protocol (introduced by Anthropic in late 2024 and adopted across frontier AI assistants including Antigravity, Claude, and OpenAI-compatible frameworks), connecting Large Language Models (LLMs) to physical hardware was fragmented and brittle:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-mermaid">graph TD
+    subgraph Ad-hoc Fragile Architecture (Pre-MCP)
+        LLM1[LLM / Agent] --&gt;|Custom Prompting| Script1[Ad-hoc Python Script]
+        Script1 --&gt;|Hardcoded REST| RobotA[Robot A]
+        LLM1 --&gt;|Vendor Plugin| PluginB[Vendor Tool]
+        PluginB --&gt;|Custom Driver| RobotB[Robot B]
+    end
+
+    subgraph Standardized MCP Architecture
+        Host[MCP Host: Antigravity / Claude / IDE] &lt;--&gt; Client[MCP Client Protocol Engine]
+        Client &lt;--&gt;|stdio or SSE JSON-RPC 2.0| MCPServer[NavPro Robotics MCP Server]
+        MCPServer &lt;--&gt;|SDK / REST / ROS 2| AMR[NavPro Mini AMR / Nav2 Sim]
+    end</code></pre></div>
+<h3>The Three Core Challenges MCP Solves in Robotics:</h3>
+<ol>
+<li><strong>Tool Schema Drift</strong>: Pre-MCP tool calling required custom prompt engineering or platform-specific JSON schemas (OpenAI function calling format vs LangChain tools vs custom regex output parsers). MCP provides an unambiguous JSON Schema specification for tools, resources, and prompts.</li>
+<li><strong>Context Window Starvation</strong>: Instead of injecting thousands of lines of robot telemetry or API documentation into the LLM system prompt, MCP provides <strong>Lazy Dynamic Discovery</strong>: the host queries <code>tools/list</code> on demand, and retrieves state through <code>resources/read</code>.</li>
+<li><strong>Transport Independence</strong>: The same robotics tool server can run locally inside a developer&#x27;s CLI/IDE over standard input/output (<code>stdio</code>) or deploy on an autonomous mobile robot&#x27;s on-board computer over HTTP Server-Sent Events (<code>SSE</code>).</li>
+</ol>
+<hr>
+<h2>2. MCP Architectural Topology</h2>
+<p>An MCP-enabled robotics deployment consists of three distinct layers:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-mermaid">sequenceDiagram
+    autonumber
+    participant Host as MCP Host (Antigravity / IDE / App)
+    participant Client as MCP Client Engine
+    participant Server as NavPro MCP Server (Python)
+    participant Robot as NavPro Mini AMR (FastAPI / ROS 2)
+
+    Note over Host,Server: Phase 1: Handshake &amp; Discovery
+    Host-&gt;&gt;Client: Initialize Session
+    Client-&gt;&gt;Server: JSON-RPC &quot;initialize&quot; (protocolVersion, capabilities)
+    Server--&gt;&gt;Client: Result (capabilities: tools, resources)
+    Client-&gt;&gt;Server: JSON-RPC &quot;notifications/initialized&quot;
+    
+    Host-&gt;&gt;Client: User Prompt: &quot;Inspect battery and drive to Dock&quot;
+    Client-&gt;&gt;Server: JSON-RPC &quot;tools/list&quot;
+    Server--&gt;&gt;Client: List of available tools (get_power_status, navigate_to_waypoint...)
+    
+    Note over Host,Robot: Phase 2: Autonomous Tool Calling
+    Host-&gt;&gt;Client: Invoke &quot;get_power_status&quot;()
+    Client-&gt;&gt;Server: JSON-RPC &quot;tools/call&quot; (name: &quot;get_power_status&quot;, arguments: {})
+    Server-&gt;&gt;Robot: GET /api/v1/power/status
+    Robot--&gt;&gt;Server: {&quot;soc_percent&quot;: 84.5, &quot;voltage&quot;: 25.2, &quot;is_charging&quot;: false}
+    Server--&gt;&gt;Client: JSON-RPC Response (text content formatted)
+    Client--&gt;&gt;Host: Tool result passed to LLM context
+    
+    Host-&gt;&gt;Client: Invoke &quot;navigate_to_waypoint&quot;({&quot;waypoint_id&quot;: &quot;dock_01&quot;})
+    Client-&gt;&gt;Server: JSON-RPC &quot;tools/call&quot; (name: &quot;navigate_to_waypoint&quot;, arguments: {&quot;waypoint_id&quot;: &quot;dock_01&quot;})
+    Server-&gt;&gt;Robot: POST /api/v1/navigation/navigate_to_waypoint
+    Robot--&gt;&gt;Server: {&quot;task_id&quot;: &quot;nav_task_902&quot;, &quot;status&quot;: &quot;dispatched&quot;}
+    Server--&gt;&gt;Client: Tool Result: &quot;Dispatched navigation to dock_01 (Task ID: nav_task_902)&quot;</code></pre></div>
+<h3>Roles Defined:</h3>
+<ul>
+<li><strong>MCP Host</strong>: The front-end AI runtime environment (e.g., Antigravity CLI/IDE, Claude Desktop, autonomous orchestrator agent). It manages user conversations, token budgets, and LLM inference.</li>
+<li><strong>MCP Client</strong>: The protocol connector inside the host that maintains an active transport session (stdio subprocess or SSE stream) with the server.</li>
+<li><strong>MCP Server</strong>: A lightweight executable service that exposes domain capabilities (tools, resources, prompts) through the standardized JSON-RPC 2.0 interface. In our architecture, the <strong>NavPro MCP Server</strong> bridges MCP tool calls to the FastAPI Robot Gateway and Nav2 ROS 2 subsystem.</li>
+</ul>
+<hr>
+<h2>3. Transport Layers: <code>stdio</code> vs <code>SSE</code></h2>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th>Feature</th>
+<th><code>stdio</code> Transport</th>
+<th><code>SSE</code> (Server-Sent Events) Transport</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>Connection Mechanism</strong></td>
+<td>Host spawns server process as child subprocess; communicates via <code>stdin</code> &amp; <code>stdout</code></td>
+<td>Host connects via HTTP <code>GET</code> stream for events; sends JSON-RPC commands via HTTP <code>POST</code></td>
+</tr>
+<tr>
+<td><strong>Typical Deployment</strong></td>
+<td>Local developer workstation, AGY CLI, local simulator</td>
+<td>Distributed robotics, AMR on-board compute, cloud fleet manager</td>
+</tr>
+<tr>
+<td><strong>Network Overhead</strong></td>
+<td>Zero network latency; local OS pipes</td>
+<td>Minimal HTTP headers; uses standard TCP/TLS socket</td>
+</tr>
+<tr>
+<td><strong>Standard Output Discipline</strong></td>
+<td><strong>Critical</strong>: Server MUST NEVER print logs to <code>stdout</code>. All logs MUST go to <code>stderr</code> or file</td>
+<td>Logs can go to <code>stdout</code>/<code>stderr</code> normally; HTTP endpoint handles protocol payload</td>
+</tr>
+<tr>
+<td><strong>Security Scope</strong></td>
+<td>Inherits local user permissions of Host process</td>
+<td>Protected by Bearer Tokens, TLS/HTTPS, and network firewalls</td>
+</tr>
+</tbody></table></div>
+<blockquote class="alert alert-warning">The Golden Rule of <code>stdio</code> MCP Servers<br>When building an MCP server running over <code>stdio</code>, any <code>print(&quot;Robot connected!&quot;)</code> statement sent to <code>sys.stdout</code> will <strong>corrupt the JSON-RPC message stream</strong> and immediately crash the MCP client parser! All debugging, telemetry, and informational logs <strong>MUST</strong> be routed to <code>sys.stderr</code> or a dedicated log file (<code>logging.basicConfig(stream=sys.stderr)</code>).</blockquote>
+<hr>
+<h2>4. The JSON-RPC 2.0 Wire Protocol</h2>
+<p>MCP standardizes all interactions on <strong>JSON-RPC 2.0</strong>. Let&#x27;s examine the exact payloads exchanged across the wire.</p>
+<h3>4.1 Handshake (<code>initialize</code>)</h3>
+<p><strong>Request from Client:</strong></p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-json">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;id&quot;: 1,
+  &quot;method&quot;: &quot;initialize&quot;,
+  &quot;params&quot;: {
+    &quot;protocolVersion&quot;: &quot;2024-11-05&quot;,
+    &quot;capabilities&quot;: {
+      &quot;roots&quot;: { &quot;listChanged&quot;: true },
+      &quot;sampling&quot;: {}
+    },
+    &quot;clientInfo&quot;: {
+      &quot;name&quot;: &quot;antigravity-agent&quot;,
+      &quot;version&quot;: &quot;2.0.0&quot;
+    }
+  }
+}</code></pre></div>
+<p><strong>Response from Server:</strong></p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-json">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;id&quot;: 1,
+  &quot;result&quot;: {
+    &quot;protocolVersion&quot;: &quot;2024-11-05&quot;,
+    &quot;capabilities&quot;: {
+      &quot;tools&quot;: { &quot;listChanged&quot;: true },
+      &quot;resources&quot;: { &quot;subscribe&quot;: false, &quot;listChanged&quot;: true }
+    },
+    &quot;serverInfo&quot;: {
+      &quot;name&quot;: &quot;navpromini-mcp-server&quot;,
+      &quot;version&quot;: &quot;1.0.0&quot;
+    }
+  }
+}</code></pre></div>
+<hr>
+<h3>4.2 Dynamic Tool Discovery (<code>tools/list</code>)</h3>
+<p><strong>Request from Client:</strong></p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-json">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;id&quot;: 2,
+  &quot;method&quot;: &quot;tools/list&quot;,
+  &quot;params&quot;: {}
+}</code></pre></div>
+<p><strong>Response from Server (Tool Schemas):</strong></p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-json">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;id&quot;: 2,
+  &quot;result&quot;: {
+    &quot;tools&quot;: [
+      {
+        &quot;name&quot;: &quot;get_power_status&quot;,
+        &quot;description&quot;: &quot;Returns current battery state of charge (percentage), voltage, current, and charging status.&quot;,
+        &quot;inputSchema&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {},
+          &quot;required&quot;: []
+        }
+      },
+      {
+        &quot;name&quot;: &quot;navigate_to_waypoint&quot;,
+        &quot;description&quot;: &quot;Dispatches the AMR to a named waypoint landmark registered in the active semantic map.&quot;,
+        &quot;inputSchema&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;waypoint_id&quot;: {
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;description&quot;: &quot;Unique identifier of the destination waypoint (e.g. &#x27;station_dock&#x27;, &#x27;storage_bay_b&#x27;).&quot;
+            }
+          },
+          &quot;required&quot;: [&quot;waypoint_id&quot;]
+        }
+      }
+    ]
+  }
+}</code></pre></div>
+<hr>
+<h3>4.3 Tool Invocation (<code>tools/call</code>)</h3>
+<p><strong>Request from Client:</strong></p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-json">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;id&quot;: 3,
+  &quot;method&quot;: &quot;tools/call&quot;,
+  &quot;params&quot;: {
+    &quot;name&quot;: &quot;navigate_to_waypoint&quot;,
+    &quot;arguments&quot;: {
+      &quot;waypoint_id&quot;: &quot;storage_bay_b&quot;
+    }
+  }
+}</code></pre></div>
+<p><strong>Response from Server:</strong></p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-json">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;id&quot;: 3,
+  &quot;result&quot;: {
+    &quot;content&quot;: [
+      {
+        &quot;type&quot;: &quot;text&quot;,
+        &quot;text&quot;: &quot;Successfully dispatched AMR navigation to waypoint &#x27;storage_bay_b&#x27;. Task ID: nav_task_104. Distance: 4.82m.&quot;
+      }
+    ],
+    &quot;isError&quot;: false
+  }
+}</code></pre></div>
+<hr>
+<h2>5. NavPro Mini AMR&#x27;s MCP Server Tool Catalog</h2>
+<p>In physical deployments of the <strong>NavPro Mini AMR</strong>, the robot runs an MCP server exposing 28 production tools categorized into four operational tiers:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-mermaid">mindmap
+  root((NavPro Mini MCP Tools))
+    Telemetry &amp; Health
+      get_system_health
+      get_power_status
+      get_active_map_info
+      list_available_maps
+    Spatial Navigation
+      list_waypoints
+      save_current_location_as_waypoint
+      navigate_to_waypoint
+      navigate_to_coordinates
+      cancel_navigation_goal
+      get_navigation_status
+    Hardware &amp; Safety
+      emergency_stop
+      dock_robot
+      undock_robot
+      cancel_docking
+      jog_robot
+      trigger_global_relocalization
+      set_initial_pose
+    Mission Workflows
+      synthesize_and_save_mission
+      synthesize_and_save_graph_mission
+      execute_mission
+      control_active_mission
+      get_mission_status
+      list_missions
+      schedule_recurring_mission
+      list_schedules
+      get_active_ui_interaction
+      respond_to_ui_interaction</code></pre></div>
+<p>In the next lesson, we will construct our own Python MCP server from scratch that connects directly to the FastAPI Gateway we built in Day 1!</p>
+<hr>
+<h2>Practical Exercise: Inspecting the MCP Server Schema</h2>
+<h3>Step 1: Open the NavPro Mini MCP Schema Directory</h3>
+<p>Explore how MCP lazily defines schemas in our environment:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-bash">ls -la /home/chaitu/.gemini/antigravity-cli/mcp/navpromini/</code></pre></div>
+<h3>Step 2: Read an MCP Tool Schema</h3>
+<p>Inspect the exact JSON schema definition for the waypoint navigation tool:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-bash">cat /home/chaitu/.gemini/antigravity-cli/mcp/navpromini/navigate_to_waypoint.json</code></pre></div>
+<p>Observe how <code>description</code>, <code>properties</code>, and <code>required</code> parameters are strictly structured to enable LLM tool-calling reliability.</p>
+<hr>
+<h2>Summary</h2>
+<ul>
+<li><strong>Model Context Protocol (MCP)</strong> standardizes how AI agents discover and execute robotic actions over <code>stdio</code> and <code>SSE</code>.</li>
+<li>The architecture cleanly decouples the <strong>Host</strong> (reasoning &amp; user interaction) from the <strong>Server</strong> (robot execution &amp; safety validation).</li>
+<li>Standard JSON-RPC 2.0 messages handle initialization, tool discovery, and invocation deterministically.</li>
+<li>Logging to <code>stderr</code> is mandatory in <code>stdio</code> servers to prevent JSON-RPC stream corruption.</li>
+<li>In <strong>Lesson 19</strong>, we will implement a fully functioning Python MCP server for our simulated robot!</li>
+</ul>
+      </article>
+
+      <footer class="lesson-nav-footer">
+        <a href="lesson_17.html" class="nav-link-btn" >&larr; Previous Lesson</a>
+        <a href="../index.html" class="nav-link-btn">⚡ Enterprise Hub</a>
+        <a href="lesson_19.html" class="nav-link-btn" >Next Lesson &rarr;</a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../assets/js/highlight.min.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/quiz_engine.js"></script>
+  <script src="../assets/js/instructor_sync.js"></script>
+</body>
+</html>

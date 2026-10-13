@@ -1,0 +1,31 @@
+# =============================================================================
+# NavPro Learning Hub - Level 2 Docker Orchestration (Enterprise & AI Agents)
+# Run: docker compose up -d
+#
+# One single command launches:
+# 1. Level 2 Learning Web Platform:    http://localhost:8000
+# 2. In-Browser VS Code IDE:           http://localhost:8443/?folder=/home/navpro/workspace
+# 3. Interactive Mission Engine UI:    http://localhost:8999
+# =============================================================================
+
+services:
+  navpro_level2:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: navpro-level2:latest
+    pull_policy: build
+    container_name: navpro_level2_container
+    restart: unless-stopped
+    ports:
+      # Level 2 Learning Web Platform
+      - "8000:8000"
+      # Web Code Editor (code-server)
+      - "8443:8443"
+      # Interactive Mission Engine UI Gate
+      - "8999:8999"
+    volumes:
+      # Mount Level 2 repository into workspace
+      - .:/home/navpro/workspace
+    environment:
+      - PYTHONUNBUFFERED=1

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 21: Connecting Frontier Models Claude Gemini Antigravity | Level 2 Enterprise</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/highlight-dark.min.css">
+  <link rel="stylesheet" href="../assets/css/quiz.css">
+  <link rel="stylesheet" href="../assets/css/instructor_sync.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-container">
+      <a href="https://botforge.in" target="_blank" class="company-brand" title="Botforge Robotics - botforge.in">
+        <img src="../assets/images/botforge_black.png" alt="Botforge Robotics" class="company-logo">
+      </a>
+      <div class="brand-divider"></div>
+      <a href="../index.html" class="brand" title="Level 2: Enterprise Robotics & AI">
+        <img src="../assets/images/ros2_logo.svg" alt="ROS 2" class="brand-logo">
+        <span class="brand-title">NavPro Learning Hub</span>
+        <span class="badge-jazzy" style="background:#0284c7; color:#fff; border-color:#0284c7;">Level 2 Enterprise</span>
+      </a>
+    </div>
+    <div class="header-center">
+      <input type="text" id="lessonSearchInput" class="search-input" placeholder="🔍 Search Level 2 curriculum...">
+    </div>
+    <div class="header-actions">
+      <a href="http://localhost:6080/vnc.html" target="_blank" class="track-btn" title="Open Ubuntu Desktop GUI via noVNC">🖥️ Desktop GUI</a>
+      <a href="http://localhost:8443/?folder=/home/navpro/workspace" target="_blank" class="track-btn" title="Open VS Code in browser">💻 VS Code</a>
+      <a href="../index.html" class="track-btn active" style="background:#0284c7; color:#fff;">Architecture Hub</a>
+      <span class="theme-pill">☀️ Light Theme</span>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <aside class="app-sidebar">
+      <div class="progress-card">
+        <div class="progress-header">
+          <span>Enterprise Progress</span>
+          <span id="overallProgressText">0% Complete (0/24)</span>
+        </div>
+        <div class="progress-bar-track">
+          <div id="overallProgressBar" class="progress-bar-fill"></div>
+        </div>
+        <button id="resetProgressBtn" class="track-btn reset-btn" style="width:100%; margin-top:8px; justify-content:center;">↺ Reset Progress</button>
+      </div>
+
+      
+        <div class="sidebar-section-title">Enterprise &amp; AI Stack (24 Lessons)</div>
+        <ul class="lesson-list">
+          
+            <li>
+              <a href="lesson_01.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_01" onclick="event.stopPropagation();">
+                <span class="lesson-num">01</span>
+                <span class="lesson-title">Web Technologies For Roboticists Http Methods Json</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_02.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_02" onclick="event.stopPropagation();">
+                <span class="lesson-num">02</span>
+                <span class="lesson-title">Realtime Websockets Vs Http Polling</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_03.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_03" onclick="event.stopPropagation();">
+                <span class="lesson-num">03</span>
+                <span class="lesson-title">Enterprise System Architecture Dual Plane</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_04.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_04" onclick="event.stopPropagation();">
+                <span class="lesson-num">04</span>
+                <span class="lesson-title">High Concurrency Ros2 Multithreaded Executor</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_05.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_05" onclick="event.stopPropagation();">
+                <span class="lesson-num">05</span>
+                <span class="lesson-title">Fastapi Robotics Rest Gateway Pydantic</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_06.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_06" onclick="event.stopPropagation();">
+                <span class="lesson-num">06</span>
+                <span class="lesson-title">High Frequency Websocket Telemetry Broadcaster</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_07.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_07" onclick="event.stopPropagation();">
+                <span class="lesson-num">07</span>
+                <span class="lesson-title">Non Blocking Nav2 Action Dispatching</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_08.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_08" onclick="event.stopPropagation();">
+                <span class="lesson-num">08</span>
+                <span class="lesson-title">Day1 Capstone Navpro Api Gateway</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_09.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_09" onclick="event.stopPropagation();">
+                <span class="lesson-num">09</span>
+                <span class="lesson-title">Client Sdk Architecture Python Javascript</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_10.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_10" onclick="event.stopPropagation();">
+                <span class="lesson-num">10</span>
+                <span class="lesson-title">Modern Fleet Cockpit Architecture Canvas</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_11.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_11" onclick="event.stopPropagation();">
+                <span class="lesson-num">11</span>
+                <span class="lesson-title">Rendering 2D Slam Map Occupancy Grid</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_12.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_12" onclick="event.stopPropagation();">
+                <span class="lesson-num">12</span>
+                <span class="lesson-title">Live Robot Pose And Trajectory Rendering</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_13.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_13" onclick="event.stopPropagation();">
+                <span class="lesson-num">13</span>
+                <span class="lesson-title">Interactive Robot Controls Virtual Joystick</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_14.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_14" onclick="event.stopPropagation();">
+                <span class="lesson-num">14</span>
+                <span class="lesson-title">Waypoint Store And Interactive Map Markers</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_15.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_15" onclick="event.stopPropagation();">
+                <span class="lesson-num">15</span>
+                <span class="lesson-title">Enterprise Fleet Security Auth Rate Limiting</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_16.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_16" onclick="event.stopPropagation();">
+                <span class="lesson-num">16</span>
+                <span class="lesson-title">Day2 Capstone Interactive Web Cockpit</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_17.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_17" onclick="event.stopPropagation();">
+                <span class="lesson-num">17</span>
+                <span class="lesson-title">Physical Ai And Grounded Reasoning</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_18.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_18" onclick="event.stopPropagation();">
+                <span class="lesson-num">18</span>
+                <span class="lesson-title">Model Context Protocol Standard Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_19.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_19" onclick="event.stopPropagation();">
+                <span class="lesson-num">19</span>
+                <span class="lesson-title">Building Python Mcp Robotics Server</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_20.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_20" onclick="event.stopPropagation();">
+                <span class="lesson-num">20</span>
+                <span class="lesson-title">Deterministic Safety Barriers And Preflight Guards</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_21.html" class="lesson-item active">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_21" onclick="event.stopPropagation();">
+                <span class="lesson-num">21</span>
+                <span class="lesson-title">Connecting Frontier Models Claude Gemini Antigravity</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_22.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_22" onclick="event.stopPropagation();">
+                <span class="lesson-num">22</span>
+                <span class="lesson-title">Industrial Mission Graph Dag Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_23.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_23" onclick="event.stopPropagation();">
+                <span class="lesson-num">23</span>
+                <span class="lesson-title">Stateful Mission Runner And Ui Gates</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_24.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_24" onclick="event.stopPropagation();">
+                <span class="lesson-num">24</span>
+                <span class="lesson-title">Day3 Grand Capstone End To End Fleet Pipeline</span>
+              </a>
+            </li>
+            
+        </ul>
+        
+    </aside>
+
+    <main class="app-content">
+      <article class="markdown-body">
+        <h1>Lesson 21: Connecting Frontier Models (Antigravity, Claude, Gemini)</h1>
+<h2>Learning Objectives</h2>
+<p>By the end of this lesson, you will be able to:</p>
+<ol>
+<li>Configure host environments (<strong>Antigravity</strong>, <strong>Claude Desktop</strong>, and custom Python SDK clients) to communicate with your local Robotics MCP Server.</li>
+<li>Engineer a specialized <strong>Physical AI System Prompt</strong> that grounds frontier LLMs in physical constraints and safety disciplines.</li>
+<li>Trace the multi-turn <strong>ReAct (Reasoning + Acting)</strong> execution loop across autonomous robotics scenarios.</li>
+<li>Handle tool execution feedback, error recoveries, and multi-step sequential dispatching.</li>
+<li>Contrast simulated agent runs with production tool execution on the physical NavPro Mini AMR.</li>
+</ol>
+<hr>
+<h2>1. Configuring MCP Hosts for Robotics</h2>
+<p>To connect your AI agent to the <code>navpro_mcp_server.py</code> we constructed in Lesson 19, configure the host&#x27;s MCP settings file.</p>
+<h3>1.1 Antigravity Configuration (<code>mcp.json</code> / <code>antigravity.json</code>)</h3>
+<p>In your project or user root configuration directory (<code>~/.gemini/antigravity-cli/mcp/</code>):</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-json">{
+  &quot;mcpServers&quot;: {
+    &quot;navpro_sim&quot;: {
+      &quot;command&quot;: &quot;python3&quot;,
+      &quot;args&quot;: [
+        &quot;/home/chaitu/Projects/navpro_learning_hub/level2/scripts/navpro_mcp_server.py&quot;
+      ],
+      &quot;env&quot;: {
+        &quot;ROBOT_GATEWAY_URL&quot;: &quot;http://127.0.0.1:8000&quot;
+      }
+    }
+  }
+}</code></pre></div>
+<h3>1.2 Claude Desktop Configuration (<code>claude_desktop_config.json</code>)</h3>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-json">{
+  &quot;mcpServers&quot;: {
+    &quot;navpro_robotics&quot;: {
+      &quot;command&quot;: &quot;python3&quot;,
+      &quot;args&quot;: [
+        &quot;/home/chaitu/Projects/navpro_learning_hub/level2/scripts/navpro_mcp_server.py&quot;
+      ]
+    }
+  }
+}</code></pre></div>
+<p>When the host initializes, it automatically runs the Python subprocess, sends the <code>initialize</code> handshake, queries <code>tools/list</code>, and presents the robot tools to the model&#x27;s tool-calling engine!</p>
+<hr>
+<h2>2. Engineering the Robotics System Prompt</h2>
+<p>Frontier models (such as Claude 3.5 Sonnet or Gemini 1.5 Pro) are general-purpose reasoners. To transform them into dependable autonomous robotics operators, you must supply a <strong>Physical Grounding System Prompt</strong>:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-markdown">You are NavPro-AI, the autonomous fleet operator and reasoning copilot for an industrial Autonomous Mobile Robot (AMR).
+You are equipped with real-time MCP tools connected directly to the robot&#x27;s physical sensors, semantic map, and Nav2 navigation stack.
+
+### Operational Guidelines:
+1. **Safety First**: Physical motion cannot be undone. Never issue blind movement commands.
+2. **Telemetry Verification**: Before dispatching navigation tasks, always check `get_robot_telemetry` to verify battery state of charge (SOC &gt;= 20%) and ensure no E-Stop is active.
+3. **Semantic Grounding**: Never invent or hallucinate waypoint names. Always call `list_waypoints` to inspect registered landmarks on the active map before dispatching `navigate_to_waypoint`.
+4. **Transparent Reasoning**: Explain your step-by-step plan to the human operator before calling high-consequence motion tools.
+5. **Fail-Safe Recovery**: If a tool returns an error or a safety violation, do not retry blindly. Explain the failure and propose a safe alternative (such as routing to a charging dock).</code></pre></div>
+<hr>
+<h2>3. The Autonomous Multi-Turn ReAct Loop in Action</h2>
+<p>Let&#x27;s examine how a natural language request is decomposed into autonomous tool actions by the model:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-mermaid">sequenceDiagram
+    autonumber
+    actor User as Human Supervisor
+    participant Model as Frontier LLM (Reasoner)
+    participant MCP as NavPro MCP Server
+    participant Robot as AMR Gateway / Nav2
+
+    User-&gt;&gt;Model: &quot;Robot, check your battery and patrol to inspection_bay_1, then head to charging_dock.&quot;
+    
+    Note over Model: Step 1: Pre-flight Check
+    Model-&gt;&gt;MCP: tools/call: get_robot_telemetry()
+    MCP-&gt;&gt;Robot: GET /api/v1/telemetry
+    Robot--&gt;&gt;MCP: {battery_soc: 78.4%, estop: false, nav_status: IDLE}
+    MCP--&gt;&gt;Model: Telemetry: Battery 78.4%, E-Stop False, Status IDLE
+
+    Note over Model: Step 2: Semantic Verification
+    Model-&gt;&gt;MCP: tools/call: list_waypoints()
+    MCP-&gt;&gt;Robot: GET /api/v1/waypoints
+    Robot--&gt;&gt;MCP: [{id: &quot;inspection_bay_1&quot;, x: 4.2, y: 1.5}, {id: &quot;charging_dock&quot;, x: 0.0, y: 0.0}]
+    MCP--&gt;&gt;Model: Registered: inspection_bay_1, charging_dock
+
+    Note over Model: Step 3: Leg 1 Dispatch
+    Model-&gt;&gt;MCP: tools/call: navigate_to_waypoint(&quot;inspection_bay_1&quot;)
+    MCP-&gt;&gt;Robot: POST /api/v1/navigation/navigate_to_waypoint
+    Robot--&gt;&gt;MCP: {task_id: &quot;nav_101&quot;, status: &quot;dispatched&quot;}
+    MCP--&gt;&gt;Model: Leg 1 Dispatched (Task ID: nav_101)
+
+    Model--&gt;&gt;User: &quot;Battery is healthy at 78.4%. Verified waypoints on map. Dispatched robot to inspection_bay_1 (Task ID: nav_101). Awaiting arrival before proceeding to charging dock.&quot;</code></pre></div>
+<hr>
+<h2>4. Building a Standalone Python Agent Client</h2>
+<p>You can run this full autonomous agent loop programmatically using the Anthropic SDK or OpenAI-compatible client. Here is a minimal standalone runner <code>level2/scripts/run_agent_mission.py</code>:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python">#!/usr/bin/env python3
+&quot;&quot;&quot;
+Autonomous Robotics Agent Runner using Frontier Model Tool Calling
+&quot;&quot;&quot;
+
+import os
+import json
+import asyncio
+import httpx
+
+# In an actual deployment, you would import anthropic or google.genai
+# Here we simulate the LLM ReAct loop interacting with our MCP tool router
+
+async def run_autonomous_mission(goal_prompt: str):
+    print(f&quot;\n=======================================================&quot;)
+    print(f&quot;🤖 USER REQUEST: {goal_prompt}&quot;)
+    print(f&quot;=======================================================\n&quot;)
+    
+    # 1. Fetch telemetry via Gateway
+    async with httpx.AsyncClient(base_url=&quot;http://127.0.0.1:8000&quot;) as client:
+        print(&quot;[Agent Thought] I must first verify robot telemetry and safety status.&quot;)
+        telem_resp = await client.get(&quot;/api/v1/telemetry&quot;)
+        telem = telem_resp.json()
+        print(f&quot;[Tool Observation] Battery: {telem.get(&#x27;battery_soc&#x27;, 80)}% | E-Stop: {telem.get(&#x27;estop_active&#x27;, False)}&quot;)
+        
+        # 2. Query available waypoints
+        print(&quot;[Agent Thought] I need to verify that &#x27;inspection_bay_1&#x27; is a registered landmark.&quot;)
+        wp_resp = await client.get(&quot;/api/v1/waypoints&quot;)
+        waypoints = [wp[&quot;id&quot;] for wp in wp_resp.json()]
+        print(f&quot;[Tool Observation] Available Waypoints: {waypoints}&quot;)
+        
+        if &quot;inspection_bay_1&quot; in waypoints:
+            print(&quot;[Agent Thought] Waypoint verified. Dispatching navigation to &#x27;inspection_bay_1&#x27;.&quot;)
+            dispatch_resp = await client.post(
+                &quot;/api/v1/navigation/navigate_to_waypoint&quot;,
+                json={&quot;waypoint_id&quot;: &quot;inspection_bay_1&quot;}
+            )
+            print(f&quot;[Tool Observation] Dispatch Response: {dispatch_resp.json()}&quot;)
+            print(&quot;\n✅ [Agent Final Response] Mission started: Navigating to inspection_bay_1 successfully.&quot;)
+        else:
+            print(&quot;❌ [Agent Thought] Target waypoint not found on map. Aborting mission safely.&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    asyncio.run(run_autonomous_mission(&quot;Patrol to inspection_bay_1 and confirm status&quot;))</code></pre></div>
+<hr>
+<h2>5. NavPro Mini AMR Real-World Parity</h2>
+<p>On the physical <strong>NavPro Mini AMR</strong>, the robot is registered as a native MCP server (<code>navpromini</code>).</p>
+<p>When an Antigravity AI agent receives a prompt like:</p>
+<blockquote class="alert alert-note"><em>&quot;What is the robot&#x27;s current battery status, and where are the charging stations?&quot;</em></blockquote>
+<p>The agent calls:</p>
+<ol>
+<li><code>call_mcp_tool(ServerName=&#x27;navpromini&#x27;, ToolName=&#x27;get_power_status&#x27;, Arguments={})</code></li>
+<li><code>call_mcp_tool(ServerName=&#x27;navpromini&#x27;, ToolName=&#x27;list_waypoints&#x27;, Arguments={})</code></li>
+</ol>
+<p>The tool definitions and response formats you created in this lesson are <strong>100% identical</strong> to those running on the physical robot&#x27;s on-board computer.</p>
+<hr>
+<h2>Summary</h2>
+<ul>
+<li>Configured MCP host environments using JSON configuration manifests.</li>
+<li>Engineered a physically grounded system prompt that prevents hallucinations and enforces pre-flight telemetry verification.</li>
+<li>Traced the multi-turn ReAct reasoning loop from high-level prompt down to physical Nav2 dispatching.</li>
+<li>In <strong>Lesson 22</strong>, we will elevate simple one-off tool calls into complex multi-node <strong>Industrial Mission DAGs</strong>!</li>
+</ul>
+      </article>
+
+      <footer class="lesson-nav-footer">
+        <a href="lesson_20.html" class="nav-link-btn" >&larr; Previous Lesson</a>
+        <a href="../index.html" class="nav-link-btn">⚡ Enterprise Hub</a>
+        <a href="lesson_22.html" class="nav-link-btn" >Next Lesson &rarr;</a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../assets/js/highlight.min.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/quiz_engine.js"></script>
+  <script src="../assets/js/instructor_sync.js"></script>
+</body>
+</html>

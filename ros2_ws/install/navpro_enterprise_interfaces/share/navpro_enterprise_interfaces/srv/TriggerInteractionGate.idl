@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from navpro_enterprise_interfaces/srv/TriggerInteractionGate.srv
+// generated code does not contain a copyright notice
+
+
+module navpro_enterprise_interfaces {
+  module srv {
+    struct TriggerInteractionGate_Request {
+      string gate_id;
+
+      string prompt_message;
+
+      sequence<string> available_actions;
+
+      int32 timeout_seconds;
+    };
+    struct TriggerInteractionGate_Response {
+      boolean success;
+
+      string selected_action;
+
+      string operator_notes;
+    };
+  };
+};

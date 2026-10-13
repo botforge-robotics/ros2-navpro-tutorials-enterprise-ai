@@ -1,0 +1,18 @@
+services:
+  navpro_level2:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: navpro-level2:latest
+    pull_policy: build
+    container_name: navpro_level2_container
+    restart: unless-stopped
+    ports:
+      - "8443:8443"   # Web Code Editor (code-server)
+      - "8000:8000"   # FastAPI REST Gateway & WebSockets
+      - "8999:8999"   # Interactive Mission Engine UI Gate
+    volumes:
+      - ..:/home/navpro/workspace
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: ["sleep", "infinity"]

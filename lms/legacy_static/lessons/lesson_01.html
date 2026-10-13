@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 01: Web Technologies For Roboticists Http Methods Json | Level 2 Enterprise</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/highlight-dark.min.css">
+  <link rel="stylesheet" href="../assets/css/quiz.css">
+  <link rel="stylesheet" href="../assets/css/instructor_sync.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-container">
+      <a href="https://botforge.in" target="_blank" class="company-brand" title="Botforge Robotics - botforge.in">
+        <img src="../assets/images/botforge_black.png" alt="Botforge Robotics" class="company-logo">
+      </a>
+      <div class="brand-divider"></div>
+      <a href="../index.html" class="brand" title="Level 2: Enterprise Robotics & AI">
+        <img src="../assets/images/ros2_logo.svg" alt="ROS 2" class="brand-logo">
+        <span class="brand-title">NavPro Learning Hub</span>
+        <span class="badge-jazzy" style="background:#0284c7; color:#fff; border-color:#0284c7;">Level 2 Enterprise</span>
+      </a>
+    </div>
+    <div class="header-center">
+      <input type="text" id="lessonSearchInput" class="search-input" placeholder="🔍 Search Level 2 curriculum...">
+    </div>
+    <div class="header-actions">
+      <a href="http://localhost:6080/vnc.html" target="_blank" class="track-btn" title="Open Ubuntu Desktop GUI via noVNC">🖥️ Desktop GUI</a>
+      <a href="http://localhost:8443/?folder=/home/navpro/workspace" target="_blank" class="track-btn" title="Open VS Code in browser">💻 VS Code</a>
+      <a href="../index.html" class="track-btn active" style="background:#0284c7; color:#fff;">Architecture Hub</a>
+      <span class="theme-pill">☀️ Light Theme</span>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <aside class="app-sidebar">
+      <div class="progress-card">
+        <div class="progress-header">
+          <span>Enterprise Progress</span>
+          <span id="overallProgressText">0% Complete (0/24)</span>
+        </div>
+        <div class="progress-bar-track">
+          <div id="overallProgressBar" class="progress-bar-fill"></div>
+        </div>
+        <button id="resetProgressBtn" class="track-btn reset-btn" style="width:100%; margin-top:8px; justify-content:center;">↺ Reset Progress</button>
+      </div>
+
+      
+        <div class="sidebar-section-title">Enterprise &amp; AI Stack (24 Lessons)</div>
+        <ul class="lesson-list">
+          
+            <li>
+              <a href="lesson_01.html" class="lesson-item active">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_01" onclick="event.stopPropagation();">
+                <span class="lesson-num">01</span>
+                <span class="lesson-title">Web Technologies For Roboticists Http Methods Json</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_02.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_02" onclick="event.stopPropagation();">
+                <span class="lesson-num">02</span>
+                <span class="lesson-title">Realtime Websockets Vs Http Polling</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_03.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_03" onclick="event.stopPropagation();">
+                <span class="lesson-num">03</span>
+                <span class="lesson-title">Enterprise System Architecture Dual Plane</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_04.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_04" onclick="event.stopPropagation();">
+                <span class="lesson-num">04</span>
+                <span class="lesson-title">High Concurrency Ros2 Multithreaded Executor</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_05.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_05" onclick="event.stopPropagation();">
+                <span class="lesson-num">05</span>
+                <span class="lesson-title">Fastapi Robotics Rest Gateway Pydantic</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_06.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_06" onclick="event.stopPropagation();">
+                <span class="lesson-num">06</span>
+                <span class="lesson-title">High Frequency Websocket Telemetry Broadcaster</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_07.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_07" onclick="event.stopPropagation();">
+                <span class="lesson-num">07</span>
+                <span class="lesson-title">Non Blocking Nav2 Action Dispatching</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_08.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_08" onclick="event.stopPropagation();">
+                <span class="lesson-num">08</span>
+                <span class="lesson-title">Day1 Capstone Navpro Api Gateway</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_09.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_09" onclick="event.stopPropagation();">
+                <span class="lesson-num">09</span>
+                <span class="lesson-title">Client Sdk Architecture Python Javascript</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_10.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_10" onclick="event.stopPropagation();">
+                <span class="lesson-num">10</span>
+                <span class="lesson-title">Modern Fleet Cockpit Architecture Canvas</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_11.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_11" onclick="event.stopPropagation();">
+                <span class="lesson-num">11</span>
+                <span class="lesson-title">Rendering 2D Slam Map Occupancy Grid</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_12.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_12" onclick="event.stopPropagation();">
+                <span class="lesson-num">12</span>
+                <span class="lesson-title">Live Robot Pose And Trajectory Rendering</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_13.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_13" onclick="event.stopPropagation();">
+                <span class="lesson-num">13</span>
+                <span class="lesson-title">Interactive Robot Controls Virtual Joystick</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_14.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_14" onclick="event.stopPropagation();">
+                <span class="lesson-num">14</span>
+                <span class="lesson-title">Waypoint Store And Interactive Map Markers</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_15.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_15" onclick="event.stopPropagation();">
+                <span class="lesson-num">15</span>
+                <span class="lesson-title">Enterprise Fleet Security Auth Rate Limiting</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_16.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_16" onclick="event.stopPropagation();">
+                <span class="lesson-num">16</span>
+                <span class="lesson-title">Day2 Capstone Interactive Web Cockpit</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_17.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_17" onclick="event.stopPropagation();">
+                <span class="lesson-num">17</span>
+                <span class="lesson-title">Physical Ai And Grounded Reasoning</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_18.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_18" onclick="event.stopPropagation();">
+                <span class="lesson-num">18</span>
+                <span class="lesson-title">Model Context Protocol Standard Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_19.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_19" onclick="event.stopPropagation();">
+                <span class="lesson-num">19</span>
+                <span class="lesson-title">Building Python Mcp Robotics Server</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_20.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_20" onclick="event.stopPropagation();">
+                <span class="lesson-num">20</span>
+                <span class="lesson-title">Deterministic Safety Barriers And Preflight Guards</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_21.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_21" onclick="event.stopPropagation();">
+                <span class="lesson-num">21</span>
+                <span class="lesson-title">Connecting Frontier Models Claude Gemini Antigravity</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_22.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_22" onclick="event.stopPropagation();">
+                <span class="lesson-num">22</span>
+                <span class="lesson-title">Industrial Mission Graph Dag Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_23.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_23" onclick="event.stopPropagation();">
+                <span class="lesson-num">23</span>
+                <span class="lesson-title">Stateful Mission Runner And Ui Gates</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_24.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_24" onclick="event.stopPropagation();">
+                <span class="lesson-num">24</span>
+                <span class="lesson-title">Day3 Grand Capstone End To End Fleet Pipeline</span>
+              </a>
+            </li>
+            
+        </ul>
+        
+    </aside>
+
+    <main class="app-content">
+      <article class="markdown-body">
+        
+        <div class="concept-card">
+          <h3>⚡ Quick Concept Snapshot</h3>
+          <ul>
+            <li><strong>Web Methods for Robotics:</strong> GET for idempotent state queries (telemetry, maps); POST for state alterations (dispatch goals); DELETE for cancellations.</li>
+            <li><strong>Deterministic Decoupling:</strong> Keep 100Hz real-time motor loops isolated from high-concurrency external web clients.</li>
+          </ul>
+        </div>
+        <h1>Lesson 01: Web Technologies for Roboticists — HTTP, Methods &amp; JSON</h1>
+<p>Welcome to <strong>Level 2</strong> of the NavPro Robotics Workshop! In Level 1, you mastered the real-time robotics fundamentals: ROS 2 nodes, topics, services, actions, TF2 coordinate transforms, Gazebo physics simulation, and Nav2 autonomous navigation.</p>
+<p>However, in commercial robotics systems (such as warehouse AMRs, hospital delivery fleets, and autonomous inspection rovers), robots must communicate with the outside world: web browsers, mobile apps, enterprise ERP systems, and cloud fleet servers.</p>
+<p>In this lesson, you will master the foundational language of the modern web: <strong>HTTP (Hypertext Transfer Protocol)</strong>, request methods, status codes, and JSON serialization for robotics.</p>
+<hr>
+<h2>1. Learning Objectives</h2>
+<p>By the end of this lesson, you will be able to:</p>
+<ol>
+<li>Explain the Client-Server model and how it contrasts with ROS 2 peer-to-peer DDS pub/sub.</li>
+<li>Dissect an HTTP packet: Request Line, Headers, Query Parameters, and Body.</li>
+<li>Apply standard HTTP methods (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>) to physical robotics operations.</li>
+<li>Interpret and use industrial HTTP status codes (<code>200 OK</code>, <code>202 Accepted</code>, <code>400</code>, <code>422</code>, <code>500</code>).</li>
+<li>Serialize complex ROS 2 telemetry objects into standard JSON payloads.</li>
+</ol>
+<hr>
+<h2>2. The Client-Server Model vs. ROS 2 DDS</h2>
+<p>In ROS 2, nodes use <strong>DDS (Data Distribution Service)</strong> over UDP multicast. Every node discovers every other node dynamically as peers.</p>
+<p>In the web ecosystem, the world operates on the <strong>Client-Server Architecture</strong>:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-bash">      ROS 2 DDS (Peer-to-Peer Multicast):
+      [ Node A ] &lt;─── UDP Multicast ───&gt; [ Node B ]
+          │                                  │
+          └─────────── [ Node C ] ───────────┘
+
+      Web / Enterprise Cloud (Client-Server):
+      [ Web Browser / Cockpit ]  ─── Request (TCP) ───&gt;  [ Robot Gateway Server ]
+                                 &lt;─── Response (JSON) ──</code></pre></div>
+<ul>
+<li><strong>Client:</strong> The initiator of the communication (e.g. a web browser dashboard, mobile app, or Python script).</li>
+<li><strong>Server:</strong> The robot&#x27;s onboard API gateway daemon listening on a dedicated port (e.g. port <code>8080</code> or <code>8090</code>).</li>
+<li><strong>Statelessness:</strong> By default, each HTTP transaction is independent. The server processes the request and closes or reuses the TCP connection.</li>
+</ul>
+<hr>
+<h2>3. Dissecting an HTTP Request &amp; Response</h2>
+<p>When a web browser clicks a button to inspect a robot, it transmits an HTTP request over TCP:</p>
+<h3>3.1 Raw HTTP Request Packet</h3>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-http">POST /api/v1/navigation/goal HTTP/1.1
+Host: 192.168.1.100:8080
+Content-Type: application/json
+Authorization: Bearer navpro_operator_token_456
+User-Agent: NavPro-Cockpit/2.0
+
+{
+  &quot;x&quot;: 4.5,
+  &quot;y&quot;: 2.0,
+  &quot;yaw&quot;: 1.57
+}</code></pre></div>
+<ul>
+<li><strong>Request Line:</strong> <code>POST /api/v1/navigation/goal HTTP/1.1</code> specifies the method, resource path, and HTTP version.</li>
+<li><strong>Headers:</strong> Metadata key-value pairs (<code>Content-Type: application/json</code> tells the server the body is JSON).</li>
+<li><strong>Body:</strong> The payload carrying our target $(x, y, \theta)$ coordinates.</li>
+</ul>
+<h3>3.2 Raw HTTP Response Packet</h3>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-http">HTTP/1.1 202 Accepted
+Content-Type: application/json
+Date: Tue, 13 Oct 2026 12:00:00 GMT
+
+{
+  &quot;status&quot;: &quot;ACCEPTED&quot;,
+  &quot;goal_id&quot;: &quot;nav_88a91b&quot;,
+  &quot;message&quot;: &quot;Navigation goal accepted and dispatched to Nav2.&quot;
+}</code></pre></div>
+<hr>
+<h2>4. HTTP Methods Mapped to Robotics Operations</h2>
+<p>In RESTful robotics design, we map standard HTTP verbs to specific robot actions:</p>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th>HTTP Method</th>
+<th>Purpose in Robotics</th>
+<th>Example Robotics Endpoint</th>
+<th>Expected Payload</th>
+</tr></thead><tbody>
+<tr>
+<td><strong><code>GET</code></strong></td>
+<td><strong>Read-Only State:</strong> Safe and idempotent. Never triggers physical motion.</td>
+<td><code>GET /api/v1/telemetry</code>&lt;br&gt;<code>GET /api/v1/battery</code></td>
+<td>None (reads cached state).</td>
+</tr>
+<tr>
+<td><strong><code>POST</code></strong></td>
+<td><strong>Action Trigger:</strong> Dispatches actuation, creates new goals, triggers E-Stop.</td>
+<td><code>POST /api/v1/navigation/goal</code>&lt;br&gt;<code>POST /api/v1/emergency_stop</code></td>
+<td>JSON containing parameters: <code>{&quot;x&quot;: 2.5, &quot;y&quot;: 1.0}</code>.</td>
+</tr>
+<tr>
+<td><strong><code>PUT</code> / <code>PATCH</code></strong></td>
+<td><strong>State Update:</strong> Modifies stored configuration or existing landmark.</td>
+<td><code>PUT /api/v1/waypoints/station_a</code></td>
+<td>JSON: <code>{&quot;x&quot;: 3.0, &quot;y&quot;: 1.5}</code>.</td>
+</tr>
+<tr>
+<td><strong><code>DELETE</code></strong></td>
+<td><strong>Cancellation / Deletion:</strong> Cancels an active goal or removes a waypoint.</td>
+<td><code>DELETE /api/v1/navigation/active_goal</code>&lt;br&gt;<code>DELETE /api/v1/waypoints/old_dock</code></td>
+<td>None or cancellation reason.</td>
+</tr>
+</tbody></table></div>
+<blockquote class="alert alert-important"><strong>Safety Rule: <code>GET</code> Requests Must Never Move the Robot!</strong><br>Web browsers, search indexers, and proxies frequently pre-fetch <code>GET</code> URLs automatically. If you configure <code>GET /api/v1/move_forward</code> to publish velocity to <code>/cmd_vel</code>, your robot could drive into a wall simply because someone opened a browser bookmark! Always use <code>POST</code> for physical actuation.</blockquote>
+<hr>
+<h2>5. Industrial HTTP Status Codes for Autonomous Fleets</h2>
+<p>When the robot responds to a client, the status code communicates what happened:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-bash">        HTTP Status Code Families:
+        ├── 2xx (Success): Request received, understood, and accepted.
+        ├── 4xx (Client Error): Client sent invalid data, missing auth, or illegal values.
+        └── 5xx (Server Error): Robot backend crashed or ROS 2 node died.</code></pre></div>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th>Status Code</th>
+<th>Name</th>
+<th>Practical Robotics Meaning</th>
+</tr></thead><tbody>
+<tr>
+<td><strong><code>200 OK</code></strong></td>
+<td>Standard Success</td>
+<td>Telemetry read succeeded, or parameter was updated successfully.</td>
+</tr>
+<tr>
+<td><strong><code>202 Accepted</code></strong></td>
+<td>Asynchronous Job Queued</td>
+<td><strong>Critical for Nav2 actions!</strong> Tells client: <em>&quot;We validated your goal and dispatched it to the robot. Motion has begun in the background.&quot;</em></td>
+</tr>
+<tr>
+<td><strong><code>400 Bad Request</code></strong></td>
+<td>Malformed Syntax</td>
+<td>JSON syntax error or missing mandatory fields.</td>
+</tr>
+<tr>
+<td><strong><code>401 Unauthorized</code></strong></td>
+<td>Missing Authentication</td>
+<td>No API token or Bearer key supplied.</td>
+</tr>
+<tr>
+<td><strong><code>403 Forbidden</code></strong></td>
+<td>Insufficient Role</td>
+<td>User is a <code>Viewer</code> attempting to trigger <code>Admin</code> manual teleop.</td>
+</tr>
+<tr>
+<td><strong><code>404 Not Found</code></strong></td>
+<td>Missing Resource</td>
+<td>Requested landmark name or <code>goal_id</code> does not exist in memory.</td>
+</tr>
+<tr>
+<td><strong><code>409 Conflict</code></strong></td>
+<td>State Conflict</td>
+<td>Request cannot execute due to robot state (e.g. attempting to navigate while <strong>Emergency Stop is ENGAGED</strong>).</td>
+</tr>
+<tr>
+<td><strong><code>422 Unprocessable Entity</code></strong></td>
+<td>Pydantic Validation Error</td>
+<td>Coordinate exceeds allowable warehouse bounds or velocity is <code>NaN</code>.</td>
+</tr>
+<tr>
+<td><strong><code>500 Internal Error</code></strong></td>
+<td>Hardware/Software Fault</td>
+<td>Motor driver disconnected, ROS 2 executor exception, or lidar crash.</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h2>6. JSON Data Encoding for Robotics</h2>
+<p>JSON (JavaScript Object Notation) is the universal data format of the web. Here is how ROS 2 message types map into clean JSON:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python">import json
+import time
+
+# Converting ROS 2 Odometry &amp; Battery into Web JSON
+telemetry_data = {
+    &quot;robot_id&quot;: &quot;navpro-mini-amr&quot;,
+    &quot;timestamp&quot;: time.time(),
+    &quot;pose&quot;: {
+        &quot;x&quot;: 4.25,      # meters
+        &quot;y&quot;: 1.50,      # meters
+        &quot;yaw&quot;: 1.57     # radians
+    },
+    &quot;velocity&quot;: {
+        &quot;linear&quot;: 0.45,  # m/s
+        &quot;angular&quot;: 0.05  # rad/s
+    },
+    &quot;battery&quot;: {
+        &quot;percentage&quot;: 88.5,
+        &quot;is_charging&quot;: False,
+        &quot;voltage&quot;: 24.2
+    },
+    &quot;status&quot;: &quot;NAVIGATING&quot;
+}
+
+# Serialize to string
+json_payload = json.dumps(telemetry_data)
+print(&quot;Serialized JSON Size:&quot;, len(json_payload), &quot;bytes&quot;)</code></pre></div>
+<hr>
+<h2>7. Summary &amp; Next Steps</h2>
+<p>In this lesson, you mastered the core web fundamentals:</p>
+<ul>
+<li>The <strong>Client-Server model</strong> establishes a clean boundary between external clients and onboard robot software.</li>
+<li>Standard <strong>HTTP methods</strong> (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>) map cleanly to queries vs. physical actuation.</li>
+<li><strong>HTTP status codes</strong> (<code>200</code>, <code>202</code>, <code>409</code>, <code>422</code>) communicate success and failure states deterministically.</li>
+</ul>
+<p>In <strong>Lesson 02</strong>, we will examine <strong>WebSockets vs. HTTP Polling</strong>: discovering how persistent full-duplex sockets eliminate bandwidth waste for high-speed $20\,\text{Hz}$ telemetry streaming!</p>
+      </article>
+
+      <footer class="lesson-nav-footer">
+        <a href="#" class="nav-link-btn" style='visibility:hidden;'>&larr; Previous Lesson</a>
+        <a href="../index.html" class="nav-link-btn">⚡ Enterprise Hub</a>
+        <a href="lesson_02.html" class="nav-link-btn" >Next Lesson &rarr;</a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../assets/js/highlight.min.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/quiz_engine.js"></script>
+  <script src="../assets/js/instructor_sync.js"></script>
+</body>
+</html>

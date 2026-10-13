@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 14: Waypoint Store And Interactive Map Markers | Level 2 Enterprise</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/highlight-dark.min.css">
+  <link rel="stylesheet" href="../assets/css/quiz.css">
+  <link rel="stylesheet" href="../assets/css/instructor_sync.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-container">
+      <a href="https://botforge.in" target="_blank" class="company-brand" title="Botforge Robotics - botforge.in">
+        <img src="../assets/images/botforge_black.png" alt="Botforge Robotics" class="company-logo">
+      </a>
+      <div class="brand-divider"></div>
+      <a href="../index.html" class="brand" title="Level 2: Enterprise Robotics & AI">
+        <img src="../assets/images/ros2_logo.svg" alt="ROS 2" class="brand-logo">
+        <span class="brand-title">NavPro Learning Hub</span>
+        <span class="badge-jazzy" style="background:#0284c7; color:#fff; border-color:#0284c7;">Level 2 Enterprise</span>
+      </a>
+    </div>
+    <div class="header-center">
+      <input type="text" id="lessonSearchInput" class="search-input" placeholder="🔍 Search Level 2 curriculum...">
+    </div>
+    <div class="header-actions">
+      <a href="http://localhost:6080/vnc.html" target="_blank" class="track-btn" title="Open Ubuntu Desktop GUI via noVNC">🖥️ Desktop GUI</a>
+      <a href="http://localhost:8443/?folder=/home/navpro/workspace" target="_blank" class="track-btn" title="Open VS Code in browser">💻 VS Code</a>
+      <a href="../index.html" class="track-btn active" style="background:#0284c7; color:#fff;">Architecture Hub</a>
+      <span class="theme-pill">☀️ Light Theme</span>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <aside class="app-sidebar">
+      <div class="progress-card">
+        <div class="progress-header">
+          <span>Enterprise Progress</span>
+          <span id="overallProgressText">0% Complete (0/24)</span>
+        </div>
+        <div class="progress-bar-track">
+          <div id="overallProgressBar" class="progress-bar-fill"></div>
+        </div>
+        <button id="resetProgressBtn" class="track-btn reset-btn" style="width:100%; margin-top:8px; justify-content:center;">↺ Reset Progress</button>
+      </div>
+
+      
+        <div class="sidebar-section-title">Enterprise &amp; AI Stack (24 Lessons)</div>
+        <ul class="lesson-list">
+          
+            <li>
+              <a href="lesson_01.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_01" onclick="event.stopPropagation();">
+                <span class="lesson-num">01</span>
+                <span class="lesson-title">Web Technologies For Roboticists Http Methods Json</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_02.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_02" onclick="event.stopPropagation();">
+                <span class="lesson-num">02</span>
+                <span class="lesson-title">Realtime Websockets Vs Http Polling</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_03.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_03" onclick="event.stopPropagation();">
+                <span class="lesson-num">03</span>
+                <span class="lesson-title">Enterprise System Architecture Dual Plane</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_04.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_04" onclick="event.stopPropagation();">
+                <span class="lesson-num">04</span>
+                <span class="lesson-title">High Concurrency Ros2 Multithreaded Executor</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_05.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_05" onclick="event.stopPropagation();">
+                <span class="lesson-num">05</span>
+                <span class="lesson-title">Fastapi Robotics Rest Gateway Pydantic</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_06.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_06" onclick="event.stopPropagation();">
+                <span class="lesson-num">06</span>
+                <span class="lesson-title">High Frequency Websocket Telemetry Broadcaster</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_07.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_07" onclick="event.stopPropagation();">
+                <span class="lesson-num">07</span>
+                <span class="lesson-title">Non Blocking Nav2 Action Dispatching</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_08.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_08" onclick="event.stopPropagation();">
+                <span class="lesson-num">08</span>
+                <span class="lesson-title">Day1 Capstone Navpro Api Gateway</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_09.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_09" onclick="event.stopPropagation();">
+                <span class="lesson-num">09</span>
+                <span class="lesson-title">Client Sdk Architecture Python Javascript</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_10.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_10" onclick="event.stopPropagation();">
+                <span class="lesson-num">10</span>
+                <span class="lesson-title">Modern Fleet Cockpit Architecture Canvas</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_11.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_11" onclick="event.stopPropagation();">
+                <span class="lesson-num">11</span>
+                <span class="lesson-title">Rendering 2D Slam Map Occupancy Grid</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_12.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_12" onclick="event.stopPropagation();">
+                <span class="lesson-num">12</span>
+                <span class="lesson-title">Live Robot Pose And Trajectory Rendering</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_13.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_13" onclick="event.stopPropagation();">
+                <span class="lesson-num">13</span>
+                <span class="lesson-title">Interactive Robot Controls Virtual Joystick</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_14.html" class="lesson-item active">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_14" onclick="event.stopPropagation();">
+                <span class="lesson-num">14</span>
+                <span class="lesson-title">Waypoint Store And Interactive Map Markers</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_15.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_15" onclick="event.stopPropagation();">
+                <span class="lesson-num">15</span>
+                <span class="lesson-title">Enterprise Fleet Security Auth Rate Limiting</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_16.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_16" onclick="event.stopPropagation();">
+                <span class="lesson-num">16</span>
+                <span class="lesson-title">Day2 Capstone Interactive Web Cockpit</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_17.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_17" onclick="event.stopPropagation();">
+                <span class="lesson-num">17</span>
+                <span class="lesson-title">Physical Ai And Grounded Reasoning</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_18.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_18" onclick="event.stopPropagation();">
+                <span class="lesson-num">18</span>
+                <span class="lesson-title">Model Context Protocol Standard Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_19.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_19" onclick="event.stopPropagation();">
+                <span class="lesson-num">19</span>
+                <span class="lesson-title">Building Python Mcp Robotics Server</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_20.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_20" onclick="event.stopPropagation();">
+                <span class="lesson-num">20</span>
+                <span class="lesson-title">Deterministic Safety Barriers And Preflight Guards</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_21.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_21" onclick="event.stopPropagation();">
+                <span class="lesson-num">21</span>
+                <span class="lesson-title">Connecting Frontier Models Claude Gemini Antigravity</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_22.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_22" onclick="event.stopPropagation();">
+                <span class="lesson-num">22</span>
+                <span class="lesson-title">Industrial Mission Graph Dag Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_23.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_23" onclick="event.stopPropagation();">
+                <span class="lesson-num">23</span>
+                <span class="lesson-title">Stateful Mission Runner And Ui Gates</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_24.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_24" onclick="event.stopPropagation();">
+                <span class="lesson-num">24</span>
+                <span class="lesson-title">Day3 Grand Capstone End To End Fleet Pipeline</span>
+              </a>
+            </li>
+            
+        </ul>
+        
+    </aside>
+
+    <main class="app-content">
+      <article class="markdown-body">
+        <h1>Lesson 14: Waypoint Store &amp; Interactive Map Marker Management</h1>
+<p>In Lesson 13, we enabled manual joystick control and arbitrary point-and-click navigation.</p>
+<p>However, in commercial factory automation, operators and AI agents rarely navigate to random floating-point coordinates. They dispatch robots to <strong>named semantic landmarks</strong>:</p>
+<ul>
+<li><em>&quot;Send robot to <code>inspection_station_a</code>&quot;</em></li>
+<li><em>&quot;Return to <code>charging_dock</code>&quot;</em></li>
+<li><em>&quot;Move to <code>packing_zone</code>&quot;</em></li>
+</ul>
+<p>In this lesson, you will build the <strong>Waypoint Store</strong>: exposing REST endpoints to save, list, and delete landmarks, implementing the <strong>&quot;Save Current Location as Waypoint&quot;</strong> workflow, and rendering custom landmark pins on the Cockpit map.</p>
+<hr>
+<h2>1. Learning Objectives</h2>
+<p>By the end of this lesson, you will be able to:</p>
+<ol>
+<li>Explain the operational importance of semantic waypoints in commercial fleet management.</li>
+<li>Build REST endpoints: <code>GET /api/v1/waypoints</code>, <code>POST /api/v1/waypoints</code>, and <code>DELETE /api/v1/waypoints/{name}</code>.</li>
+<li>Implement the <strong>&quot;Save Current Location as Waypoint&quot;</strong> button (reading live <code>/odom</code> pose).</li>
+<li>Categorize waypoints by type: <code>CHARGING_DOCK</code>, <code>INSPECTION_BAY</code>, <code>PICKUP_ZONE</code>, <code>REST_AREA</code>.</li>
+<li>Render custom, interactive SVG waypoint pins on the Cockpit Canvas.</li>
+</ol>
+<hr>
+<h2>2. Waypoint Store Architecture</h2>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-mermaid">graph LR
+    subgraph Cockpit_UI[&quot;Cockpit UI Controls&quot;]
+        List[&quot;Waypoint Sidebar List&quot;]
+        SaveBtn[&quot;&#x27;Save Current Pose&#x27; Button&quot;]
+        Pin[&quot;Interactive Map Pins&quot;]
+    end
+
+    subgraph Waypoint_Service[&quot;Waypoint Store Service&quot;]
+        Memory[(&quot;Thread-Safe Waypoint Store (JSON File Backend)&quot;)]
+        Endpoints[&quot;REST API: /api/v1/waypoints&quot;]
+    end
+
+    subgraph Robot[&quot;Live Robot State&quot;]
+        Pose[&quot;Current Pose from /odom: (x, y, yaw)&quot;]
+    end
+
+    SaveBtn --&gt;|Read Pose| Pose
+    Pose --&gt;|POST /api/v1/waypoints| Endpoints
+    Endpoints --&gt; Memory
+    Memory --&gt;|GET /api/v1/waypoints| List
+    Memory --&gt; Pin</code></pre></div>
+<hr>
+<h2>3. Designing the Waypoint Data Models</h2>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python">from pydantic import BaseModel, Field
+from enum import Enum
+from typing import Dict, Any, List, Optional
+import time
+
+
+class WaypointCategory(str, Enum):
+    CHARGING_DOCK = &quot;CHARGING_DOCK&quot;
+    INSPECTION_BAY = &quot;INSPECTION_BAY&quot;
+    PICKUP_ZONE = &quot;PICKUP_ZONE&quot;
+    REST_AREA = &quot;REST_AREA&quot;
+    GENERAL = &quot;GENERAL&quot;
+
+
+class WaypointDefinition(BaseModel):
+    name: str = Field(..., description=&quot;Unique alphanumeric identifier (e.g. &#x27;station_a&#x27;).&quot;)
+    x: float
+    y: float
+    yaw: float = 0.0
+    category: WaypointCategory = WaypointCategory.GENERAL
+    description: str = &quot;&quot;
+    created_at: float = Field(default_factory=time.time)
+
+
+class WaypointStore:
+    &quot;&quot;&quot;Thread-safe persistent store for saved map waypoints.&quot;&quot;&quot;
+
+    def __init__(self, persistence_file: str = &quot;waypoints.json&quot;):
+        self.file_path = persistence_file
+        self.waypoints: Dict[str, WaypointDefinition] = {
+            &quot;charging_dock&quot;: WaypointDefinition(name=&quot;charging_dock&quot;, x=0.0, y=0.0, yaw=0.0, category=WaypointCategory.CHARGING_DOCK),
+            &quot;inspection_station_a&quot;: WaypointDefinition(name=&quot;inspection_station_a&quot;, x=4.2, y=1.5, yaw=1.57, category=WaypointCategory.INSPECTION_BAY),
+            &quot;packing_zone&quot;: WaypointDefinition(name=&quot;packing_zone&quot;, x=-2.0, y=6.8, yaw=3.14, category=WaypointCategory.PICKUP_ZONE)
+        }
+
+    def add_waypoint(self, wp: WaypointDefinition):
+        self.waypoints[wp.name] = wp
+
+    def get_all(self) -&gt; List[WaypointDefinition]:
+        return list(self.waypoints.values())
+
+    def delete(self, name: str) -&gt; bool:
+        if name in self.waypoints:
+            del self.waypoints[name]
+            return True
+        return False</code></pre></div>
+<hr>
+<h2>4. Mounting the Waypoint Endpoints in FastAPI</h2>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python">wp_store = WaypointStore()
+
+
+@app.get(&quot;/api/v1/waypoints&quot;, response_model=List[WaypointDefinition])
+async def list_waypoints():
+    &quot;&quot;&quot;Returns all saved landmarks in the active map.&quot;&quot;&quot;
+    return wp_store.get_all()
+
+
+@app.post(&quot;/api/v1/waypoints&quot;, status_code=201)
+async def create_waypoint(wp: WaypointDefinition):
+    &quot;&quot;&quot;Saves a new landmark with custom coordinates and metadata.&quot;&quot;&quot;
+    wp_store.add_waypoint(wp)
+    return {&quot;status&quot;: &quot;WAYPOINT_SAVED&quot;, &quot;waypoint&quot;: wp.name}
+
+
+@app.post(&quot;/api/v1/waypoints/save_current_location&quot;, status_code=201)
+async def save_current_location(name: str, category: WaypointCategory = WaypointCategory.GENERAL):
+    &quot;&quot;&quot;Takes robot&#x27;s live pose from telemetry cache and saves it as a named landmark.&quot;&quot;&quot;
+    snapshot = robot_state.get_snapshot()
+    wp = WaypointDefinition(
+        name=name,
+        x=round(snapshot[&quot;x&quot;], 3),
+        y=round(snapshot[&quot;y&quot;], 3),
+        yaw=round(snapshot[&quot;yaw&quot;], 3),
+        category=category,
+        description=&quot;Saved from live robot position.&quot;
+    )
+    wp_store.add_waypoint(wp)
+    return {&quot;status&quot;: &quot;SAVED&quot;, &quot;waypoint&quot;: wp}</code></pre></div>
+<hr>
+<h2>5. Rendering Waypoint Pins on the Cockpit Canvas</h2>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-javascript">class WaypointPinRenderer {
+    constructor(ctx, transformer) {
+        this.ctx = ctx;
+        this.transformer = transformer;
+        this.waypoints = [];
+    }
+
+    setWaypoints(waypointsList) {
+        this.waypoints = waypointsList;
+    }
+
+    render() {
+        for (const wp of this.waypoints) {
+            const pt = this.transformer.worldToScreen(wp.x, wp.y);
+
+            // Draw Pin Icon
+            this.ctx.save();
+            this.ctx.translate(pt.x, pt.y);
+
+            // Distinct color per category
+            const color = wp.category === &quot;CHARGING_DOCK&quot; ? &quot;#10b981&quot; : &quot;#f59e0b&quot;;
+            this.ctx.fillStyle = color;
+            this.ctx.strokeStyle = &quot;#ffffff&quot;;
+            this.ctx.lineWidth = 2;
+
+            // Pin marker circle
+            this.ctx.beginPath();
+            this.ctx.arc(0, -10, 8, 0, Math.PI * 2);
+            this.ctx.fill();
+            this.ctx.stroke();
+
+            // Pin needle point
+            this.ctx.beginPath();
+            this.ctx.moveTo(0, -2);
+            this.ctx.lineTo(0, 0);
+            this.ctx.stroke();
+
+            // Waypoint Label Text
+            this.ctx.fillStyle = &quot;#0f172a&quot;;
+            this.ctx.font = &quot;bold 11px sans-serif&quot;;
+            this.ctx.textAlign = &quot;center&quot;;
+            this.ctx.fillText(wp.name, 0, 14);
+
+            this.ctx.restore();
+        }
+    }
+}</code></pre></div>
+<hr>
+<h2>6. Summary &amp; Next Steps</h2>
+<p>In this lesson, you implemented semantic landmark management:</p>
+<ul>
+<li>Enabled operators to save and dispatch named waypoints.</li>
+<li>Built the <strong>&quot;Save Current Location as Waypoint&quot;</strong> workflow.</li>
+<li>Rendered styled landmark pins directly onto the 2D map canvas.</li>
+</ul>
+<p>In <strong>Lesson 15</strong>, we will secure our entire gateway: adding <strong>Bearer Token Authentication, Role-Based Access Control &amp; Rate Limiting</strong>!</p>
+      </article>
+
+      <footer class="lesson-nav-footer">
+        <a href="lesson_13.html" class="nav-link-btn" >&larr; Previous Lesson</a>
+        <a href="../index.html" class="nav-link-btn">⚡ Enterprise Hub</a>
+        <a href="lesson_15.html" class="nav-link-btn" >Next Lesson &rarr;</a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../assets/js/highlight.min.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/quiz_engine.js"></script>
+  <script src="../assets/js/instructor_sync.js"></script>
+</body>
+</html>

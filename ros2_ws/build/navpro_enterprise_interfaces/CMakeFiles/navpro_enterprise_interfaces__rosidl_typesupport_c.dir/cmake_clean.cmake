@@ -1,0 +1,18 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/navpro_enterprise_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/navpro_enterprise_interfaces/action/execute_mission__type_support.cpp.o"
+  "CMakeFiles/navpro_enterprise_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/navpro_enterprise_interfaces/action/execute_mission__type_support.cpp.o.d"
+  "CMakeFiles/navpro_enterprise_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/navpro_enterprise_interfaces/msg/fleet_telemetry__type_support.cpp.o"
+  "CMakeFiles/navpro_enterprise_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/navpro_enterprise_interfaces/msg/fleet_telemetry__type_support.cpp.o.d"
+  "CMakeFiles/navpro_enterprise_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/navpro_enterprise_interfaces/srv/trigger_interaction_gate__type_support.cpp.o"
+  "CMakeFiles/navpro_enterprise_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/navpro_enterprise_interfaces/srv/trigger_interaction_gate__type_support.cpp.o.d"
+  "libnavpro_enterprise_interfaces__rosidl_typesupport_c.pdb"
+  "libnavpro_enterprise_interfaces__rosidl_typesupport_c.so"
+  "rosidl_typesupport_c/navpro_enterprise_interfaces/action/execute_mission__type_support.cpp"
+  "rosidl_typesupport_c/navpro_enterprise_interfaces/msg/fleet_telemetry__type_support.cpp"
+  "rosidl_typesupport_c/navpro_enterprise_interfaces/srv/trigger_interaction_gate__type_support.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/navpro_enterprise_interfaces__rosidl_typesupport_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

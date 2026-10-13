@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 10: Modern Fleet Cockpit Architecture Canvas | Level 2 Enterprise</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/highlight-dark.min.css">
+  <link rel="stylesheet" href="../assets/css/quiz.css">
+  <link rel="stylesheet" href="../assets/css/instructor_sync.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-container">
+      <a href="https://botforge.in" target="_blank" class="company-brand" title="Botforge Robotics - botforge.in">
+        <img src="../assets/images/botforge_black.png" alt="Botforge Robotics" class="company-logo">
+      </a>
+      <div class="brand-divider"></div>
+      <a href="../index.html" class="brand" title="Level 2: Enterprise Robotics & AI">
+        <img src="../assets/images/ros2_logo.svg" alt="ROS 2" class="brand-logo">
+        <span class="brand-title">NavPro Learning Hub</span>
+        <span class="badge-jazzy" style="background:#0284c7; color:#fff; border-color:#0284c7;">Level 2 Enterprise</span>
+      </a>
+    </div>
+    <div class="header-center">
+      <input type="text" id="lessonSearchInput" class="search-input" placeholder="🔍 Search Level 2 curriculum...">
+    </div>
+    <div class="header-actions">
+      <a href="http://localhost:6080/vnc.html" target="_blank" class="track-btn" title="Open Ubuntu Desktop GUI via noVNC">🖥️ Desktop GUI</a>
+      <a href="http://localhost:8443/?folder=/home/navpro/workspace" target="_blank" class="track-btn" title="Open VS Code in browser">💻 VS Code</a>
+      <a href="../index.html" class="track-btn active" style="background:#0284c7; color:#fff;">Architecture Hub</a>
+      <span class="theme-pill">☀️ Light Theme</span>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <aside class="app-sidebar">
+      <div class="progress-card">
+        <div class="progress-header">
+          <span>Enterprise Progress</span>
+          <span id="overallProgressText">0% Complete (0/24)</span>
+        </div>
+        <div class="progress-bar-track">
+          <div id="overallProgressBar" class="progress-bar-fill"></div>
+        </div>
+        <button id="resetProgressBtn" class="track-btn reset-btn" style="width:100%; margin-top:8px; justify-content:center;">↺ Reset Progress</button>
+      </div>
+
+      
+        <div class="sidebar-section-title">Enterprise &amp; AI Stack (24 Lessons)</div>
+        <ul class="lesson-list">
+          
+            <li>
+              <a href="lesson_01.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_01" onclick="event.stopPropagation();">
+                <span class="lesson-num">01</span>
+                <span class="lesson-title">Web Technologies For Roboticists Http Methods Json</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_02.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_02" onclick="event.stopPropagation();">
+                <span class="lesson-num">02</span>
+                <span class="lesson-title">Realtime Websockets Vs Http Polling</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_03.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_03" onclick="event.stopPropagation();">
+                <span class="lesson-num">03</span>
+                <span class="lesson-title">Enterprise System Architecture Dual Plane</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_04.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_04" onclick="event.stopPropagation();">
+                <span class="lesson-num">04</span>
+                <span class="lesson-title">High Concurrency Ros2 Multithreaded Executor</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_05.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_05" onclick="event.stopPropagation();">
+                <span class="lesson-num">05</span>
+                <span class="lesson-title">Fastapi Robotics Rest Gateway Pydantic</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_06.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_06" onclick="event.stopPropagation();">
+                <span class="lesson-num">06</span>
+                <span class="lesson-title">High Frequency Websocket Telemetry Broadcaster</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_07.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_07" onclick="event.stopPropagation();">
+                <span class="lesson-num">07</span>
+                <span class="lesson-title">Non Blocking Nav2 Action Dispatching</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_08.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_08" onclick="event.stopPropagation();">
+                <span class="lesson-num">08</span>
+                <span class="lesson-title">Day1 Capstone Navpro Api Gateway</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_09.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_09" onclick="event.stopPropagation();">
+                <span class="lesson-num">09</span>
+                <span class="lesson-title">Client Sdk Architecture Python Javascript</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_10.html" class="lesson-item active">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_10" onclick="event.stopPropagation();">
+                <span class="lesson-num">10</span>
+                <span class="lesson-title">Modern Fleet Cockpit Architecture Canvas</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_11.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_11" onclick="event.stopPropagation();">
+                <span class="lesson-num">11</span>
+                <span class="lesson-title">Rendering 2D Slam Map Occupancy Grid</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_12.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_12" onclick="event.stopPropagation();">
+                <span class="lesson-num">12</span>
+                <span class="lesson-title">Live Robot Pose And Trajectory Rendering</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_13.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_13" onclick="event.stopPropagation();">
+                <span class="lesson-num">13</span>
+                <span class="lesson-title">Interactive Robot Controls Virtual Joystick</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_14.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_14" onclick="event.stopPropagation();">
+                <span class="lesson-num">14</span>
+                <span class="lesson-title">Waypoint Store And Interactive Map Markers</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_15.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_15" onclick="event.stopPropagation();">
+                <span class="lesson-num">15</span>
+                <span class="lesson-title">Enterprise Fleet Security Auth Rate Limiting</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_16.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_16" onclick="event.stopPropagation();">
+                <span class="lesson-num">16</span>
+                <span class="lesson-title">Day2 Capstone Interactive Web Cockpit</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_17.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_17" onclick="event.stopPropagation();">
+                <span class="lesson-num">17</span>
+                <span class="lesson-title">Physical Ai And Grounded Reasoning</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_18.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_18" onclick="event.stopPropagation();">
+                <span class="lesson-num">18</span>
+                <span class="lesson-title">Model Context Protocol Standard Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_19.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_19" onclick="event.stopPropagation();">
+                <span class="lesson-num">19</span>
+                <span class="lesson-title">Building Python Mcp Robotics Server</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_20.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_20" onclick="event.stopPropagation();">
+                <span class="lesson-num">20</span>
+                <span class="lesson-title">Deterministic Safety Barriers And Preflight Guards</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_21.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_21" onclick="event.stopPropagation();">
+                <span class="lesson-num">21</span>
+                <span class="lesson-title">Connecting Frontier Models Claude Gemini Antigravity</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_22.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_22" onclick="event.stopPropagation();">
+                <span class="lesson-num">22</span>
+                <span class="lesson-title">Industrial Mission Graph Dag Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_23.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_23" onclick="event.stopPropagation();">
+                <span class="lesson-num">23</span>
+                <span class="lesson-title">Stateful Mission Runner And Ui Gates</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_24.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_24" onclick="event.stopPropagation();">
+                <span class="lesson-num">24</span>
+                <span class="lesson-title">Day3 Grand Capstone End To End Fleet Pipeline</span>
+              </a>
+            </li>
+            
+        </ul>
+        
+    </aside>
+
+    <main class="app-content">
+      <article class="markdown-body">
+        
+        <div class="concept-card">
+          <h3>⚡ Quick Concept Snapshot</h3>
+          <ul>
+            <li><strong>Model Context Protocol (MCP):</strong> Standardized JSON-RPC protocol allowing Frontier LLMs (Claude, Gemini, Antigravity) to call robot tools deterministically.</li>
+            <li><strong>Tool Safety Boundary:</strong> AI proposes structured parameters; local gateway validates geofences, battery thresholds, and permissions before execution.</li>
+          </ul>
+        </div>
+        <h1>Lesson 10: Modern Fleet Cockpit UI Architecture — Multi-Layer Canvas &amp; Coordinates</h1>
+<p>In Lesson 09, we built our Client SDKs. Now, we begin constructing the frontend operator surface: <strong>The Modern Fleet Cockpit GUI</strong>.</p>
+<p>When building robotics dashboards, the most common engineering mistake is treating a robotics map like a standard web page. If you attempt to render a $2000 \times 2000$ SLAM occupancy grid inside an HTML <code>&lt;img&gt;</code> tag or redraw the entire DOM at $20\,\text{Hz}$, the browser tab will freeze and drop frames.</p>
+<p>In this lesson, you will learn the <strong>Multi-Layer Canvas Architecture</strong> and master the mathematical transformation between <strong>ROS Metric Frames</strong> and <strong>HTML5 Screen Pixels</strong>.</p>
+<hr>
+<h2>1. Learning Objectives</h2>
+<p>By the end of this lesson, you will be able to:</p>
+<ol>
+<li>Explain the performance advantages of Multi-Layer Canvas Architecture over single-layer DOM rendering.</li>
+<li>Differentiate between the <strong>ROS 2 Metric Coordinate Frame</strong> (Right-handed, $+X$ Forward, $+Y$ Left) and the <strong>HTML5 Canvas Frame</strong> ($+X$ Right, $+Y$ Down).</li>
+<li>Derive and implement the mathematical transformation formula mapping world meters to screen pixels.</li>
+<li>Implement pan and zoom viewport navigation (scaling and translation offsets).</li>
+<li>Structure a modern HTML5/CSS3 robotics cockpit layout.</li>
+</ol>
+<hr>
+<h2>2. Multi-Layer Canvas Architecture</h2>
+<p>In high-performance cockpits (like RViz, Foxglove Studio, and the <strong>NavPro Cockpit</strong>), the viewport is split into three independent visual layers:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-mermaid">graph TD
+    subgraph Viewport[&quot;Cockpit Multi-Layer Canvas Viewport&quot;]
+        L3[&quot;Layer 3 (Top DOM): Interactive UI Controls (Joystick, Buttons, Gates)&quot;]
+        L2[&quot;Layer 2 (Middle Canvas): Dynamic Entities (Robot Pose, Lidar, Nav2 Path at 60 FPS)&quot;]
+        L1[&quot;Layer 1 (Bottom Canvas): Static SLAM Map (Occupancy Grid Bitmap)&quot;]
+    end
+
+    subgraph Data[&quot;Update Frequencies&quot;]
+        D1[&quot;Map: Redrawn ONLY on pan/zoom or new map load&quot;]
+        D2[&quot;Pose/Path: Redrawn at 60 FPS using requestAnimationFrame&quot;]
+        D3[&quot;UI: Standard DOM event listeners (click, touch)&quot;]
+    end
+
+    D1 --&gt; L1
+    D2 --&gt; L2
+    D3 --&gt; L3</code></pre></div>
+<ul>
+<li><strong>Bottom Canvas (Layer 1):</strong> Renders the static SLAM grid. Decoded once into an off-screen bitmap.</li>
+<li><strong>Middle Canvas (Layer 2):</strong> Cleared and redrawn at 60 FPS. Renders the robot marker, heading vector, footprint, and Nav2 planned path.</li>
+<li><strong>Top DOM (Layer 3):</strong> Standard HTML/CSS buttons, virtual joysticks, and modal dialogs.</li>
+</ul>
+<hr>
+<h2>3. The Coordinate Transformation Problem</h2>
+<p>ROS 2 coordinate frames (defined by REP-105) follow standard mathematical conventions:</p>
+<ul>
+<li>$+X$ points <strong>forward</strong> (East).</li>
+<li>$+Y$ points <strong>left</strong> (North).</li>
+<li>Yaw angle $\theta$ rotates <strong>counter-clockwise</strong>.</li>
+<li>Units are strictly in <strong>meters</strong>.</li>
+</ul>
+<p>HTML5 Canvas uses a computer graphics coordinate frame:</p>
+<ul>
+<li>Origin $(0, 0)$ is at the <strong>top-left corner</strong>.</li>
+<li>$+X$ points <strong>right</strong>.</li>
+<li>$+Y$ points <strong>downward</strong>.</li>
+<li>Yaw angle $\theta$ rotates <strong>clockwise</strong>.</li>
+<li>Units are strictly in <strong>pixels</strong>.</li>
+</ul>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-bash">    ROS 2 World Frame (Meters):          Canvas Screen Frame (Pixels):
+            +Y (Left / North)                     (0, 0) ───────&gt; +X (Right)
+                 ▲                                  │
+                 │                                  │
+                 └──────&gt; +X (Forward)              ▼ +Y (Down)</code></pre></div>
+<hr>
+<h2>4. The World-to-Screen Mathematical Formula</h2>
+<p>To convert any point $(x_{\text{world}}, y_{\text{world}})$ into screen pixels $(x_{\text{screen}}, y_{\text{screen}})$:</p>
+<p>$$x_{\text{screen}} = \text{pan}_x + (x_{\text{world}} - \text{origin}_x) \cdot \text{scale}$$</p>
+<p>$$y_{\text{screen}} = \text{pan}_y - (y_{\text{world}} - \text{origin}_y) \cdot \text{scale}$$</p>
+<p>Where:</p>
+<ul>
+<li>$\text{scale}$ is the zoom factor in <strong>pixels per meter</strong> (e.g. $25\,\text{px/m}$).</li>
+<li>$\text{origin}_x, \text{origin}_y$ is the map origin offset in meters.</li>
+<li>$\text{pan}_x, \text{pan}_y$ is the canvas pan offset in pixels (usually canvas center: $\text{width}/2, \text{height}/2$).</li>
+<li>Notice the <strong>minus sign ($-$)</strong> in $y_{\text{screen}}$: this inverts the vertical axis so $+Y$ points up!</li>
+</ul>
+<hr>
+<h2>5. Implementing the Coordinate Transformer in JavaScript</h2>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-javascript">class CoordinateTransformer {
+    constructor(canvasWidth, canvasHeight) {
+        this.scale = 25.0; // 25 pixels per meter
+        this.panX = canvasWidth / 2;
+        this.panY = canvasHeight / 2;
+        this.mapOriginX = 0.0;
+        this.mapOriginY = 0.0;
+    }
+
+    worldToScreen(worldX, worldY) {
+        const screenX = this.panX + (worldX - this.mapOriginX) * this.scale;
+        const screenY = this.panY - (worldY - this.mapOriginY) * this.scale;
+        return { x: screenX, y: screenY };
+    }
+
+    screenToWorld(screenX, screenY) {
+        const worldX = ((screenX - this.panX) / this.scale) + this.mapOriginX;
+        const worldY = -((screenY - this.panY) / this.scale) + this.mapOriginY;
+        return { x: worldX, y: worldY };
+    }
+
+    zoom(delta, cursorX, cursorY) {
+        const factor = delta &gt; 0 ? 1.15 : 0.85;
+        this.scale = Math.max(5.0, Math.min(200.0, this.scale * factor));
+    }
+
+    pan(dx, dy) {
+        this.panX += dx;
+        this.panY += dy;
+    }
+}</code></pre></div>
+<hr>
+<h2>6. Summary &amp; Next Steps</h2>
+<p>In this lesson, you designed the Cockpit architecture:</p>
+<ul>
+<li>Adopted the <strong>Multi-Layer Canvas Architecture</strong> to preserve 60 FPS performance.</li>
+<li>Mastered the mathematical conversion between <strong>ROS metric space</strong> and <strong>Canvas screen pixels</strong>.</li>
+<li>Built the <code>CoordinateTransformer</code> class supporting pan and zoom.</li>
+</ul>
+<p>In <strong>Lesson 11</strong>, we will decode and render the <strong>2D SLAM Occupancy Grid Map</strong> on Canvas Layer 1!</p>
+      </article>
+
+      <footer class="lesson-nav-footer">
+        <a href="lesson_09.html" class="nav-link-btn" >&larr; Previous Lesson</a>
+        <a href="../index.html" class="nav-link-btn">⚡ Enterprise Hub</a>
+        <a href="lesson_11.html" class="nav-link-btn" >Next Lesson &rarr;</a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../assets/js/highlight.min.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/quiz_engine.js"></script>
+  <script src="../assets/js/instructor_sync.js"></script>
+</body>
+</html>

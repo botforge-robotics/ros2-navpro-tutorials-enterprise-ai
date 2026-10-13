@@ -1,0 +1,55 @@
+{
+  "id": "mission-wh-001",
+  "title": "Automated Pallet Retrieval & Dispatch",
+  "version": "1.0",
+  "author": "NavPro Logistics Automation",
+  "nodes": [
+    {
+      "id": "node_1",
+      "type": "NAVIGATE_WAYPOINT",
+      "name": "Navigate to Pallet Storage Bay",
+      "params": {
+        "waypoint": "warehouse_aisle_1",
+        "tolerance": 0.2
+      }
+    },
+    {
+      "id": "node_2",
+      "type": "UI_CONFIRMATION_GATE",
+      "name": "Operator Loading Gate",
+      "params": {
+        "title": "Pallet Loaded?",
+        "prompt": "Operator: Confirm pallet #4029 has been secured onto the AMR deck.",
+        "target_device": "smartwatch_and_cockpit",
+        "options": ["CONFIRMED", "RETRY_ALIGNMENT", "ABORT_MISSION"],
+        "default_option": "CONFIRMED",
+        "timeout_seconds": 120
+      }
+    },
+    {
+      "id": "node_3",
+      "type": "NAVIGATE_WAYPOINT",
+      "name": "Transit to Dispatch Bay",
+      "params": {
+        "waypoint": "dispatch_bay",
+        "tolerance": 0.25
+      }
+    },
+    {
+      "id": "node_4",
+      "type": "WAIT_DELAY",
+      "name": "Automated Unloading Dwell",
+      "params": {
+        "duration_seconds": 3.0
+      }
+    },
+    {
+      "id": "node_5",
+      "type": "DOCK",
+      "name": "Return to Charging Station",
+      "params": {
+        "charge_threshold": 95.0
+      }
+    }
+  ]
+}

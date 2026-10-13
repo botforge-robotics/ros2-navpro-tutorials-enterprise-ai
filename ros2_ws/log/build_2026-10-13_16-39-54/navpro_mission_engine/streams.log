@@ -1,0 +1,42 @@
+[1.032s] Invoking command in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_mission_engine': AMENT_PREFIX_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mission_engine/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/lib/python3.12/site-packages:/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/navpro_mission_engine build --build-base /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mission_engine/build install --record /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mission_engine/install.log --install-scripts $base/lib/navpro_mission_engine --single-version-externally-managed install_data
+[1.210s] running egg_info
+[1.211s] creating ../../build/navpro_mission_engine/navpro_mission_engine.egg-info
+[1.223s] writing ../../build/navpro_mission_engine/navpro_mission_engine.egg-info/PKG-INFO
+[1.223s] writing dependency_links to ../../build/navpro_mission_engine/navpro_mission_engine.egg-info/dependency_links.txt
+[1.223s] writing entry points to ../../build/navpro_mission_engine/navpro_mission_engine.egg-info/entry_points.txt
+[1.223s] writing requirements to ../../build/navpro_mission_engine/navpro_mission_engine.egg-info/requires.txt
+[1.223s] writing top-level names to ../../build/navpro_mission_engine/navpro_mission_engine.egg-info/top_level.txt
+[1.223s] writing manifest file '../../build/navpro_mission_engine/navpro_mission_engine.egg-info/SOURCES.txt'
+[1.247s] reading manifest file '../../build/navpro_mission_engine/navpro_mission_engine.egg-info/SOURCES.txt'
+[1.248s] writing manifest file '../../build/navpro_mission_engine/navpro_mission_engine.egg-info/SOURCES.txt'
+[1.248s] running build
+[1.248s] running build_py
+[1.248s] creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mission_engine/build
+[1.248s] creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mission_engine/build/lib
+[1.248s] creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mission_engine/build/lib/navpro_mission_engine
+[1.248s] copying navpro_mission_engine/__init__.py -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mission_engine/build/lib/navpro_mission_engine
+[1.248s] copying navpro_mission_engine/mission_engine_node.py -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mission_engine/build/lib/navpro_mission_engine
+[1.248s] running install
+[1.252s] running install_lib
+[1.264s] creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/lib/python3.12/site-packages/navpro_mission_engine
+[1.264s] copying /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mission_engine/build/lib/navpro_mission_engine/__init__.py -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/lib/python3.12/site-packages/navpro_mission_engine
+[1.265s] copying /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mission_engine/build/lib/navpro_mission_engine/mission_engine_node.py -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/lib/python3.12/site-packages/navpro_mission_engine
+[1.265s] byte-compiling /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/lib/python3.12/site-packages/navpro_mission_engine/__init__.py to __init__.cpython-312.pyc
+[1.265s] byte-compiling /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/lib/python3.12/site-packages/navpro_mission_engine/mission_engine_node.py to mission_engine_node.cpython-312.pyc
+[1.266s] running install_data
+[1.266s] creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/share/ament_index
+[1.266s] creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/share/ament_index/resource_index
+[1.266s] creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/share/ament_index/resource_index/packages
+[1.267s] copying resource/navpro_mission_engine -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/share/ament_index/resource_index/packages
+[1.267s] copying package.xml -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/share/navpro_mission_engine
+[1.267s] creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/share/navpro_mission_engine/launch
+[1.267s] copying launch/mission_engine.launch.py -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/share/navpro_mission_engine/launch
+[1.267s] creating /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/share/navpro_mission_engine/sample_missions
+[1.267s] copying sample_missions/security_patrol_gate_mission.json -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/share/navpro_mission_engine/sample_missions
+[1.267s] copying sample_missions/warehouse_delivery_mission.json -> /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/share/navpro_mission_engine/sample_missions
+[1.267s] running install_egg_info
+[1.287s] Copying ../../build/navpro_mission_engine/navpro_mission_engine.egg-info to /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/lib/python3.12/site-packages/navpro_mission_engine-2.0.0-py3.12.egg-info
+[1.287s] running install_scripts
+[1.369s] Installing mission_engine_node script to /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/lib/navpro_mission_engine
+[1.369s] writing list of installed files to '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mission_engine/install.log'
+[1.399s] Invoked command in '/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/src/navpro_mission_engine' returned '0': AMENT_PREFIX_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mission_engine/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_mission_engine/lib/python3.12/site-packages:/home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/install/navpro_enterprise_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/navpro_mission_engine build --build-base /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mission_engine/build install --record /home/chaitu/Projects/navpro_learning_hub/level2/ros2_ws/build/navpro_mission_engine/install.log --install-scripts $base/lib/navpro_mission_engine --single-version-externally-managed install_data

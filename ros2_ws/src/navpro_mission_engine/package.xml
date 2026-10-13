@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>navpro_mission_engine</name>
+  <version>2.0.0</version>
+  <description>Stateful Directed Acyclic Graph (DAG) Mission Runner with UI/Watch Gates for NavPro Level 2</description>
+  <maintainer email="chaitu@botforge.in">Botforge Robotics</maintainer>
+  <license>Apache-2.0</license>
+
+  <depend>rclpy</depend>
+  <depend>navpro_enterprise_interfaces</depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

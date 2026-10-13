@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 15: Enterprise Fleet Security Auth Rate Limiting | Level 2 Enterprise</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/highlight-dark.min.css">
+  <link rel="stylesheet" href="../assets/css/quiz.css">
+  <link rel="stylesheet" href="../assets/css/instructor_sync.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-container">
+      <a href="https://botforge.in" target="_blank" class="company-brand" title="Botforge Robotics - botforge.in">
+        <img src="../assets/images/botforge_black.png" alt="Botforge Robotics" class="company-logo">
+      </a>
+      <div class="brand-divider"></div>
+      <a href="../index.html" class="brand" title="Level 2: Enterprise Robotics & AI">
+        <img src="../assets/images/ros2_logo.svg" alt="ROS 2" class="brand-logo">
+        <span class="brand-title">NavPro Learning Hub</span>
+        <span class="badge-jazzy" style="background:#0284c7; color:#fff; border-color:#0284c7;">Level 2 Enterprise</span>
+      </a>
+    </div>
+    <div class="header-center">
+      <input type="text" id="lessonSearchInput" class="search-input" placeholder="🔍 Search Level 2 curriculum...">
+    </div>
+    <div class="header-actions">
+      <a href="http://localhost:6080/vnc.html" target="_blank" class="track-btn" title="Open Ubuntu Desktop GUI via noVNC">🖥️ Desktop GUI</a>
+      <a href="http://localhost:8443/?folder=/home/navpro/workspace" target="_blank" class="track-btn" title="Open VS Code in browser">💻 VS Code</a>
+      <a href="../index.html" class="track-btn active" style="background:#0284c7; color:#fff;">Architecture Hub</a>
+      <span class="theme-pill">☀️ Light Theme</span>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <aside class="app-sidebar">
+      <div class="progress-card">
+        <div class="progress-header">
+          <span>Enterprise Progress</span>
+          <span id="overallProgressText">0% Complete (0/24)</span>
+        </div>
+        <div class="progress-bar-track">
+          <div id="overallProgressBar" class="progress-bar-fill"></div>
+        </div>
+        <button id="resetProgressBtn" class="track-btn reset-btn" style="width:100%; margin-top:8px; justify-content:center;">↺ Reset Progress</button>
+      </div>
+
+      
+        <div class="sidebar-section-title">Enterprise &amp; AI Stack (24 Lessons)</div>
+        <ul class="lesson-list">
+          
+            <li>
+              <a href="lesson_01.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_01" onclick="event.stopPropagation();">
+                <span class="lesson-num">01</span>
+                <span class="lesson-title">Web Technologies For Roboticists Http Methods Json</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_02.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_02" onclick="event.stopPropagation();">
+                <span class="lesson-num">02</span>
+                <span class="lesson-title">Realtime Websockets Vs Http Polling</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_03.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_03" onclick="event.stopPropagation();">
+                <span class="lesson-num">03</span>
+                <span class="lesson-title">Enterprise System Architecture Dual Plane</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_04.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_04" onclick="event.stopPropagation();">
+                <span class="lesson-num">04</span>
+                <span class="lesson-title">High Concurrency Ros2 Multithreaded Executor</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_05.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_05" onclick="event.stopPropagation();">
+                <span class="lesson-num">05</span>
+                <span class="lesson-title">Fastapi Robotics Rest Gateway Pydantic</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_06.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_06" onclick="event.stopPropagation();">
+                <span class="lesson-num">06</span>
+                <span class="lesson-title">High Frequency Websocket Telemetry Broadcaster</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_07.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_07" onclick="event.stopPropagation();">
+                <span class="lesson-num">07</span>
+                <span class="lesson-title">Non Blocking Nav2 Action Dispatching</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_08.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_08" onclick="event.stopPropagation();">
+                <span class="lesson-num">08</span>
+                <span class="lesson-title">Day1 Capstone Navpro Api Gateway</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_09.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_09" onclick="event.stopPropagation();">
+                <span class="lesson-num">09</span>
+                <span class="lesson-title">Client Sdk Architecture Python Javascript</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_10.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_10" onclick="event.stopPropagation();">
+                <span class="lesson-num">10</span>
+                <span class="lesson-title">Modern Fleet Cockpit Architecture Canvas</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_11.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_11" onclick="event.stopPropagation();">
+                <span class="lesson-num">11</span>
+                <span class="lesson-title">Rendering 2D Slam Map Occupancy Grid</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_12.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_12" onclick="event.stopPropagation();">
+                <span class="lesson-num">12</span>
+                <span class="lesson-title">Live Robot Pose And Trajectory Rendering</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_13.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_13" onclick="event.stopPropagation();">
+                <span class="lesson-num">13</span>
+                <span class="lesson-title">Interactive Robot Controls Virtual Joystick</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_14.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_14" onclick="event.stopPropagation();">
+                <span class="lesson-num">14</span>
+                <span class="lesson-title">Waypoint Store And Interactive Map Markers</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_15.html" class="lesson-item active">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_15" onclick="event.stopPropagation();">
+                <span class="lesson-num">15</span>
+                <span class="lesson-title">Enterprise Fleet Security Auth Rate Limiting</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_16.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_16" onclick="event.stopPropagation();">
+                <span class="lesson-num">16</span>
+                <span class="lesson-title">Day2 Capstone Interactive Web Cockpit</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_17.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_17" onclick="event.stopPropagation();">
+                <span class="lesson-num">17</span>
+                <span class="lesson-title">Physical Ai And Grounded Reasoning</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_18.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_18" onclick="event.stopPropagation();">
+                <span class="lesson-num">18</span>
+                <span class="lesson-title">Model Context Protocol Standard Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_19.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_19" onclick="event.stopPropagation();">
+                <span class="lesson-num">19</span>
+                <span class="lesson-title">Building Python Mcp Robotics Server</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_20.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_20" onclick="event.stopPropagation();">
+                <span class="lesson-num">20</span>
+                <span class="lesson-title">Deterministic Safety Barriers And Preflight Guards</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_21.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_21" onclick="event.stopPropagation();">
+                <span class="lesson-num">21</span>
+                <span class="lesson-title">Connecting Frontier Models Claude Gemini Antigravity</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_22.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_22" onclick="event.stopPropagation();">
+                <span class="lesson-num">22</span>
+                <span class="lesson-title">Industrial Mission Graph Dag Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_23.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_23" onclick="event.stopPropagation();">
+                <span class="lesson-num">23</span>
+                <span class="lesson-title">Stateful Mission Runner And Ui Gates</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_24.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_24" onclick="event.stopPropagation();">
+                <span class="lesson-num">24</span>
+                <span class="lesson-title">Day3 Grand Capstone End To End Fleet Pipeline</span>
+              </a>
+            </li>
+            
+        </ul>
+        
+    </aside>
+
+    <main class="app-content">
+      <article class="markdown-body">
+        <h1>Lesson 15: Enterprise Fleet Security — Authentication &amp; Rate Limiting</h1>
+<p>In Lessons 09 through 14, we built an interactive, browser-based robotics cockpit.</p>
+<p>However, leaving an open, unauthenticated API on a factory Wi-Fi network is a severe safety hazard. Anyone on the local network could connect to the gateway and drive the robot or trigger emergency stops.</p>
+<p>In this lesson, you will implement <strong>enterprise-grade security</strong>: Bearer token authentication, Role-Based Access Control (RBAC), token-bucket rate limiting, and emergency stop overrides.</p>
+<hr>
+<h2>1. Learning Objectives</h2>
+<p>By the end of this lesson, you will be able to:</p>
+<ol>
+<li>Identify the primary cybersecurity threats facing connected mobile robots on shared Wi-Fi networks.</li>
+<li>Implement <strong>Bearer Token Authentication</strong> in FastAPI using <code>HTTPBearer</code>.</li>
+<li>Enforce <strong>Role-Based Access Control (RBAC)</strong> separating <code>Viewer</code>, <code>Operator</code>, and <code>Admin</code> permissions.</li>
+<li>Implement token-bucket rate limiting to protect the robot CPU from Denial of Service (DoS) attacks.</li>
+<li>Guarantee that Emergency Stop endpoints bypass rate limiters and execute unconditionally.</li>
+</ol>
+<hr>
+<h2>2. Robotics Attack Vectors &amp; Security Architecture</h2>
+<p>When mobile robots connect to Wi-Fi networks, they face three primary attack vectors:</p>
+<ol>
+<li><strong>Unauthorized Actuation:</strong> An unauthenticated device on the LAN sends <code>/teleop</code> or <code>/navigation/goal</code> commands.</li>
+<li><strong>Denial of Service (DoS):</strong> A faulty frontend script spams 5,000 HTTP requests per second, exhausting CPU cycles required for LiDAR obstacle avoidance.</li>
+<li><strong>Telemetry Snooping:</strong> Eavesdropping on camera feeds and facility floor plans.</li>
+</ol>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-mermaid">graph TD
+    Request[&quot;Incoming Client Request&quot;]
+    AuthGate{&quot;Auth Dependency (Bearer Token)&quot;}
+    RBAC{&quot;Role-Based Access Control&quot;}
+    RateLimit{&quot;Token Bucket Rate Limiter&quot;}
+    Priority{&quot;Is Emergency Stop?&quot;}
+    Handler[&quot;Target Endpoint Handler&quot;]
+    Reject[&quot;HTTP 401 / 403 / 429 Rejection&quot;]
+
+    Request --&gt; AuthGate
+    AuthGate --&gt;|Invalid Token| Reject
+    AuthGate --&gt;|Valid Token| Priority
+    
+    Priority --&gt;|Yes: E-Stop!| Handler
+    Priority --&gt;|No: Standard API| RBAC
+
+    RBAC --&gt;|Insufficient Permissions| Reject
+    RBAC --&gt;|Authorized| RateLimit
+
+    RateLimit --&gt;|Exceeded Limit (&gt;30 req/s)| Reject
+    RateLimit --&gt;|Within Budget| Handler</code></pre></div>
+<hr>
+<h2>3. Implementing Bearer Token Authentication</h2>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python">from fastapi import Security, HTTPException, status
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+from enum import Enum
+from typing import Dict, Set
+
+security = HTTPBearer()
+
+
+class Role(str, Enum):
+    VIEWER = &quot;VIEWER&quot;        # Read telemetry, maps, waypoints
+    OPERATOR = &quot;OPERATOR&quot;    # Dispatch missions, navigate to waypoints
+    ADMIN = &quot;ADMIN&quot;          # Manual teleop, change configs, save waypoints
+
+
+VALID_API_KEYS: Dict[str, Role] = {
+    &quot;navpro_viewer_token_789&quot;: Role.VIEWER,
+    &quot;navpro_operator_token_456&quot;: Role.OPERATOR,
+    &quot;navpro_admin_secret_123&quot;: Role.ADMIN,
+}
+
+
+async def verify_auth_token(credentials: HTTPAuthorizationCredentials = Security(security)) -&gt; Role:
+    &quot;&quot;&quot;Validates token and extracts user role.&quot;&quot;&quot;
+    token = credentials.credentials
+    if token not in VALID_API_KEYS:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail=&quot;Invalid or expired Bearer Token.&quot;,
+            headers={&quot;WWW-Authenticate&quot;: &quot;Bearer&quot;},
+        )
+    return VALID_API_KEYS[token]
+
+
+def require_role(allowed_roles: Set[Role]):
+    &quot;&quot;&quot;Role-Based Access Control dependency.&quot;&quot;&quot;
+    def role_checker(user_role: Role = Security(verify_auth_token)):
+        if user_role not in allowed_roles:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail=f&quot;Access denied. Required roles: {[r.value for r in allowed_roles]}. Your role: {user_role.value}&quot;
+            )
+        return user_role
+    return role_checker</code></pre></div>
+<hr>
+<h2>4. Attaching Roles to Endpoints</h2>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python"># 1. Telemetry can be viewed by all roles
+@app.get(&quot;/api/v1/telemetry&quot;, dependencies=[Security(require_role({Role.VIEWER, Role.OPERATOR, Role.ADMIN}))])
+async def get_secured_telemetry():
+    return robot_state.get_snapshot()
+
+
+# 2. Autonomous Navigation requires OPERATOR or ADMIN role
+@app.post(&quot;/api/v1/navigation/goal&quot;, dependencies=[Security(require_role({Role.OPERATOR, Role.ADMIN}))])
+async def dispatch_secured_goal(payload: NavigationGoalPayload):
+    # Dispatch logic...
+    return {&quot;status&quot;: &quot;ACCEPTED&quot;}
+
+
+# 3. Direct Manual Joystick Teleop is strictly restricted to ADMINS
+@app.post(&quot;/api/v1/teleop&quot;, dependencies=[Security(require_role({Role.ADMIN}))])
+async def secured_teleop(cmd: TeleopPayload):
+    # Manual teleop logic...
+    return {&quot;status&quot;: &quot;COMMAND_ACCEPTED&quot;}</code></pre></div>
+<hr>
+<h2>5. Token-Bucket Rate Limiting for Teleoperation</h2>
+<p>To prevent network flooding from rapid virtual joystick touch events:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python">import time
+from fastapi import Request
+
+class TokenBucketRateLimiter:
+    def __init__(self, capacity: int = 30, refill_rate: float = 20.0):
+        self.capacity = capacity
+        self.refill_rate = refill_rate
+        self.tokens = capacity
+        self.last_update = time.time()
+
+    def allow_request(self) -&gt; bool:
+        now = time.time()
+        elapsed = now - self.last_update
+        self.last_update = now
+        self.tokens = min(self.capacity, self.tokens + elapsed * self.refill_rate)
+        
+        if self.tokens &gt;= 1.0:
+            self.tokens -= 1.0
+            return True
+        return False
+
+rate_limiter = TokenBucketRateLimiter(capacity=30, refill_rate=20.0)
+
+
+@app.middleware(&quot;http&quot;)
+async def rate_limiting_middleware(request: Request, call_next):
+    # CRITICAL: Emergency Stop must NEVER be throttled!
+    if request.url.path.endswith(&quot;/emergency_stop&quot;):
+        return await call_next(request)
+
+    if request.url.path.endswith(&quot;/teleop&quot;):
+        if not rate_limiter.allow_request():
+            raise HTTPException(
+                status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+                detail=&quot;Rate limit exceeded. Maximum 30 teleop commands per second.&quot;
+            )
+
+    return await call_next(request)</code></pre></div>
+<hr>
+<h2>6. Summary &amp; Next Steps</h2>
+<p>In this lesson, you secured the robotics platform:</p>
+<ul>
+<li>Implemented <strong>Bearer Token Authentication</strong> using FastAPI security dependencies.</li>
+<li>Enforced <strong>Role-Based Access Control</strong> (<code>Viewer</code>, <code>Operator</code>, <code>Admin</code>).</li>
+<li>Added a <strong>Token-Bucket Rate Limiter</strong> to protect the network from flooding.</li>
+<li>Upheld the golden safety rule: <strong>Emergency Stop requests bypass rate limits</strong>.</li>
+</ul>
+<p>In <strong>Lesson 16</strong>, you will deploy the complete frontend in our <strong>Day 2 Capstone: The Full Interactive Web Cockpit</strong>!</p>
+      </article>
+
+      <footer class="lesson-nav-footer">
+        <a href="lesson_14.html" class="nav-link-btn" >&larr; Previous Lesson</a>
+        <a href="../index.html" class="nav-link-btn">⚡ Enterprise Hub</a>
+        <a href="lesson_16.html" class="nav-link-btn" >Next Lesson &rarr;</a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../assets/js/highlight.min.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/quiz_engine.js"></script>
+  <script src="../assets/js/instructor_sync.js"></script>
+</body>
+</html>

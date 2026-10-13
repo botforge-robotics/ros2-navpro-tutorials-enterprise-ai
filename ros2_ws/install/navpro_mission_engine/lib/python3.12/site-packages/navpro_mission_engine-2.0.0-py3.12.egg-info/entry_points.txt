@@ -1,0 +1,2 @@
+[console_scripts]
+mission_engine_node = navpro_mission_engine.mission_engine_node:main

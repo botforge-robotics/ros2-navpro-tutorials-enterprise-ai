@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 07: Non Blocking Nav2 Action Dispatching | Level 2 Enterprise</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/highlight-dark.min.css">
+  <link rel="stylesheet" href="../assets/css/quiz.css">
+  <link rel="stylesheet" href="../assets/css/instructor_sync.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-container">
+      <a href="https://botforge.in" target="_blank" class="company-brand" title="Botforge Robotics - botforge.in">
+        <img src="../assets/images/botforge_black.png" alt="Botforge Robotics" class="company-logo">
+      </a>
+      <div class="brand-divider"></div>
+      <a href="../index.html" class="brand" title="Level 2: Enterprise Robotics & AI">
+        <img src="../assets/images/ros2_logo.svg" alt="ROS 2" class="brand-logo">
+        <span class="brand-title">NavPro Learning Hub</span>
+        <span class="badge-jazzy" style="background:#0284c7; color:#fff; border-color:#0284c7;">Level 2 Enterprise</span>
+      </a>
+    </div>
+    <div class="header-center">
+      <input type="text" id="lessonSearchInput" class="search-input" placeholder="🔍 Search Level 2 curriculum...">
+    </div>
+    <div class="header-actions">
+      <a href="http://localhost:6080/vnc.html" target="_blank" class="track-btn" title="Open Ubuntu Desktop GUI via noVNC">🖥️ Desktop GUI</a>
+      <a href="http://localhost:8443/?folder=/home/navpro/workspace" target="_blank" class="track-btn" title="Open VS Code in browser">💻 VS Code</a>
+      <a href="../index.html" class="track-btn active" style="background:#0284c7; color:#fff;">Architecture Hub</a>
+      <span class="theme-pill">☀️ Light Theme</span>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <aside class="app-sidebar">
+      <div class="progress-card">
+        <div class="progress-header">
+          <span>Enterprise Progress</span>
+          <span id="overallProgressText">0% Complete (0/24)</span>
+        </div>
+        <div class="progress-bar-track">
+          <div id="overallProgressBar" class="progress-bar-fill"></div>
+        </div>
+        <button id="resetProgressBtn" class="track-btn reset-btn" style="width:100%; margin-top:8px; justify-content:center;">↺ Reset Progress</button>
+      </div>
+
+      
+        <div class="sidebar-section-title">Enterprise &amp; AI Stack (24 Lessons)</div>
+        <ul class="lesson-list">
+          
+            <li>
+              <a href="lesson_01.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_01" onclick="event.stopPropagation();">
+                <span class="lesson-num">01</span>
+                <span class="lesson-title">Web Technologies For Roboticists Http Methods Json</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_02.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_02" onclick="event.stopPropagation();">
+                <span class="lesson-num">02</span>
+                <span class="lesson-title">Realtime Websockets Vs Http Polling</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_03.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_03" onclick="event.stopPropagation();">
+                <span class="lesson-num">03</span>
+                <span class="lesson-title">Enterprise System Architecture Dual Plane</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_04.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_04" onclick="event.stopPropagation();">
+                <span class="lesson-num">04</span>
+                <span class="lesson-title">High Concurrency Ros2 Multithreaded Executor</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_05.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_05" onclick="event.stopPropagation();">
+                <span class="lesson-num">05</span>
+                <span class="lesson-title">Fastapi Robotics Rest Gateway Pydantic</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_06.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_06" onclick="event.stopPropagation();">
+                <span class="lesson-num">06</span>
+                <span class="lesson-title">High Frequency Websocket Telemetry Broadcaster</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_07.html" class="lesson-item active">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_07" onclick="event.stopPropagation();">
+                <span class="lesson-num">07</span>
+                <span class="lesson-title">Non Blocking Nav2 Action Dispatching</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_08.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_08" onclick="event.stopPropagation();">
+                <span class="lesson-num">08</span>
+                <span class="lesson-title">Day1 Capstone Navpro Api Gateway</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_09.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_09" onclick="event.stopPropagation();">
+                <span class="lesson-num">09</span>
+                <span class="lesson-title">Client Sdk Architecture Python Javascript</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_10.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_10" onclick="event.stopPropagation();">
+                <span class="lesson-num">10</span>
+                <span class="lesson-title">Modern Fleet Cockpit Architecture Canvas</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_11.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_11" onclick="event.stopPropagation();">
+                <span class="lesson-num">11</span>
+                <span class="lesson-title">Rendering 2D Slam Map Occupancy Grid</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_12.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_12" onclick="event.stopPropagation();">
+                <span class="lesson-num">12</span>
+                <span class="lesson-title">Live Robot Pose And Trajectory Rendering</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_13.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_13" onclick="event.stopPropagation();">
+                <span class="lesson-num">13</span>
+                <span class="lesson-title">Interactive Robot Controls Virtual Joystick</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_14.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_14" onclick="event.stopPropagation();">
+                <span class="lesson-num">14</span>
+                <span class="lesson-title">Waypoint Store And Interactive Map Markers</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_15.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_15" onclick="event.stopPropagation();">
+                <span class="lesson-num">15</span>
+                <span class="lesson-title">Enterprise Fleet Security Auth Rate Limiting</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_16.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_16" onclick="event.stopPropagation();">
+                <span class="lesson-num">16</span>
+                <span class="lesson-title">Day2 Capstone Interactive Web Cockpit</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_17.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_17" onclick="event.stopPropagation();">
+                <span class="lesson-num">17</span>
+                <span class="lesson-title">Physical Ai And Grounded Reasoning</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_18.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_18" onclick="event.stopPropagation();">
+                <span class="lesson-num">18</span>
+                <span class="lesson-title">Model Context Protocol Standard Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_19.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_19" onclick="event.stopPropagation();">
+                <span class="lesson-num">19</span>
+                <span class="lesson-title">Building Python Mcp Robotics Server</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_20.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_20" onclick="event.stopPropagation();">
+                <span class="lesson-num">20</span>
+                <span class="lesson-title">Deterministic Safety Barriers And Preflight Guards</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_21.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_21" onclick="event.stopPropagation();">
+                <span class="lesson-num">21</span>
+                <span class="lesson-title">Connecting Frontier Models Claude Gemini Antigravity</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_22.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_22" onclick="event.stopPropagation();">
+                <span class="lesson-num">22</span>
+                <span class="lesson-title">Industrial Mission Graph Dag Architecture</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_23.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_23" onclick="event.stopPropagation();">
+                <span class="lesson-num">23</span>
+                <span class="lesson-title">Stateful Mission Runner And Ui Gates</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="lesson_24.html" class="lesson-item ">
+                <input type="checkbox" class="lesson-checkbox" data-lesson-id="l2_24" onclick="event.stopPropagation();">
+                <span class="lesson-num">24</span>
+                <span class="lesson-title">Day3 Grand Capstone End To End Fleet Pipeline</span>
+              </a>
+            </li>
+            
+        </ul>
+        
+    </aside>
+
+    <main class="app-content">
+      <article class="markdown-body">
+        
+        <div class="concept-card">
+          <h3>⚡ Quick Concept Snapshot</h3>
+          <ul>
+            <li><strong>Non-Blocking Action Dispatch:</strong> Return HTTP 202 Accepted immediately with a unique <code>goal_id</code> while Nav2 navigates asynchronously.</li>
+            <li><strong>Lifecycle Tracking:</strong> Stream goal status transitions (ACCEPTED &rarr; EXECUTING &rarr; SUCCEEDED) through WebSockets.</li>
+          </ul>
+        </div>
+        <h1>Lesson 07: Non-Blocking Nav2 Action Dispatching — HTTP 202 Accepted</h1>
+<p>In Lesson 06, we built the real-time streaming pipe. Now, we tackle long-running physical tasks: <strong>Autonomous Waypoint Navigation</strong>.</p>
+<p>When an AMR drives across a warehouse, the navigation maneuver may take <strong>$15$ to $90$ seconds</strong>. If an HTTP endpoint (<code>POST /api/v1/navigation/goal</code>) blocks waiting for the robot to arrive:</p>
+<ol>
+<li>The web client&#x27;s request will time out with an <code>HTTP 504 Gateway Timeout</code>.</li>
+<li>The web connection remains locked, exhausting server socket pools.</li>
+<li>The client cannot send cancellation requests or monitor live progress.</li>
+</ol>
+<p>In this lesson, you will learn the <strong>Asynchronous Action Dispatch Pattern</strong>, mapping ROS 2 Actions into non-blocking <code>HTTP 202 Accepted</code> workflows.</p>
+<hr>
+<h2>1. Learning Objectives</h2>
+<p>By the end of this lesson, you will be able to:</p>
+<ol>
+<li>Explain why synchronous HTTP request-response fails for physical robotics navigation.</li>
+<li>Implement the <strong>HTTP 202 Accepted</strong> pattern with tracking <code>goal_id</code> tokens.</li>
+<li>Wrap <code>rclpy.action.ActionClient</code> for <code>nav2_msgs/action/NavigateToPose</code> inside async Python routines.</li>
+<li>Build a state tracker for active navigation goals (<code>ACCEPTED</code>, <code>EXECUTING</code>, <code>SUCCEEDED</code>, <code>FAILED</code>, <code>CANCELED</code>).</li>
+<li>Implement safe cancellation endpoints (<code>POST /api/v1/navigation/cancel/{goal_id}</code>).</li>
+</ol>
+<hr>
+<h2>2. The Asynchronous Action Dispatch Pattern</h2>
+<p>Instead of blocking the HTTP connection, we decouple <strong>goal initiation</strong> from <strong>goal monitoring</strong>:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-mermaid">sequenceDiagram
+    autonumber
+    actor Web as Web Client / Cockpit
+    participant API as FastAPI Gateway
+    participant Bridge as Action Dispatcher
+    participant Nav2 as ROS 2 Nav2 Action Server
+
+    Web-&gt;&gt;API: POST /api/v1/navigation/goal {x: 12.5, y: -4.0}
+    API-&gt;&gt;Bridge: Validate &amp; Dispatch (Generate UUID: &#x27;nav_98a&#x27;)
+    Bridge-&gt;&gt;Nav2: send_goal_async(NavigateToPose)
+    API--&gt;&gt;Web: HTTP 202 Accepted {goal_id: &#x27;nav_98a&#x27;, status: &#x27;ACCEPTED&#x27;}
+    Note over Web,API: HTTP transaction finishes in &lt; 15ms!
+
+    loop Periodic Status Polling (or via WebSocket)
+        Web-&gt;&gt;API: GET /api/v1/navigation/status/nav_98a
+        API--&gt;&gt;Web: HTTP 200 OK {status: &#x27;EXECUTING&#x27;, distance_remaining: 3.2m}
+    end
+
+    Nav2--&gt;&gt;Bridge: Goal Result: SUCCEEDED
+    Bridge-&gt;&gt;API: Update goal status cache: &#x27;SUCCEEDED&#x27;
+    Web-&gt;&gt;API: GET /api/v1/navigation/status/nav_98a
+    API--&gt;&gt;Web: HTTP 200 OK {status: &#x27;SUCCEEDED&#x27;, error_code: 0}</code></pre></div>
+<hr>
+<h2>3. Implementing the Goal Registry</h2>
+<p>We maintain an in-memory registry tracking the lifecycle of all submitted navigation jobs:</p>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python">import uuid
+import time
+from enum import Enum
+from typing import Dict, Any, Optional
+from pydantic import BaseModel
+
+
+class GoalState(str, Enum):
+    ACCEPTED = &quot;ACCEPTED&quot;
+    EXECUTING = &quot;EXECUTING&quot;
+    SUCCEEDED = &quot;SUCCEEDED&quot;
+    FAILED = &quot;FAILED&quot;
+    CANCELED = &quot;CANCELED&quot;
+
+
+class NavigationJob(BaseModel):
+    goal_id: str
+    target_x: float
+    target_y: float
+    target_yaw: float
+    status: GoalState
+    created_at: float
+    completed_at: Optional[float] = None
+    error_message: Optional[str] = None
+
+
+class GoalRegistry:
+    &quot;&quot;&quot;Thread-safe registry tracking active and completed navigation tasks.&quot;&quot;&quot;
+
+    def __init__(self):
+        self._jobs: Dict[str, NavigationJob] = {}
+
+    def create_job(self, x: float, y: float, yaw: float) -&gt; str:
+        goal_id = f&quot;nav_{uuid.uuid4().hex[:8]}&quot;
+        job = NavigationJob(
+            goal_id=goal_id,
+            target_x=x,
+            target_y=y,
+            target_yaw=yaw,
+            status=GoalState.ACCEPTED,
+            created_at=time.time()
+        )
+        self._jobs[goal_id] = job
+        return goal_id
+
+    def update_status(self, goal_id: str, status: GoalState, error: Optional[str] = None):
+        if goal_id in self._jobs:
+            self._jobs[goal_id].status = status
+            if status in (GoalState.SUCCEEDED, GoalState.FAILED, GoalState.CANCELED):
+                self._jobs[goal_id].completed_at = time.time()
+            if error:
+                self._jobs[goal_id].error_message = error
+
+    def get_job(self, goal_id: str) -&gt; Optional[NavigationJob]:
+        return self._jobs.get(goal_id)</code></pre></div>
+<hr>
+<h2>4. Wrapping the Nav2 Action Client</h2>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python">from rclpy.action import ActionClient
+from nav2_msgs.action import NavigateToPose
+from geometry_msgs.msg import PoseStamped
+import math
+
+class Nav2BridgeNode(Node):
+    def __init__(self, registry: GoalRegistry):
+        super().__init__(&#x27;nav2_bridge_node&#x27;)
+        self.registry = registry
+        self.action_client = ActionClient(self, NavigateToPose, &#x27;navigate_to_pose&#x27;)
+        self.active_goal_handle = None
+
+    def dispatch_navigation_goal(self, goal_id: str, x: float, y: float, yaw: float):
+        &quot;&quot;&quot;Asynchronously dispatches goal to Nav2 without blocking.&quot;&quot;&quot;
+        if not self.action_client.wait_for_server(timeout_sec=2.0):
+            self.registry.update_status(goal_id, GoalState.FAILED, &quot;Nav2 Action Server not available&quot;)
+            return
+
+        goal_msg = NavigateToPose.Goal()
+        goal_msg.pose.header.frame_id = &#x27;map&#x27;
+        goal_msg.pose.header.stamp = self.get_clock().now().to_msg()
+        goal_msg.pose.pose.position.x = float(x)
+        goal_msg.pose.pose.position.y = float(y)
+        
+        # Quaternion calculation
+        goal_msg.pose.pose.orientation.z = math.sin(yaw / 2.0)
+        goal_msg.pose.pose.orientation.w = math.cos(yaw / 2.0)
+
+        # Send goal asynchronously
+        send_future = self.action_client.send_goal_async(goal_msg)
+        send_future.add_done_callback(lambda future: self._goal_response_callback(future, goal_id))
+
+    def _goal_response_callback(self, future, goal_id: str):
+        goal_handle = future.result()
+        if not goal_handle.accepted:
+            self.registry.update_status(goal_id, GoalState.FAILED, &quot;Nav2 rejected navigation goal&quot;)
+            return
+
+        self.active_goal_handle = goal_handle
+        self.registry.update_status(goal_id, GoalState.EXECUTING)
+        
+        result_future = goal_handle.get_result_async()
+        result_future.add_done_callback(lambda res_fut: self._goal_result_callback(res_fut, goal_id))
+
+    def _goal_result_callback(self, future, goal_id: str):
+        result = future.result()
+        # ROS 2 GoalStatus: 4 = SUCCEEDED, 5 = CANCELED
+        if result.status == 4:
+            self.registry.update_status(goal_id, GoalState.SUCCEEDED)
+        elif result.status == 5:
+            self.registry.update_status(goal_id, GoalState.CANCELED)
+        else:
+            self.registry.update_status(goal_id, GoalState.FAILED, f&quot;Nav2 returned status code: {result.status}&quot;)
+        self.active_goal_handle = None
+
+    def cancel_active_goal(self, goal_id: str) -&gt; bool:
+        if self.active_goal_handle:
+            self.active_goal_handle.cancel_goal_async()
+            self.registry.update_status(goal_id, GoalState.CANCELED)
+            return True
+        return False</code></pre></div>
+<hr>
+<h2>5. Exposing Endpoints in FastAPI</h2>
+<div class="code-container"><pre><button class="copy-btn">Copy</button><code class="language-python">@app.post(&quot;/api/v1/navigation/goal&quot;, status_code=status.HTTP_202_ACCEPTED)
+async def dispatch_goal(payload: NavigationGoalPayload):
+    &quot;&quot;&quot;Submits a navigation goal and returns HTTP 202 Accepted immediately.&quot;&quot;&quot;
+    goal_id = goal_registry.create_job(payload.x, payload.y, payload.yaw)
+    nav2_node.dispatch_navigation_goal(goal_id, payload.x, payload.y, payload.yaw)
+
+    return {
+        &quot;status&quot;: &quot;ACCEPTED&quot;,
+        &quot;goal_id&quot;: goal_id,
+        &quot;message&quot;: &quot;Navigation goal accepted and dispatched to Nav2.&quot;,
+        &quot;status_url&quot;: f&quot;/api/v1/navigation/status/{goal_id}&quot;
+    }
+
+
+@app.get(&quot;/api/v1/navigation/status/{goal_id}&quot;)
+async def get_goal_status(goal_id: str):
+    &quot;&quot;&quot;Retrieves current execution status of a navigation job.&quot;&quot;&quot;
+    job = goal_registry.get_job(goal_id)
+    if not job:
+        raise HTTPException(status_code=404, detail=&quot;Navigation goal ID not found.&quot;)
+    return job
+
+
+@app.post(&quot;/api/v1/navigation/cancel/{goal_id}&quot;)
+async def cancel_goal(goal_id: str):
+    &quot;&quot;&quot;Cancels an in-progress navigation goal.&quot;&quot;&quot;
+    success = nav2_node.cancel_active_goal(goal_id)
+    if not success:
+        raise HTTPException(status_code=400, detail=&quot;Unable to cancel goal (not active or completed).&quot;)
+    return {&quot;status&quot;: &quot;CANCEL_REQUESTED&quot;, &quot;goal_id&quot;: goal_id}</code></pre></div>
+<hr>
+<h2>6. Summary &amp; Next Steps</h2>
+<p>In this lesson, you mastered non-blocking action handling:</p>
+<ul>
+<li>Replaced fragile synchronous HTTP requests with the <strong>HTTP 202 Accepted</strong> pattern.</li>
+<li>Tracked full navigation lifecycles using unique <code>goal_id</code> identifiers.</li>
+<li>Implemented cancellation hooks to safely abort autonomous motion in real time.</li>
+</ul>
+<p>In <strong>Lesson 08</strong>, you will combine everything built in Day 1 into our <strong>Day 1 Capstone Project: The Production NavPro API Gateway</strong>!</p>
+      </article>
+
+      <footer class="lesson-nav-footer">
+        <a href="lesson_06.html" class="nav-link-btn" >&larr; Previous Lesson</a>
+        <a href="../index.html" class="nav-link-btn">⚡ Enterprise Hub</a>
+        <a href="lesson_08.html" class="nav-link-btn" >Next Lesson &rarr;</a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../assets/js/highlight.min.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/quiz_engine.js"></script>
+  <script src="../assets/js/instructor_sync.js"></script>
+</body>
+</html>

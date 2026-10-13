@@ -1,0 +1,115 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "navpro_enterprise_interfaces/action/ExecuteMission_FeedbackMessage",
+      "fields": [
+        {
+          "name": "goal_id",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "unique_identifier_msgs/msg/UUID"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "feedback",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "navpro_enterprise_interfaces/action/ExecuteMission_Feedback"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "navpro_enterprise_interfaces/action/ExecuteMission_Feedback",
+        "fields": [
+          {
+            "name": "current_node_index",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "total_nodes_count",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "active_node_name",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "active_node_status",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "percent_complete",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "unique_identifier_msgs/msg/UUID",
+        "fields": [
+          {
+            "name": "uuid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "navpro_enterprise_interfaces/action/ExecuteMission_FeedbackMessage",
+      "hash_string": "RIHS01_5b4dd19cd9097dbc0785de3302d47d102492ff0684a4627ef22b8eadf0de2f07"
+    },
+    {
+      "type_name": "navpro_enterprise_interfaces/action/ExecuteMission_Feedback",
+      "hash_string": "RIHS01_327fb7536de7d295fc58ec9fe2642211e3b100c3ca3e2a2e8544a95466e9db76"
+    },
+    {
+      "type_name": "unique_identifier_msgs/msg/UUID",
+      "hash_string": "RIHS01_1b8e8aca958cbea28fe6ef60bf6c19b683c97a9ef60bb34752067d0f2f7ab437"
+    }
+  ]
+}
