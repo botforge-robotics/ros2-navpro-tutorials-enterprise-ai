@@ -6,7 +6,8 @@ import {
   Zap, 
   Clock, 
   ArrowLeft,
-  ArrowRight
+  ArrowRight,
+  BookOpen
 } from 'lucide-react';
 import { QuizCard } from './QuizCard';
 
@@ -156,6 +157,105 @@ export function LessonView({
           />
         </section>
       )}
+
+      {/* Bottom Completion Action Card */}
+      <section className="lesson-completion-card" style={{
+        marginTop: '2rem',
+        marginBottom: '2rem',
+        padding: '1.25rem 1.5rem',
+        background: 'var(--bg-card)',
+        border: '1px solid var(--border-color)',
+        borderRadius: '12px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        flexWrap: 'wrap',
+        gap: '1.25rem',
+        boxShadow: 'var(--shadow-sm)'
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          <div style={{
+            width: 44,
+            height: 44,
+            borderRadius: '10px',
+            background: isCompleted ? 'var(--success)' : 'var(--bg-sidebar)',
+            color: isCompleted ? '#fff' : 'var(--accent-primary)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            {isCompleted ? <CheckSquare size={22} /> : <BookOpen size={22} />}
+          </div>
+          <div>
+            <h4 style={{ margin: '0 0 3px', fontSize: '1.05rem', fontWeight: 800, color: 'var(--text-primary)' }}>
+              {isCompleted ? '✓ Lesson Completed' : 'Completed this Lesson?'}
+            </h4>
+            <p style={{ margin: 0, fontSize: '0.86rem', color: 'var(--text-secondary)' }}>
+              {isCompleted 
+                ? 'Your completion is marked and synced in real-time with the instructor dashboard.'
+                : 'Click below to mark complete and automatically advance to the next module.'}
+            </p>
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+          {isCompleted ? (
+            <>
+              <button
+                onClick={() => onToggleComplete(lesson.id)}
+                className="lesson-complete-toggle-btn completed"
+                title="Click to unmark as complete"
+                style={{ padding: '0.65rem 1.1rem', borderRadius: '8px' }}
+              >
+                <CheckSquare size={17} />
+                <span>Marked Complete (Click to Undo)</span>
+              </button>
+
+              {lesson.next_id && (
+                <button
+                  onClick={() => onSelectLesson(lesson.next_id)}
+                  className="lesson-nav-btn next"
+                  style={{ padding: '0.65rem 1.25rem' }}
+                >
+                  <span>Next Lesson</span>
+                  <ArrowRight size={16} />
+                </button>
+              )}
+            </>
+          ) : (
+            <button
+              onClick={() => {
+                onToggleComplete(lesson.id);
+                if (lesson.next_id) {
+                  onSelectLesson(lesson.next_id);
+                } else {
+                  onNavigateHub();
+                }
+              }}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: 'var(--success)',
+                color: '#ffffff',
+                border: 'none',
+                padding: '0.75rem 1.5rem',
+                borderRadius: '8px',
+                fontWeight: 800,
+                fontSize: '0.92rem',
+                cursor: 'pointer',
+                boxShadow: '0 2px 8px rgba(16, 185, 129, 0.35)',
+                transition: 'all 0.15s ease'
+              }}
+              className="btn-complete-and-advance"
+            >
+              <CheckSquare size={18} />
+              <span>{lesson.next_id ? 'Mark as Complete & Next Module' : 'Mark as Complete & Finish'}</span>
+              <ArrowRight size={18} />
+            </button>
+          )}
+        </div>
+      </section>
 
       {/* Lesson Navigation Footer */}
       <footer className="lesson-navigation-footer">
