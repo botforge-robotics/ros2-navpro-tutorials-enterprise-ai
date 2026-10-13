@@ -44,7 +44,8 @@ export function App() {
     closeChatModal,
     sendChatMessage,
     raiseHand,
-    lowerHand
+    lowerHand,
+    heartbeatCount
   } = useInstructorSync(completedLessons, quizScores, currentLessonId);
 
   // Immediate sync wrapper for marking lessons completed
@@ -142,6 +143,7 @@ export function App() {
         onOpenChatModal={openChatModal}
         unreadChatCount={unreadChatCount}
         isHandRaised={isHandRaised}
+        heartbeatCount={heartbeatCount}
       />
 
       <div className="app-main-layout">
@@ -192,48 +194,50 @@ export function App() {
       </div>
 
       {/* Floating Quick Launcher for Group Chat & Raise Hand */}
-      <button
-        onClick={openChatModal}
-        className={`floating-chat-trigger-btn ${studentInfo?.registered && connectionStatus === 'connected' ? 'synced' : 'locked'}`}
-        title={
-          studentInfo?.registered && connectionStatus === 'connected'
-            ? (isHandRaised ? "Hand Raised! Click to view group chat or lower hand." : "Open Workshop Group Chat & Raise Hand")
-            : "Click to open group chat (requires student login)"
-        }
-        style={{
-          position: 'fixed',
-          bottom: '1.75rem',
-          right: '1.75rem',
-          zIndex: 90,
-          display: 'flex',
-          alignItems: 'center',
-          gap: '8px',
-          padding: '0.75rem 1.25rem',
-          borderRadius: '50px',
-          background: isHandRaised ? '#f59e0b' : 'var(--accent-primary)',
-          color: '#ffffff',
-          border: 'none',
-          boxShadow: '0 4px 14px rgba(0, 0, 0, 0.25)',
-          cursor: 'pointer',
-          fontWeight: 700,
-          fontSize: '0.88rem'
-        }}
-      >
-        {isHandRaised ? <Hand size={18} /> : <MessageSquare size={18} />}
-        <span>{isHandRaised ? 'Hand Raised' : 'Group Chat'}</span>
-        {unreadChatCount > 0 && !isHandRaised && (
-          <span style={{
-            background: '#ef4444',
-            color: '#fff',
-            borderRadius: '10px',
-            padding: '2px 6px',
-            fontSize: '0.72rem',
-            fontWeight: 800
-          }}>
-            {unreadChatCount}
-          </span>
-        )}
-      </button>
+      {!isChatOpen && (
+        <button
+          onClick={openChatModal}
+          className={`floating-chat-trigger-btn ${studentInfo?.registered && connectionStatus === 'connected' ? 'synced' : 'locked'}`}
+          title={
+            studentInfo?.registered && connectionStatus === 'connected'
+              ? (isHandRaised ? "Hand Raised! Click to view group chat or lower hand." : "Open Workshop Group Chat & Raise Hand")
+              : "Click to open group chat (requires student login)"
+          }
+          style={{
+            position: 'fixed',
+            bottom: '1.75rem',
+            right: '1.75rem',
+            zIndex: 90,
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '0.75rem 1.25rem',
+            borderRadius: '50px',
+            background: isHandRaised ? '#f59e0b' : 'var(--accent-primary)',
+            color: '#ffffff',
+            border: 'none',
+            boxShadow: '0 4px 14px rgba(0, 0, 0, 0.25)',
+            cursor: 'pointer',
+            fontWeight: 700,
+            fontSize: '0.88rem'
+          }}
+        >
+          {isHandRaised ? <Hand size={18} /> : <MessageSquare size={18} />}
+          <span>{isHandRaised ? 'Hand Raised' : 'Group Chat'}</span>
+          {unreadChatCount > 0 && !isHandRaised && (
+            <span style={{
+              background: '#ef4444',
+              color: '#fff',
+              borderRadius: '10px',
+              padding: '2px 6px',
+              fontSize: '0.72rem',
+              fontWeight: 800
+            }}>
+              {unreadChatCount}
+            </span>
+          )}
+        </button>
+      )}
 
       {/* Workshop Registration Modal */}
       <RegistrationModal

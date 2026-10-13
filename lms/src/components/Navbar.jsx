@@ -12,7 +12,8 @@ import {
   HelpCircle,
   Cpu,
   MessageSquare,
-  Hand
+  Hand,
+  Activity
 } from 'lucide-react';
 
 export function Navbar({ 
@@ -29,7 +30,8 @@ export function Navbar({
   onToggleSidebarMobile,
   onOpenChatModal,
   unreadChatCount = 0,
-  isHandRaised = false
+  isHandRaised = false,
+  heartbeatCount = 0
 }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -215,12 +217,16 @@ export function Navbar({
         <button 
           onClick={onOpenSyncModal} 
           className={`student-login-nav-btn ${studentInfo?.registered ? 'registered' : 'unregistered'} ${connectionStatus}`}
-          title={studentInfo?.registered ? `Logged in: ${studentInfo.name} (${connectionStatus}) - Click to edit` : "Click to log in and submit workshop attendance"}
+          title={studentInfo?.registered ? `Logged in: ${studentInfo.name} (${connectionStatus}) - Live Pulse #${heartbeatCount}` : "Click to log in and submit workshop attendance"}
         >
-          <User size={15} />
+          {connectionStatus === 'connected' ? (
+            <Activity size={14} className="pulsing-heart" style={{ color: 'var(--success)' }} />
+          ) : (
+            <User size={15} />
+          )}
           <span>
             {studentInfo?.name 
-              ? `${studentInfo.name.split(' ')[0]} (${connectionStatus === 'connected' ? 'Synced' : 'Local'})` 
+              ? `${studentInfo.name.split(' ')[0]} (${connectionStatus === 'connected' ? `Live #${heartbeatCount}` : 'Local'})` 
               : 'Student Login'}
           </span>
         </button>
